@@ -1,0 +1,9 @@
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+-- Compiling module add_round_keys
+** Error: add_round_key.v(60): near "data_out": syntax error, unexpected IDENTIFIER, expecting ';'
+** Error: add_round_key.v(136): Expecting numeric digits.
+** Error: add_round_key.v(142): Expecting numeric digits.
+** Error: add_round_key.v(144): Expecting numeric digits.
+** Error: add_round_key.v(146): Expecting numeric digits.
+** Error: add_round_key.v(148): Expecting numeric digits.
+** Error: add_round_key.v(152): near "data_in_vld": syntax error, unexpected IDENTIFIER, expecting '('

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/user/final_year_project/asic_project/de
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Z1 V7FkKZ5N9@Nm7>aTih5OAF0
+Z2 04 11 4 work test_module fast 0
+Z3 =1-f0def14d596d-54c7d270-98a52-6972
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;10.2c;57
+Z7 d/home/user/final_year_project/asic_project/de
+Z8 !s110 1422381680
+vadd_round_keys
+!s110 1422433256
+!i10b 1
+!s100 4DZnG]Y5i7AM1LmdVl0d11
+INB>gWB:Hme`4lCn`c_EO]0
+Z9 V`JN@9S9cnhjKRR_L]QIcM3
+R7
+w1422433255
+8add_round_key.v
+Fadd_round_key.v
+L0 3
+Z10 OL;L;10.2c;57
+r1
+!s85 0
+31
+!s108 1422433256.819486
+!s107 chip_defines.v|add_round_key.v|
+!s90 add_round_key.v|
+!i111 0
+Z11 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtest_module
+Z12 IzP@@zh:I485jzTi=NCfFz2
+R9
+R7
+Z13 w1422381671
+Z14 8test_module.v
+Z15 Ftest_module.v
+L0 1
+R10
+r1
+31
+R11
+Z16 !s100 @;<`Gj5^eHzfdZM`ZQ>@J2
+Z17 !s90 test_module.v|
+Z18 !s110 1422381676
+!i10b 1
+!s85 0
+Z19 !s108 1422381676.107785
+Z20 !s107 test_module.v|
+!i111 0
