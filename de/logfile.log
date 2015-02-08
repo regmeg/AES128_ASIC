@@ -1,0 +1,31 @@
+# vsim -do {vcd file muvcd.vcd; vcd add *;  run -all; } -l logfile.log -c test_module 
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.test_module(fast)
+# vcd file muvcd.vcd 
+#  vcd add * 
+# ** Error: (vsim-3561) No objects found matching '*'.
+#   run -all 
+# 		time,	clk,	innn,	outtt
+#                    0,	0,	00,	xx
+#                    1,	1,	01,	01
+#                    2,	0,	01,	01
+#                    3,	1,	10,	10
+#                    4,	0,	10,	10
+#                    5,	1,	10,	10
+#                    6,	0,	11,	10
+#                    7,	1,	11,	11
+#                    8,	0,	11,	11
+#                    9,	1,	11,	11
+#                   10,	0,	11,	11
+#                   11,	1,	11,	11
+# ** Note: $finish    : test_module.v(22)
+#    Time: 12 ns  Iteration: 0  Instance: /test_module

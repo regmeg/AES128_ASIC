@@ -32,13 +32,13 @@ module shift_rows (clk,cpu_rd,cpu_rd_data,reset,data_in,data_in_vld,data_out,dat
 
 	always @ posedge clk begin
 
-		//If data in is valid perform shift_rows operation as it is specified in AES specificaton.
+		//If data in is valid perform shift_rows operation as it is specified in AES specificaton. -- this is all wrong
 		if  data_in_vld begin
 			//Shift rows for the first word of the state matrix
 			data_out[`first_wrd_1st_byte]   <= data_in[`first_wrd_1st_byte]
 			data_out[`first_wrd_2nd_byte]   <= data_in[`first_wrd_2nd_byte]
 			data_out[`first_wrd_3rd_byte]   <= data_in[`first_wrd_3rd_byte]
-			data_out[`first_wrd_4th_byte]   <= data_in[`first_wrd_4th_byte] 
+			data_out[`first_wrd_4th_byte]   <= data_in[`first_wrd_4th_byte]
 			//Shift rows for the second word of the state matrix
 			data_out[`second_wrd_1st_byte]  <= data_in[`fourth_wrd_2nd_byte]
 			data_out[`second_wrd_2nd_byte]  <= data_in[ `first_wrd_2nd_byte]

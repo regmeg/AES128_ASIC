@@ -1,6 +1,6 @@
 `include "chip_defines.v"
 
-module add_round_keys (clk,cpu_rd,cpu_rd_data,reset,data_in,data_in_vld,data_out,data_out_vld,pntr_num_in, pntr_num_out,key_schedule);
+module word_wide_add_round_keys (clk,cpu_rd,cpu_rd_data,reset,data_in,data_in_vld,data_out,data_out_vld,pntr_num_in, pntr_num_out,key_schedule);
 
 	input clk;
 	input cpu_rd;

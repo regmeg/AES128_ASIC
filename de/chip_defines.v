@@ -1,17 +1,22 @@
+//Common defines
+`define WORD_DATA_WIDTH 32
 `define BLOCK_DATA_WIDTH 128
-`define CPU_DATA_WIDTH 64
-`define REG_PNTR_CNTR_WIDTH 4
-`define REG_PNTR_CNTR_FIRST 3:0
-`define REG_PNTR_CNTR_SECOND 7:4
-`define REG_PNTR_CNTR_THIRD 11:8
-`define REG_PNTR_CNTR_FOURTH 15:12
-`define CPU_READ_AND_VALID_BOTH_HIGH 0
 
-//Block seperation into the words
-`define first_wrd     31:0
-`define second_wrd  63:32
-`define third_wrd     95:64
-`define fourth_wrd    127:96
+// flow_cntr module defines
+`define FLOW_CNTR_COUNT_WORD_CYCLES 			5:0
+`define FLOW_CNTR_COUNT_WORD_CYCLES_WIDTH 6
+`define LAST_CYCLE_OF_ENCRPT							`FLOW_CNTR_COUNT_WORD_CYCLES_WIDTH'h28
+
+//Block seperation into the words and bytes
+`define FIRST_WRD       31:0
+`define SECOND_WRD      63:32
+`define THIRD_WRD       95:64
+`define FOURTH_WRD      127:96
+
+`define FIRST_WRD_BYTE  7:0
+`define SECOND_WRD_BYTE 15:8
+`define THIRD_WRD_BYTE  23:16
+`define FOURTH_WRD_BYTE 31:24
 
 //Key expansion wrds for different stages
 //Preliminary stage
