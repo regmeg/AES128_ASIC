@@ -1,0 +1,47 @@
+# vsim -do {run -all} -c test_module 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.test_module(fast)
+# run -all 
+# 		time,	clk,	cntr,	cycle_mod,	is_mod_1_to_2
+#                    0,	1,	00000000,	0,	0
+#                    1,	0,	00000001,	1,	1
+#                    2,	1,	00000002,	2,	1
+#                    3,	0,	00000003,	3,	0
+#                    4,	1,	00000004,	0,	0
+#                    5,	0,	00000005,	1,	1
+#                    6,	1,	00000006,	2,	1
+#                    7,	0,	00000007,	3,	0
+#                    8,	1,	00000008,	0,	0
+#                    9,	0,	00000009,	1,	1
+#                   10,	1,	0000000a,	2,	1
+#                   11,	0,	0000000b,	3,	0
+#                   12,	1,	0000000c,	0,	0
+#                   13,	0,	0000000d,	1,	1
+#                   14,	1,	0000000e,	2,	1
+#                   15,	0,	0000000f,	3,	0
+#                   16,	1,	00000010,	0,	0
+#                   17,	0,	00000011,	1,	1
+#                   18,	1,	00000012,	2,	1
+#                   19,	0,	00000013,	3,	0
+#                   20,	1,	00000014,	0,	0
+#                   21,	0,	00000015,	1,	1
+#                   22,	1,	00000016,	2,	1
+#                   23,	0,	00000017,	3,	0
+#                   24,	1,	00000018,	0,	0
+#                   25,	0,	00000019,	1,	1
+#                   26,	1,	0000001a,	2,	1
+#                   27,	0,	0000001b,	3,	0
+#                   28,	1,	0000001c,	0,	0
+#                   29,	0,	0000001d,	1,	1
+# ** Note: $finish    : test_module.v(26)
+#    Time: 300 ns  Iteration: 0  Instance: /test_module

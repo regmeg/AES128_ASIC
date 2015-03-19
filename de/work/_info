@@ -9,50 +9,212 @@ Z0 d/home/user/final_year_project/asic_project/de
 !i10e 25
 !i10f 100
 T_opt
-VDK3GJE0c@@hAAjNf8_MGd0
-04 11 4 work test_module fast 0
-=1-f0def14d596d-54d78abe-ca57c-2ea2
-o-quiet -auto_acc_if_foreign -work work
-n@_opt
-OL;O;10.2c;57
-Z1 d/home/user/final_year_project/asic_project/de
-!s110 1423411903
-vadd_round_keys
-INB>gWB:Hme`4lCn`c_EO]0
-Z2 V`JN@9S9cnhjKRR_L]QIcM3
-R1
-w1422433255
-8add_round_key.v
-Fadd_round_key.v
+Z1 Vh8UXi?`A0;@H8a13jo97z0
+Z2 04 11 4 work test_module fast 0
+Z3 =1-f0def14d596d-54d7b9bd-8fd55-5a9d
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;10.2c;57
+Z7 d/home/user/final_year_project/asic_project/de
+Z8 !s110 1423423933
+vadd_round_key_block
+Z9 !s100 c06RUfN8483BkK:Hnl1gj3
+Z10 IK:oAQ`?J>AliXJb=kkPzO3
+Z11 V`JN@9S9cnhjKRR_L]QIcM3
+R7
+Z12 w1426506702
+Z13 8add_round_key_block.v
+Z14 Fadd_round_key_block.v
 L0 3
-Z3 OL;L;10.2c;57
+Z15 OL;L;10.2c;57
 r1
 31
-Z4 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s110 1422433256
-!s100 4DZnG]Y5i7AM1LmdVl0d11
-!s108 1422433256.819486
-!s107 chip_defines.v|add_round_key.v|
-!s90 add_round_key.v|
+Z16 !s90 add_round_key_block.v|
+Z17 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z18 !s110 1426674575
+Z19 !s108 1426674575.793603
+Z20 !s107 chip_defines.v|add_round_key_block.v|
 !i10b 1
 !s85 0
 !i111 0
-vtest_module
-R2
+vadd_round_key_word
+Z21 !s100 kYT]5B?R^Q@C9Oi_c`Y802
+Z22 IhfhaBajNnOmYN5dJObh5c0
+R11
+R7
+Z23 w1426506818
+Z24 8add_round_key_word.v
+Z25 Fadd_round_key_word.v
+L0 3
+R15
+r1
+31
+Z26 !s90 add_round_key_word.v|
+R17
+Z27 !s110 1426674579
+Z28 !s108 1426674579.621394
+Z29 !s107 chip_defines.v|add_round_key_word.v|
+!i10b 1
+!s85 0
+!i111 0
+vadd_round_keys
+Z30 INB>gWB:Hme`4lCn`c_EO]0
+R11
+R7
+Z31 w1422433255
+Z32 8add_round_key.v
+Z33 Fadd_round_key.v
+L0 3
+R15
+r1
+31
+R17
+Z34 !s110 1422433256
+Z35 !s100 4DZnG]Y5i7AM1LmdVl0d11
+Z36 !s108 1422433256.819486
+Z37 !s107 chip_defines.v|add_round_key.v|
+Z38 !s90 add_round_key.v|
+!i10b 1
+!s85 0
+!i111 0
+vchip_top
+!s110 1426750875
+!i10b 1
+!s100 2LB7MCC@o2P6U?86YZO;O2
+InRdG0B57a?NZA1S[NCR`[0
+R11
+R7
+w1426750873
+8chip_top.v
+Fchip_top.v
+L0 3
+R15
 r1
 !s85 0
 31
-I?5NLlGc`R4R9mD2_d:1160
-R1
-w1423416318
-8test_module.v
-Ftest_module.v
+!s108 1426750875.021999
+!s107 chip_defines.v|chip_top.v|
+!s90 chip_top.v|+incdir+./home/user/final_year_project/asic_project/de|
+!i111 0
+R17
+!s92 +incdir+./home/user/final_year_project/asic_project/de -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vflow_cntrl
+Z39 !s100 ;b=4MnPCNoLAeYDg65HDU1
+Z40 Ik88AanCJk?0fJ5P3IDgRb1
+R11
+R7
+Z41 w1426507000
+Z42 8flow_cntr.v
+Z43 Fflow_cntr.v
 L0 3
-R3
-!s90 -reportprogress|300|test_module.v|
-R4
+R15
+r1
+31
+Z44 !s90 flow_cntr.v|
+R17
+Z45 !s110 1426674591
+Z46 !s108 1426674591.499457
+Z47 !s107 chip_defines.v|flow_cntr.v|
 !i10b 1
-!s100 3d4HZM;RNUKGjbEIMQ4RY2
-!s108 1423417658.504477
-!s107 test_module.v|
+!s85 0
+!i111 0
+vkey_expansion
+Z48 !s100 Sgm]Kaf;BEm]D81cQmESI1
+Z49 IRJ]Af23bAmjaDACiEMl>B2
+R11
+R7
+Z50 w1426510671
+Z51 8key_expansion.v
+Z52 Fkey_expansion.v
+L0 3
+R15
+r1
+31
+Z53 !s90 key_expansion.v|
+R17
+Z54 !s110 1426674613
+Z55 !s108 1426674613.420453
+Z56 !s107 chip_defines.v|key_expansion.v|
+!i10b 1
+!s85 0
+!i111 0
+vmix_columns
+Z57 !s100 IfXd_U1UYLNIL;oC=R=aQ0
+Z58 I313>^:RYb`FN@=mazFjOJ2
+R11
+R7
+Z59 w1426581569
+Z60 8mix_columns.v
+Z61 Fmix_columns.v
+L0 3
+R15
+r1
+31
+Z62 !s90 mix_columns.v|
+R17
+Z63 !s110 1426674615
+Z64 !s108 1426674615.977665
+Z65 !s107 chip_defines.v|mix_columns.v|
+!i10b 1
+!s85 0
+!i111 0
+vsbox_lut
+Z66 IH_jM?3bAg<8add8CA:<k?2
+R11
+R7
+Z67 w1426690175
+Z68 8sbox_lut.v
+Z69 Fsbox_lut.v
+L0 3
+R15
+r1
+31
+R17
+Z70 !s110 1426690179
+Z71 !s100 gc_Ql=B]0VYdUB>PYinN:3
+Z72 !s108 1426690179.098721
+Z73 !s107 chip_defines.v|sbox_lut.v|
+Z74 !s90 sbox_lut.v|
+!i10b 1
+!s85 0
+!i111 0
+vsub_bytes
+Z75 IFEcXP5j8LK;]5Rm_gz>P>3
+R11
+R7
+Z76 w1426690232
+Z77 8sub_bytes.v
+Z78 Fsub_bytes.v
+L0 3
+R15
+r1
+31
+R17
+Z79 !s110 1426690235
+!i10b 1
+Z80 !s100 m2MRIg^jEP13:HRlk:5j]1
+!s85 0
+Z81 !s108 1426690235.238119
+Z82 !s107 chip_defines.v|sub_bytes.v|
+Z83 !s90 sub_bytes.v|
+!i111 0
+vtest_module
+Z84 !s100 Om_cXDPWUdLR4L=2AM=ej0
+Z85 I3b2UQJ_F_]295KSG0d58E2
+R11
+R7
+Z86 w1423423915
+Z87 8test_module.v
+Z88 Ftest_module.v
+L0 3
+R15
+r1
+31
+Z89 !s90 test_module.v|
+R17
+Z90 !s110 1425932763
+Z91 !s108 1425932763.213395
+Z92 !s107 test_module.v|
+!i10b 1
+!s85 0
 !i111 0
