@@ -3,4 +3,5 @@
 ###############################################################################
 dv/chip_top_e2e/covhtmlreport/pages/* linguist-vendored
 dv/chip_top_e2e/covhtmlreport/* linguist-vendored
-
+dv/brad_conte_aes_c/* linguist-vendored
+dv/legacy/tiny-AES128-C-master/* linguist-vendored
