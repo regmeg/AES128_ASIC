@@ -1,4 +1,6 @@
+###############################################################################
 # For githubs liguist
 ###############################################################################
-*.html linguist-vendored
+dv/chip_top_e2e/covhtmlreport/pages/* linguist-vendored
+dv/chip_top_e2e/covhtmlreport/* linguist-vendored
 
