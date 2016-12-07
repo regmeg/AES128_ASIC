@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/user/final_year_project/asic_project/dv/mix_column_key_word
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+V39zgTzM1;7SVJh5P`om;L3
+Z1 04 20 4 work mix_columns_test_top fast 0
+=1-24b6fdfd2b29-559d9d44-7753c-548b
+Z2 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z3 OL;O;10.2c;57
+Z4 d/home/user/final_year_project/asic_project/dv/mix_column_key_word
+!s110 1436392772
+T_opt1
+!s110 1439234651
+VQiLnYeaj59<BE@S<=TzH71
+R1
+=1-24b6fdfd2b29-55c8fa5b-87846-3a02
+R2
+n@_opt1
+R3
+vmix_columns
+Z5 DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+Z6 !s110 1439234648
+IBI13]3GVW83:cfk;kYclK0
+Z7 V`JN@9S9cnhjKRR_L]QIcM3
+S1
+Z8 d/home/user/final_year_project/asic_project/dv/mix_column
+w1438805444
+8/home/user/final_year_project/asic_project/de/mix_columns.v
+F/home/user/final_year_project/asic_project/de/mix_columns.v
+L0 3
+Z9 OL;L;10.2c;57
+r1
+31
+Z10 !s108 1439234648.499062
+Z11 !s107 /home/user/final_year_project/asic_project/de/chip_defines.v|/home/user/final_year_project/asic_project/de/mix_columns.v|mix_columns_tb.sv|mix_columns_test_top.sv|mix_columns_if.sv|
+Z12 !s90 -sv|mix_columns_if.sv|mix_columns_test_top.sv|mix_columns_tb.sv|/home/user/final_year_project/asic_project/de/mix_columns.v|+incdir+/home/user/final_year_project/asic_project/de|
+Z13 o-sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z14 !s92 -sv +incdir+/home/user/final_year_project/asic_project/de -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s105 mix_columns_v_unit
+!i10b 1
+!s100 m8oX8RA6^fAjj0d6`=hf[0
+!s85 0
+!i111 0
+Ymix_columns_io
+R5
+R6
+I[2;hEBGJW3mE;5i03G:<j1
+R7
+S1
+R8
+w1438814121
+8mix_columns_if.sv
+Fmix_columns_if.sv
+L0 4
+R9
+r1
+31
+R10
+R11
+R12
+R13
+R14
+!s105 mix_columns_if_sv_unit
+!i10b 1
+!s100 fiWRBeLU_b;8B^8b6`IJj2
+!s85 0
+!i111 0
+4mix_columns_test
+R5
+R6
+Il;MbZzeCdWZ5A0@YMX6n73
+R7
+S1
+R8
+w1438814556
+8mix_columns_tb.sv
+Fmix_columns_tb.sv
+L0 4
+R9
+r1
+31
+R10
+R11
+R12
+R13
+R14
+!s105 mix_columns_tb_sv_unit
+!i10b 1
+!s100 cL@YXdf=UXdVUVah`gY1L2
+!s85 0
+!i111 0
+vmix_columns_test_top
+R5
+R6
+IDag>_<`R3[3M=hfN`1oc53
+R7
+S1
+R8
+w1436387620
+8mix_columns_test_top.sv
+Fmix_columns_test_top.sv
+L0 2
+R9
+r1
+31
+R10
+R11
+R12
+R13
+R14
+!s100 z;n`8S7ja:9GAX2=7hndc3
+!s105 mix_columns_test_top_sv_unit
+!i10b 1
+!s85 0
+!i111 0

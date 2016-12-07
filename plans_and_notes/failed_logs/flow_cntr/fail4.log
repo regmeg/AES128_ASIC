@@ -1,0 +1,295 @@
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes flow_cntr_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: flow_cntr_tb.sv(112): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: flow_cntr_tb.sv(124): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.flow_cntr_test_top(fast)
+# Loading work.flow_cntr_test(fast)
+# Loading work.flow_cntr(fast)
+# ** Warning: (vsim-PLI-3691) flow_cntr_test_top.sv(33): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /flow_cntr_test_top
+# Loading ./aes.so
+# Sv_Seed = 370918592
+# run -all 
+# ** Error: (vsim-PLI-3107) flow_cntr_test_top.sv(32): $dumpports : File "test.vcd" is already in use.
+#         Region: /flow_cntr_test_top
+#                    0[ns]: reset - 0x1
+#                   30[ns]: reset - 0x0, should have reset triggered
+#                   50[ns]:reg_flow_cntr is 0x00000000
+#                   50[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                   50[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  150[ns]:data_accep = 0x1, as expected
+#                  250[ns]:data_accep = 0x0, as expected
+#                  250[ns]: generated_block_data = 0x698a12c44dd571ddccc0e324ee6b941b
+#                  250[ns]:reg_flow_cntr is 0x00000000
+#                  250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                  250[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  350[ns]: generated_word_data = 0x611dd41a
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0x69d5e31b, word_out_comb_vld is 0x1
+#                  450[ns]:reg_x_word_store_1 is 0x698a12c4
+#                  450[ns]:reg_x_word_store_1 is 0x4dd571dd
+#                  450[ns]:reg_x_word_store_3 is 0xccc0e324
+#                  450[ns]:reg_x_word_store_4 is 0xee6b941b
+#                  450[ns]:check_subbytes data_in 0x698a12c44dd571ddccc0e324ee6b941b, data_out 0x69d5e31b4dc094c4cc6b12ddee8a7124
+#                  450[ns]:word_out_comb is 0x69d5e31b, as expected
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0x69d5e31b, word_out_comb_vld is 0x1
+#                  450[ns]: generated_word_data = 0x4772af85
+#                  550[ns]:check_subbytes data_in 0x698a12c44dd571ddccc0e324ee6b941b, data_out 0x69d5e31b4dc094c4cc6b12ddee8a7124
+#                  550[ns]:word_out_comb is 0x4dc094c4, as expected
+#                  550[ns]:reg_flow_cntr is 0x00000003
+#                  550[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                  550[ns]:word_out_comb is 0x4dc094c4, word_out_comb_vld is 0x1
+#                  550[ns]: generated_word_data = 0x554e75f3
+#                  650[ns]:check_subbytes data_in 0x698a12c44dd571ddccc0e324ee6b941b, data_out 0x69d5e31b4dc094c4cc6b12ddee8a7124
+#                  650[ns]:word_out_comb is 0xcc6b12dd, as expected
+#                  650[ns]:reg_flow_cntr is 0x00000004
+#                  650[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                  650[ns]:word_out_comb is 0xcc6b12dd, word_out_comb_vld is 0x1
+#                  650[ns]: generated_word_data = 0x3df442b2
+#                  750[ns]:check_subbytes data_in 0x698a12c44dd571ddccc0e324ee6b941b, data_out 0x69d5e31b4dc094c4cc6b12ddee8a7124
+#                  750[ns]:word_out_comb is 0xee8a7124, as expected
+#                  750[ns]:reg_flow_cntr is 0x00000005
+#                  750[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                  750[ns]:word_out_comb is 0xee8a7124, word_out_comb_vld is 0x1
+#                  750[ns]: generated_word_data = 0x7e21250f
+#                  850[ns]:check_subbytes data_in 0x611dd41a4772af85554e75f33df442b2, data_out 0x617275b2474e421a55f4d4853d1daff3
+#                  850[ns]:word_out_comb is 0x617275b2, as expected
+#                  850[ns]:reg_flow_cntr is 0x00000006
+#                  850[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                  850[ns]:word_out_comb is 0x617275b2, word_out_comb_vld is 0x1
+#                  850[ns]: generated_word_data = 0xa963c35f
+#                  950[ns]:check_subbytes data_in 0x611dd41a4772af85554e75f33df442b2, data_out 0x617275b2474e421a55f4d4853d1daff3
+#                  950[ns]:word_out_comb is 0x474e421a, as expected
+#                  950[ns]:reg_flow_cntr is 0x00000007
+#                  950[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                  950[ns]:word_out_comb is 0x474e421a, word_out_comb_vld is 0x1
+#                  950[ns]: generated_word_data = 0x0e80ffc1
+#                 1050[ns]:check_subbytes data_in 0x611dd41a4772af85554e75f33df442b2, data_out 0x617275b2474e421a55f4d4853d1daff3
+#                 1050[ns]:word_out_comb is 0x55f4d485, as expected
+#                 1050[ns]:reg_flow_cntr is 0x00000008
+#                 1050[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 1050[ns]:word_out_comb is 0x55f4d485, word_out_comb_vld is 0x1
+#                 1050[ns]: generated_word_data = 0xda450411
+#                 1150[ns]:check_subbytes data_in 0x611dd41a4772af85554e75f33df442b2, data_out 0x617275b2474e421a55f4d4853d1daff3
+#                 1150[ns]:word_out_comb is 0x3d1daff3, as expected
+#                 1150[ns]:reg_flow_cntr is 0x00000009
+#                 1150[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 1150[ns]:word_out_comb is 0x3d1daff3, word_out_comb_vld is 0x1
+#                 1150[ns]: generated_word_data = 0x76a7185e
+#                 1250[ns]:check_subbytes data_in 0x7e21250fa963c35f0e80ffc1da450411, data_out 0x7e63ff11a980040f0e45255fda21c3c1
+#                 1250[ns]:word_out_comb is 0x7e63ff11, as expected
+#                 1250[ns]:reg_flow_cntr is 0x0000000a
+#                 1250[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 1250[ns]:word_out_comb is 0x7e63ff11, word_out_comb_vld is 0x1
+#                 1250[ns]: generated_word_data = 0x963ac59e
+#                 1350[ns]:check_subbytes data_in 0x7e21250fa963c35f0e80ffc1da450411, data_out 0x7e63ff11a980040f0e45255fda21c3c1
+#                 1350[ns]:word_out_comb is 0xa980040f, as expected
+#                 1350[ns]:reg_flow_cntr is 0x0000000b
+#                 1350[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 1350[ns]:word_out_comb is 0xa980040f, word_out_comb_vld is 0x1
+#                 1350[ns]: generated_word_data = 0xb2a9c8bc
+#                 1450[ns]:check_subbytes data_in 0x7e21250fa963c35f0e80ffc1da450411, data_out 0x7e63ff11a980040f0e45255fda21c3c1
+#                 1450[ns]:word_out_comb is 0x0e45255f, as expected
+#                 1450[ns]:reg_flow_cntr is 0x0000000c
+#                 1450[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 1450[ns]:word_out_comb is 0x0e45255f, word_out_comb_vld is 0x1
+#                 1450[ns]: generated_word_data = 0x39f4efcc
+#                 1550[ns]:check_subbytes data_in 0x7e21250fa963c35f0e80ffc1da450411, data_out 0x7e63ff11a980040f0e45255fda21c3c1
+#                 1550[ns]:word_out_comb is 0xda21c3c1, as expected
+#                 1550[ns]:reg_flow_cntr is 0x0000000d
+#                 1550[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 1550[ns]:word_out_comb is 0xda21c3c1, word_out_comb_vld is 0x1
+#                 1550[ns]: generated_word_data = 0x1ac7fd2e
+#                 1650[ns]:check_subbytes data_in 0x76a7185e963ac59eb2a9c8bc39f4efcc, data_out 0x763ac8cc96a9ef5eb2f4189e39a7c5bc
+#                 1650[ns]:word_out_comb is 0x763ac8cc, as expected
+#                 1650[ns]:reg_flow_cntr is 0x0000000e
+#                 1650[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 1650[ns]:word_out_comb is 0x763ac8cc, word_out_comb_vld is 0x1
+#                 1650[ns]: generated_word_data = 0xa2a6a71e
+#                 1750[ns]:check_subbytes data_in 0x76a7185e963ac59eb2a9c8bc39f4efcc, data_out 0x763ac8cc96a9ef5eb2f4189e39a7c5bc
+#                 1750[ns]:word_out_comb is 0x96a9ef5e, as expected
+#                 1750[ns]:reg_flow_cntr is 0x0000000f
+#                 1750[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 1750[ns]:word_out_comb is 0x96a9ef5e, word_out_comb_vld is 0x1
+#                 1750[ns]: generated_word_data = 0x93d4779c
+#                 1850[ns]:check_subbytes data_in 0x76a7185e963ac59eb2a9c8bc39f4efcc, data_out 0x763ac8cc96a9ef5eb2f4189e39a7c5bc
+#                 1850[ns]:word_out_comb is 0xb2f4189e, as expected
+#                 1850[ns]:reg_flow_cntr is 0x00000010
+#                 1850[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 1850[ns]:word_out_comb is 0xb2f4189e, word_out_comb_vld is 0x1
+#                 1850[ns]: generated_word_data = 0x7262865d
+#                 1950[ns]:check_subbytes data_in 0x76a7185e963ac59eb2a9c8bc39f4efcc, data_out 0x763ac8cc96a9ef5eb2f4189e39a7c5bc
+#                 1950[ns]:word_out_comb is 0x39a7c5bc, as expected
+#                 1950[ns]:reg_flow_cntr is 0x00000011
+#                 1950[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 1950[ns]:word_out_comb is 0x39a7c5bc, word_out_comb_vld is 0x1
+#                 1950[ns]: generated_word_data = 0xbf3ee3e9
+#                 2050[ns]:check_subbytes data_in 0x1ac7fd2ea2a6a71e93d4779c7262865d, data_out 0x1aa6775da2d4862e9362fd1e72c7a79c
+#                 2050[ns]:word_out_comb is 0x1aa6775d, as expected
+#                 2050[ns]:reg_flow_cntr is 0x00000012
+#                 2050[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 2050[ns]:word_out_comb is 0x1aa6775d, word_out_comb_vld is 0x1
+#                 2050[ns]: generated_word_data = 0x01fb9619
+#                 2150[ns]:check_subbytes data_in 0x1ac7fd2ea2a6a71e93d4779c7262865d, data_out 0x1aa6775da2d4862e9362fd1e72c7a79c
+#                 2150[ns]:word_out_comb is 0xa2d4862e, as expected
+#                 2150[ns]:reg_flow_cntr is 0x00000013
+#                 2150[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 2150[ns]:word_out_comb is 0xa2d4862e, word_out_comb_vld is 0x1
+#                 2150[ns]: generated_word_data = 0x24807cd5
+#                 2250[ns]:check_subbytes data_in 0x1ac7fd2ea2a6a71e93d4779c7262865d, data_out 0x1aa6775da2d4862e9362fd1e72c7a79c
+#                 2250[ns]:word_out_comb is 0x9362fd1e, as expected
+#                 2250[ns]:reg_flow_cntr is 0x00000014
+#                 2250[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 2250[ns]:word_out_comb is 0x9362fd1e, word_out_comb_vld is 0x1
+#                 2250[ns]: generated_word_data = 0xf3d70cb1
+#                 2350[ns]:check_subbytes data_in 0x1ac7fd2ea2a6a71e93d4779c7262865d, data_out 0x1aa6775da2d4862e9362fd1e72c7a79c
+#                 2350[ns]:word_out_comb is 0x72c7a79c, as expected
+#                 2350[ns]:reg_flow_cntr is 0x00000015
+#                 2350[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 2350[ns]:word_out_comb is 0x72c7a79c, word_out_comb_vld is 0x1
+#                 2350[ns]: generated_word_data = 0x5266be60
+#                 2450[ns]:check_subbytes data_in 0xbf3ee3e901fb961924807cd5f3d70cb1, data_out 0xbffb7cb101800ce924d7e319f33e96d5
+#                 2450[ns]:word_out_comb is 0xbffb7cb1, as expected
+#                 2450[ns]:reg_flow_cntr is 0x00000016
+#                 2450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 2450[ns]:word_out_comb is 0xbffb7cb1, word_out_comb_vld is 0x1
+#                 2450[ns]: generated_word_data = 0xc47c08db
+#                 2550[ns]:check_subbytes data_in 0xbf3ee3e901fb961924807cd5f3d70cb1, data_out 0xbffb7cb101800ce924d7e319f33e96d5
+#                 2550[ns]:word_out_comb is 0x01800ce9, as expected
+#                 2550[ns]:reg_flow_cntr is 0x00000017
+#                 2550[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 2550[ns]:word_out_comb is 0x01800ce9, word_out_comb_vld is 0x1
+#                 2550[ns]: generated_word_data = 0xa53301f8
+#                 2650[ns]:check_subbytes data_in 0xbf3ee3e901fb961924807cd5f3d70cb1, data_out 0xbffb7cb101800ce924d7e319f33e96d5
+#                 2650[ns]:word_out_comb is 0x24d7e319, as expected
+#                 2650[ns]:reg_flow_cntr is 0x00000018
+#                 2650[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 2650[ns]:word_out_comb is 0x24d7e319, word_out_comb_vld is 0x1
+#                 2650[ns]: generated_word_data = 0xfc3a1820
+#                 2750[ns]:check_subbytes data_in 0xbf3ee3e901fb961924807cd5f3d70cb1, data_out 0xbffb7cb101800ce924d7e319f33e96d5
+#                 2750[ns]:word_out_comb is 0xf33e96d5, as expected
+#                 2750[ns]:reg_flow_cntr is 0x00000019
+#                 2750[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 2750[ns]:word_out_comb is 0xf33e96d5, word_out_comb_vld is 0x1
+#                 2750[ns]: generated_word_data = 0xcbb3430f
+#                 2850[ns]:check_subbytes data_in 0x5266be60c47c08dba53301f8fc3a1820, data_out 0x527c0120c4331860a53abedbfc6608f8
+#                 2850[ns]:word_out_comb is 0x527c0120, as expected
+#                 2850[ns]:reg_flow_cntr is 0x0000001a
+#                 2850[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 2850[ns]:word_out_comb is 0x527c0120, word_out_comb_vld is 0x1
+#                 2850[ns]: generated_word_data = 0x584204b3
+#                 2950[ns]:check_subbytes data_in 0x5266be60c47c08dba53301f8fc3a1820, data_out 0x527c0120c4331860a53abedbfc6608f8
+#                 2950[ns]:word_out_comb is 0xc4331860, as expected
+#                 2950[ns]:reg_flow_cntr is 0x0000001b
+#                 2950[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 2950[ns]:word_out_comb is 0xc4331860, word_out_comb_vld is 0x1
+#                 2950[ns]: generated_word_data = 0x6ebf88ca
+#                 3050[ns]:check_subbytes data_in 0x5266be60c47c08dba53301f8fc3a1820, data_out 0x527c0120c4331860a53abedbfc6608f8
+#                 3050[ns]:word_out_comb is 0xa53abedb, as expected
+#                 3050[ns]:reg_flow_cntr is 0x0000001c
+#                 3050[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 3050[ns]:word_out_comb is 0xa53abedb, word_out_comb_vld is 0x1
+#                 3050[ns]: generated_word_data = 0xa4bb6cf5
+#                 3150[ns]:check_subbytes data_in 0x5266be60c47c08dba53301f8fc3a1820, data_out 0x527c0120c4331860a53abedbfc6608f8
+#                 3150[ns]:word_out_comb is 0xfc6608f8, as expected
+#                 3150[ns]:reg_flow_cntr is 0x0000001d
+#                 3150[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 3150[ns]:word_out_comb is 0xfc6608f8, word_out_comb_vld is 0x1
+#                 3150[ns]: generated_word_data = 0x7e359a77
+#                 3250[ns]:check_subbytes data_in 0xcbb3430f584204b36ebf88caa4bb6cf5, data_out 0xcb4288f558bf6c0f6ebb43b3a4b304ca
+#                 3250[ns]:word_out_comb is 0xcb4288f5, as expected
+#                 3250[ns]:reg_flow_cntr is 0x0000001e
+#                 3250[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 3250[ns]:word_out_comb is 0xcb4288f5, word_out_comb_vld is 0x1
+#                 3250[ns]: generated_word_data = 0xc3510208
+#                 3350[ns]:check_subbytes data_in 0xcbb3430f584204b36ebf88caa4bb6cf5, data_out 0xcb4288f558bf6c0f6ebb43b3a4b304ca
+#                 3350[ns]:word_out_comb is 0x58bf6c0f, as expected
+#                 3350[ns]:reg_flow_cntr is 0x0000001f
+#                 3350[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 3350[ns]:word_out_comb is 0x58bf6c0f, word_out_comb_vld is 0x1
+#                 3350[ns]: generated_word_data = 0x6cadecdd
+#                 3450[ns]:check_subbytes data_in 0xcbb3430f584204b36ebf88caa4bb6cf5, data_out 0xcb4288f558bf6c0f6ebb43b3a4b304ca
+#                 3450[ns]:word_out_comb is 0x6ebb43b3, as expected
+#                 3450[ns]:reg_flow_cntr is 0x00000020
+#                 3450[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 3450[ns]:word_out_comb is 0x6ebb43b3, word_out_comb_vld is 0x1
+#                 3450[ns]: generated_word_data = 0x1cfc8378
+#                 3550[ns]:check_subbytes data_in 0xcbb3430f584204b36ebf88caa4bb6cf5, data_out 0xcb4288f558bf6c0f6ebb43b3a4b304ca
+#                 3550[ns]:word_out_comb is 0xa4b304ca, as expected
+#                 3550[ns]:reg_flow_cntr is 0x00000021
+#                 3550[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 3550[ns]:word_out_comb is 0xa4b304ca, word_out_comb_vld is 0x1
+#                 3550[ns]: generated_word_data = 0x6df6ae18
+#                 3650[ns]:check_subbytes data_in 0x7e359a77c35102086cadecdd1cfc8378, data_out 0x7e51ec78c3ad83776cfc9a081c3502dd
+#                 3650[ns]:word_out_comb is 0x7e51ec78, as expected
+#                 3650[ns]:reg_flow_cntr is 0x00000022
+#                 3650[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 3650[ns]:word_out_comb is 0x7e51ec78, word_out_comb_vld is 0x1
+#                 3650[ns]: generated_word_data = 0x18986574
+#                 3750[ns]:check_subbytes data_in 0x7e359a77c35102086cadecdd1cfc8378, data_out 0x7e51ec78c3ad83776cfc9a081c3502dd
+#                 3750[ns]:word_out_comb is 0xc3ad8377, as expected
+#                 3750[ns]:reg_flow_cntr is 0x00000023
+#                 3750[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 3750[ns]:word_out_comb is 0xc3ad8377, word_out_comb_vld is 0x1
+#                 3750[ns]: generated_word_data = 0x71d1da3a
+#                 3850[ns]:check_subbytes data_in 0x7e359a77c35102086cadecdd1cfc8378, data_out 0x7e51ec78c3ad83776cfc9a081c3502dd
+#                 3850[ns]:word_out_comb is 0x6cfc9a08, as expected
+#                 3850[ns]:reg_flow_cntr is 0x00000024
+#                 3850[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 3850[ns]:word_out_comb is 0x6cfc9a08, word_out_comb_vld is 0x1
+#                 3850[ns]: generated_word_data = 0x15a3c357
+#                 3950[ns]:check_subbytes data_in 0x7e359a77c35102086cadecdd1cfc8378, data_out 0x7e51ec78c3ad83776cfc9a081c3502dd
+#                 3950[ns]:word_out_comb is 0x1c3502dd, as expected
+#                 3950[ns]:reg_flow_cntr is 0x00000025
+#                 3950[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 3950[ns]:word_out_comb is 0x1c3502dd, word_out_comb_vld is 0x1
+#                 3950[ns]: generated_word_data = 0x62345a2d
+#                 4050[ns]:check_subbytes data_in 0x6df6ae181898657471d1da3a15a3c357, data_out 0x6d98da5718d1c31871a3ae7415f6653a
+#                 4050[ns]:word_out_comb is 0x6d98da57, as expected
+#                 4050[ns]:reg_flow_cntr is 0x00000026
+#                 4050[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 4050[ns]:word_out_comb is 0x6d98da57, word_out_comb_vld is 0x1
+#                 4050[ns]: generated_word_data = 0x4ec4fe93
+#                 4150[ns]:check_subbytes data_in 0x6df6ae181898657471d1da3a15a3c357, data_out 0x6d98da5718d1c31871a3ae7415f6653a
+#                 4150[ns]:word_out_comb is 0x18d1c318, as expected
+#                 4150[ns]:reg_flow_cntr is 0x00000027
+#                 4150[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 4150[ns]:word_out_comb is 0x18d1c318, word_out_comb_vld is 0x1
+#                 4150[ns]: generated_word_data = 0x168d682b
+#                 4250[ns]:check_subbytes data_in 0x6df6ae181898657471d1da3a15a3c357, data_out 0x6d98da5718d1c31871a3ae7415f6653a
+#                 4250[ns]:word_out_comb is 0x71a3ae74, as expected
+#                 4250[ns]:reg_flow_cntr is 0x00000000
+#                 4250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4250[ns]:word_out_comb is 0x71a3ae74, word_out_comb_vld is 0x1
+#                 4250[ns]: generated_word_data = 0xb322bbcc
+#                 4350[ns]:check_subbytes data_in 0x6df6ae181898657471d1da3a15a3c357, data_out 0x6d98da5718d1c31871a3ae7415f6653a
+#                 4350[ns]: [ERROR] word_out_comb after subbytes is 00, but should be 15f6653a0
+#                 4350[ns]:reg_flow_cntr is 0x00000000
+#                 4350[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4350[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                 4350[ns]: generated_word_data = 0x9827bc6e
+#                 4450[ns]:reg_flow_cntr is 0x00000000
+#                 4450[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4450[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+# ** Note: $finish    : flow_cntr_tb.sv(240)
+#    Time: 4450 ns  Iteration: 2  Instance: /flow_cntr_test_top/flow_cntr_test
+-------------------------------------------------------------------
+-------------------- counter is gets reset too early - last cylce is 0x00000027
+changed
+			if (reg_flow_cntr[`FLOW_CNTR_COUNT_WORD_CYCLES] == `LAST_CYCLE_OF_ENCRPT -1'b1) begin
+to 
+			if (reg_flow_cntr[`FLOW_CNTR_COUNT_WORD_CYCLES] == `LAST_CYCLE_OF_ENCRPT) begin

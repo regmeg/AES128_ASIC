@@ -1,0 +1,863 @@
+vsim -sv_lib aes -sv_seed random -c -do "run -all" flow_cntr_test_top
+Reading pref.tcl 
+
+# 10.2c
+
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes flow_cntr_test_top 
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.flow_cntr_test_top(fast)
+# Loading work.flow_cntr_test(fast)
+# Loading work.flow_cntr(fast)
+# ** Warning: (vsim-PLI-3691) flow_cntr_test_top.sv(33): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /flow_cntr_test_top
+# Loading ./aes.so
+# Sv_Seed = 3802857499
+# run -all 
+# ** Error: (vsim-PLI-3107) flow_cntr_test_top.sv(32): $dumpports : File "test.vcd" is already in use.
+#         Region: /flow_cntr_test_top
+#                    0[ns]: reset - 0x1
+#                   30[ns]: reset - 0x0, should have reset triggered
+#                   50[ns]:reg_x_word_store_1 is 0x00000000
+#                   50[ns]:reg_x_word_store_2 is 0x00000000
+#                   50[ns]:reg_x_word_store_3 is 0x00000000
+#                   50[ns]:reg_x_word_store_4 is 0x00000000
+#                   50[ns]:reg_y_word_store_1 is 0x00000000
+#                   50[ns]:reg_y_word_store_2 is 0x00000000
+#                   50[ns]:reg_y_word_store_3 is 0x00000000
+#                   50[ns]:reg_y_word_store_4 is 0x00000000
+#                   50[ns]:reg_flow_cntr is 0x00000000
+#                   50[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                   50[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                   50[ns]: data_from_store_regs_1 = 0x00000000
+#                   50[ns]: data_from_store_regs_2 = 0x00000000
+#                   50[ns]: data_from_store_regs_3 = 0x00000000
+#                   50[ns]: data_from_store_regs_4 = 0x00000000
+#                  150[ns]:data_accep = 0x1, as expected
+#                  250[ns]:data_accep = 0x0, as expected
+#                  250[ns]: generated_block_data = 0xe05962d2457f549bac618fb18dbc323e
+#                  250[ns]:reg_x_word_store_1 is 0x00000000
+#                  250[ns]:reg_x_word_store_2 is 0x00000000
+#                  250[ns]:reg_x_word_store_3 is 0x00000000
+#                  250[ns]:reg_x_word_store_4 is 0x00000000
+#                  250[ns]:reg_y_word_store_1 is 0x00000000
+#                  250[ns]:reg_y_word_store_2 is 0x00000000
+#                  250[ns]:reg_y_word_store_3 is 0x00000000
+#                  250[ns]:reg_y_word_store_4 is 0x00000000
+#                  250[ns]:reg_flow_cntr is 0x00000000
+#                  250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                  250[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  250[ns]: data_from_store_regs_1 = 0x00000000
+#                  250[ns]: data_from_store_regs_2 = 0x00000000
+#                  250[ns]: data_from_store_regs_3 = 0x00000000
+#                  250[ns]: data_from_store_regs_4 = 0x00000000
+#                  350[ns]: generated_word_data = 0x920cdf76
+#                  450[ns]:reg_x_word_store_1 is 0xe05962d2
+#                  450[ns]:reg_x_word_store_2 is 0x457f549b
+#                  450[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  450[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  450[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0xe07f8f3e, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0xe05962d2
+#                  450[ns]: data_from_store_regs_2 = 0x457f549b
+#                  450[ns]: data_from_store_regs_3 = 0xac618fb1
+#                  450[ns]: data_from_store_regs_4 = 0x8dbc323e
+#                  450[ns]:reg_x_word_store_1 is 0xe05962d2
+#                  450[ns]:reg_x_word_store_1 is 0x457f549b
+#                  450[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  450[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  450[ns]:check_subbytes data_in 0xe05962d2457f549bac618fb18dbc323e, data_out 0xe07f8f3e456132d2acbc629b8d5954b1
+#                  450[ns]:word_out_comb is 0xe07f8f3e, as expected
+#                  450[ns]:reg_x_word_store_1 is 0xe05962d2
+#                  450[ns]:reg_x_word_store_2 is 0x457f549b
+#                  450[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  450[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  450[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0xe07f8f3e, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0xe05962d2
+#                  450[ns]: data_from_store_regs_2 = 0x457f549b
+#                  450[ns]: data_from_store_regs_3 = 0xac618fb1
+#                  450[ns]: data_from_store_regs_4 = 0x8dbc323e
+#                  450[ns]:mix_column_off is 0x0, as expected
+#                  450[ns]: generated_word_data = 0xa2b1c7de
+#                  550[ns]:check_subbytes data_in 0xe05962d2457f549bac618fb18dbc323e, data_out 0xe07f8f3e456132d2acbc629b8d5954b1
+#                  550[ns]:word_out_comb is 0x456132d2, as expected
+#                  550[ns]:reg_x_word_store_1 is 0xe05962d2
+#                  550[ns]:reg_x_word_store_2 is 0x457f549b
+#                  550[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  550[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  550[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  550[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                  550[ns]:reg_y_word_store_3 is 0x00000000
+#                  550[ns]:reg_y_word_store_4 is 0x00000000
+#                  550[ns]:reg_flow_cntr is 0x00000003
+#                  550[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                  550[ns]:word_out_comb is 0x456132d2, word_out_comb_vld is 0x1
+#                  550[ns]: data_from_store_regs_1 = 0xe05962d2
+#                  550[ns]: data_from_store_regs_2 = 0x457f549b
+#                  550[ns]: data_from_store_regs_3 = 0xac618fb1
+#                  550[ns]: data_from_store_regs_4 = 0x8dbc323e
+#                  550[ns]:mix_column_off is 0x0, as expected
+#                  550[ns]: generated_word_data = 0x707dde86
+#                  650[ns]:check_subbytes data_in 0xe05962d2457f549bac618fb18dbc323e, data_out 0xe07f8f3e456132d2acbc629b8d5954b1
+#                  650[ns]:word_out_comb is 0xacbc629b, as expected
+#                  650[ns]:reg_x_word_store_1 is 0xe05962d2
+#                  650[ns]:reg_x_word_store_2 is 0x457f549b
+#                  650[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  650[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  650[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  650[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                  650[ns]:reg_y_word_store_3 is 0x707dde86
+#                  650[ns]:reg_y_word_store_4 is 0x00000000
+#                  650[ns]:reg_flow_cntr is 0x00000004
+#                  650[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                  650[ns]:word_out_comb is 0xacbc629b, word_out_comb_vld is 0x1
+#                  650[ns]: data_from_store_regs_1 = 0xe05962d2
+#                  650[ns]: data_from_store_regs_2 = 0x457f549b
+#                  650[ns]: data_from_store_regs_3 = 0xac618fb1
+#                  650[ns]: data_from_store_regs_4 = 0x8dbc323e
+#                  650[ns]:mix_column_off is 0x0, as expected
+#                  650[ns]: generated_word_data = 0xf7846791
+#                  750[ns]:check_subbytes data_in 0xe05962d2457f549bac618fb18dbc323e, data_out 0xe07f8f3e456132d2acbc629b8d5954b1
+#                  750[ns]:word_out_comb is 0x8d5954b1, as expected
+#                  750[ns]:reg_x_word_store_1 is 0xe05962d2
+#                  750[ns]:reg_x_word_store_2 is 0x457f549b
+#                  750[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  750[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  750[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  750[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                  750[ns]:reg_y_word_store_3 is 0x707dde86
+#                  750[ns]:reg_y_word_store_4 is 0xf7846791
+#                  750[ns]:reg_flow_cntr is 0x00000005
+#                  750[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                  750[ns]:word_out_comb is 0x8d5954b1, word_out_comb_vld is 0x1
+#                  750[ns]: data_from_store_regs_1 = 0x920cdf76
+#                  750[ns]: data_from_store_regs_2 = 0xa2b1c7de
+#                  750[ns]: data_from_store_regs_3 = 0x707dde86
+#                  750[ns]: data_from_store_regs_4 = 0xf7846791
+#                  750[ns]:mix_column_off is 0x0, as expected
+#                  750[ns]: generated_word_data = 0x9334b3c4
+#                  850[ns]:check_subbytes data_in 0x920cdf76a2b1c7de707dde86f7846791, data_out 0x92b1de91a27d67767084dfdef70cc786
+#                  850[ns]:word_out_comb is 0x92b1de91, as expected
+#                  850[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                  850[ns]:reg_x_word_store_2 is 0x457f549b
+#                  850[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  850[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  850[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  850[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                  850[ns]:reg_y_word_store_3 is 0x707dde86
+#                  850[ns]:reg_y_word_store_4 is 0xf7846791
+#                  850[ns]:reg_flow_cntr is 0x00000006
+#                  850[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                  850[ns]:word_out_comb is 0x92b1de91, word_out_comb_vld is 0x1
+#                  850[ns]: data_from_store_regs_1 = 0x920cdf76
+#                  850[ns]: data_from_store_regs_2 = 0xa2b1c7de
+#                  850[ns]: data_from_store_regs_3 = 0x707dde86
+#                  850[ns]: data_from_store_regs_4 = 0xf7846791
+#                  850[ns]:mix_column_off is 0x0, as expected
+#                  850[ns]: generated_word_data = 0x848a94b8
+#                  950[ns]:check_subbytes data_in 0x920cdf76a2b1c7de707dde86f7846791, data_out 0x92b1de91a27d67767084dfdef70cc786
+#                  950[ns]:word_out_comb is 0xa27d6776, as expected
+#                  950[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                  950[ns]:reg_x_word_store_2 is 0x848a94b8
+#                  950[ns]:reg_x_word_store_3 is 0xac618fb1
+#                  950[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                  950[ns]:reg_y_word_store_1 is 0x920cdf76
+#                  950[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                  950[ns]:reg_y_word_store_3 is 0x707dde86
+#                  950[ns]:reg_y_word_store_4 is 0xf7846791
+#                  950[ns]:reg_flow_cntr is 0x00000007
+#                  950[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                  950[ns]:word_out_comb is 0xa27d6776, word_out_comb_vld is 0x1
+#                  950[ns]: data_from_store_regs_1 = 0x920cdf76
+#                  950[ns]: data_from_store_regs_2 = 0xa2b1c7de
+#                  950[ns]: data_from_store_regs_3 = 0x707dde86
+#                  950[ns]: data_from_store_regs_4 = 0xf7846791
+#                  950[ns]:mix_column_off is 0x0, as expected
+#                  950[ns]: generated_word_data = 0x7aed70b9
+#                 1050[ns]:check_subbytes data_in 0x920cdf76a2b1c7de707dde86f7846791, data_out 0x92b1de91a27d67767084dfdef70cc786
+#                 1050[ns]:word_out_comb is 0x7084dfde, as expected
+#                 1050[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                 1050[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1050[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1050[ns]:reg_x_word_store_4 is 0x8dbc323e
+#                 1050[ns]:reg_y_word_store_1 is 0x920cdf76
+#                 1050[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                 1050[ns]:reg_y_word_store_3 is 0x707dde86
+#                 1050[ns]:reg_y_word_store_4 is 0xf7846791
+#                 1050[ns]:reg_flow_cntr is 0x00000008
+#                 1050[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 1050[ns]:word_out_comb is 0x7084dfde, word_out_comb_vld is 0x1
+#                 1050[ns]: data_from_store_regs_1 = 0x920cdf76
+#                 1050[ns]: data_from_store_regs_2 = 0xa2b1c7de
+#                 1050[ns]: data_from_store_regs_3 = 0x707dde86
+#                 1050[ns]: data_from_store_regs_4 = 0xf7846791
+#                 1050[ns]:mix_column_off is 0x0, as expected
+#                 1050[ns]: generated_word_data = 0x5ce3ef25
+#                 1150[ns]:check_subbytes data_in 0x920cdf76a2b1c7de707dde86f7846791, data_out 0x92b1de91a27d67767084dfdef70cc786
+#                 1150[ns]:word_out_comb is 0xf70cc786, as expected
+#                 1150[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                 1150[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1150[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1150[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1150[ns]:reg_y_word_store_1 is 0x920cdf76
+#                 1150[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                 1150[ns]:reg_y_word_store_3 is 0x707dde86
+#                 1150[ns]:reg_y_word_store_4 is 0xf7846791
+#                 1150[ns]:reg_flow_cntr is 0x00000009
+#                 1150[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 1150[ns]:word_out_comb is 0xf70cc786, word_out_comb_vld is 0x1
+#                 1150[ns]: data_from_store_regs_1 = 0x9334b3c4
+#                 1150[ns]: data_from_store_regs_2 = 0x848a94b8
+#                 1150[ns]: data_from_store_regs_3 = 0x7aed70b9
+#                 1150[ns]: data_from_store_regs_4 = 0x5ce3ef25
+#                 1150[ns]:mix_column_off is 0x0, as expected
+#                 1150[ns]: generated_word_data = 0xe8692714
+#                 1250[ns]:check_subbytes data_in 0x9334b3c4848a94b87aed70b95ce3ef25, data_out 0x938a702584edefc47ae3b3b85c3494b9
+#                 1250[ns]:word_out_comb is 0x938a7025, as expected
+#                 1250[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                 1250[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1250[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1250[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1250[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1250[ns]:reg_y_word_store_2 is 0xa2b1c7de
+#                 1250[ns]:reg_y_word_store_3 is 0x707dde86
+#                 1250[ns]:reg_y_word_store_4 is 0xf7846791
+#                 1250[ns]:reg_flow_cntr is 0x0000000a
+#                 1250[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 1250[ns]:word_out_comb is 0x938a7025, word_out_comb_vld is 0x1
+#                 1250[ns]: data_from_store_regs_1 = 0x9334b3c4
+#                 1250[ns]: data_from_store_regs_2 = 0x848a94b8
+#                 1250[ns]: data_from_store_regs_3 = 0x7aed70b9
+#                 1250[ns]: data_from_store_regs_4 = 0x5ce3ef25
+#                 1250[ns]:mix_column_off is 0x0, as expected
+#                 1250[ns]: generated_word_data = 0x4f645f4d
+#                 1350[ns]:check_subbytes data_in 0x9334b3c4848a94b87aed70b95ce3ef25, data_out 0x938a702584edefc47ae3b3b85c3494b9
+#                 1350[ns]:word_out_comb is 0x84edefc4, as expected
+#                 1350[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                 1350[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1350[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1350[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1350[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1350[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1350[ns]:reg_y_word_store_3 is 0x707dde86
+#                 1350[ns]:reg_y_word_store_4 is 0xf7846791
+#                 1350[ns]:reg_flow_cntr is 0x0000000b
+#                 1350[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 1350[ns]:word_out_comb is 0x84edefc4, word_out_comb_vld is 0x1
+#                 1350[ns]: data_from_store_regs_1 = 0x9334b3c4
+#                 1350[ns]: data_from_store_regs_2 = 0x848a94b8
+#                 1350[ns]: data_from_store_regs_3 = 0x7aed70b9
+#                 1350[ns]: data_from_store_regs_4 = 0x5ce3ef25
+#                 1350[ns]:mix_column_off is 0x0, as expected
+#                 1350[ns]: generated_word_data = 0x8125755b
+#                 1450[ns]:check_subbytes data_in 0x9334b3c4848a94b87aed70b95ce3ef25, data_out 0x938a702584edefc47ae3b3b85c3494b9
+#                 1450[ns]:word_out_comb is 0x7ae3b3b8, as expected
+#                 1450[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                 1450[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1450[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1450[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1450[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1450[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1450[ns]:reg_y_word_store_3 is 0x8125755b
+#                 1450[ns]:reg_y_word_store_4 is 0xf7846791
+#                 1450[ns]:reg_flow_cntr is 0x0000000c
+#                 1450[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 1450[ns]:word_out_comb is 0x7ae3b3b8, word_out_comb_vld is 0x1
+#                 1450[ns]: data_from_store_regs_1 = 0x9334b3c4
+#                 1450[ns]: data_from_store_regs_2 = 0x848a94b8
+#                 1450[ns]: data_from_store_regs_3 = 0x7aed70b9
+#                 1450[ns]: data_from_store_regs_4 = 0x5ce3ef25
+#                 1450[ns]:mix_column_off is 0x0, as expected
+#                 1450[ns]: generated_word_data = 0x0a9f400e
+#                 1550[ns]:check_subbytes data_in 0x9334b3c4848a94b87aed70b95ce3ef25, data_out 0x938a702584edefc47ae3b3b85c3494b9
+#                 1550[ns]:word_out_comb is 0x5c3494b9, as expected
+#                 1550[ns]:reg_x_word_store_1 is 0x9334b3c4
+#                 1550[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1550[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1550[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1550[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1550[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1550[ns]:reg_y_word_store_3 is 0x8125755b
+#                 1550[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 1550[ns]:reg_flow_cntr is 0x0000000d
+#                 1550[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 1550[ns]:word_out_comb is 0x5c3494b9, word_out_comb_vld is 0x1
+#                 1550[ns]: data_from_store_regs_1 = 0xe8692714
+#                 1550[ns]: data_from_store_regs_2 = 0x4f645f4d
+#                 1550[ns]: data_from_store_regs_3 = 0x8125755b
+#                 1550[ns]: data_from_store_regs_4 = 0x0a9f400e
+#                 1550[ns]:mix_column_off is 0x0, as expected
+#                 1550[ns]: generated_word_data = 0xd07b8489
+#                 1650[ns]:check_subbytes data_in 0xe86927144f645f4d8125755b0a9f400e, data_out 0xe864750e4f254014819f274d0a695f5b
+#                 1650[ns]:word_out_comb is 0xe864750e, as expected
+#                 1650[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 1650[ns]:reg_x_word_store_2 is 0x848a94b8
+#                 1650[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1650[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1650[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1650[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1650[ns]:reg_y_word_store_3 is 0x8125755b
+#                 1650[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 1650[ns]:reg_flow_cntr is 0x0000000e
+#                 1650[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 1650[ns]:word_out_comb is 0xe864750e, word_out_comb_vld is 0x1
+#                 1650[ns]: data_from_store_regs_1 = 0xe8692714
+#                 1650[ns]: data_from_store_regs_2 = 0x4f645f4d
+#                 1650[ns]: data_from_store_regs_3 = 0x8125755b
+#                 1650[ns]: data_from_store_regs_4 = 0x0a9f400e
+#                 1650[ns]:mix_column_off is 0x0, as expected
+#                 1650[ns]: generated_word_data = 0xe3c7784d
+#                 1750[ns]:check_subbytes data_in 0xe86927144f645f4d8125755b0a9f400e, data_out 0xe864750e4f254014819f274d0a695f5b
+#                 1750[ns]:word_out_comb is 0x4f254014, as expected
+#                 1750[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 1750[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 1750[ns]:reg_x_word_store_3 is 0x7aed70b9
+#                 1750[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1750[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1750[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1750[ns]:reg_y_word_store_3 is 0x8125755b
+#                 1750[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 1750[ns]:reg_flow_cntr is 0x0000000f
+#                 1750[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 1750[ns]:word_out_comb is 0x4f254014, word_out_comb_vld is 0x1
+#                 1750[ns]: data_from_store_regs_1 = 0xe8692714
+#                 1750[ns]: data_from_store_regs_2 = 0x4f645f4d
+#                 1750[ns]: data_from_store_regs_3 = 0x8125755b
+#                 1750[ns]: data_from_store_regs_4 = 0x0a9f400e
+#                 1750[ns]:mix_column_off is 0x0, as expected
+#                 1750[ns]: generated_word_data = 0xc1351683
+#                 1850[ns]:check_subbytes data_in 0xe86927144f645f4d8125755b0a9f400e, data_out 0xe864750e4f254014819f274d0a695f5b
+#                 1850[ns]:word_out_comb is 0x819f274d, as expected
+#                 1850[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 1850[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 1850[ns]:reg_x_word_store_3 is 0xc1351683
+#                 1850[ns]:reg_x_word_store_4 is 0x5ce3ef25
+#                 1850[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1850[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1850[ns]:reg_y_word_store_3 is 0x8125755b
+#                 1850[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 1850[ns]:reg_flow_cntr is 0x00000010
+#                 1850[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 1850[ns]:word_out_comb is 0x819f274d, word_out_comb_vld is 0x1
+#                 1850[ns]: data_from_store_regs_1 = 0xe8692714
+#                 1850[ns]: data_from_store_regs_2 = 0x4f645f4d
+#                 1850[ns]: data_from_store_regs_3 = 0x8125755b
+#                 1850[ns]: data_from_store_regs_4 = 0x0a9f400e
+#                 1850[ns]:mix_column_off is 0x0, as expected
+#                 1850[ns]: generated_word_data = 0xc54f07f3
+#                 1950[ns]:check_subbytes data_in 0xe86927144f645f4d8125755b0a9f400e, data_out 0xe864750e4f254014819f274d0a695f5b
+#                 1950[ns]:word_out_comb is 0x0a695f5b, as expected
+#                 1950[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 1950[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 1950[ns]:reg_x_word_store_3 is 0xc1351683
+#                 1950[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 1950[ns]:reg_y_word_store_1 is 0xe8692714
+#                 1950[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 1950[ns]:reg_y_word_store_3 is 0x8125755b
+#                 1950[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 1950[ns]:reg_flow_cntr is 0x00000011
+#                 1950[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 1950[ns]:word_out_comb is 0x0a695f5b, word_out_comb_vld is 0x1
+#                 1950[ns]: data_from_store_regs_1 = 0xd07b8489
+#                 1950[ns]: data_from_store_regs_2 = 0xe3c7784d
+#                 1950[ns]: data_from_store_regs_3 = 0xc1351683
+#                 1950[ns]: data_from_store_regs_4 = 0xc54f07f3
+#                 1950[ns]:mix_column_off is 0x0, as expected
+#                 1950[ns]: generated_word_data = 0x375c14cc
+#                 2050[ns]:check_subbytes data_in 0xd07b8489e3c7784dc1351683c54f07f3, data_out 0xd0c716f3e3350789c14f844dc57b7883
+#                 2050[ns]:word_out_comb is 0xd0c716f3, as expected
+#                 2050[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 2050[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 2050[ns]:reg_x_word_store_3 is 0xc1351683
+#                 2050[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2050[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2050[ns]:reg_y_word_store_2 is 0x4f645f4d
+#                 2050[ns]:reg_y_word_store_3 is 0x8125755b
+#                 2050[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 2050[ns]:reg_flow_cntr is 0x00000012
+#                 2050[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 2050[ns]:word_out_comb is 0xd0c716f3, word_out_comb_vld is 0x1
+#                 2050[ns]: data_from_store_regs_1 = 0xd07b8489
+#                 2050[ns]: data_from_store_regs_2 = 0xe3c7784d
+#                 2050[ns]: data_from_store_regs_3 = 0xc1351683
+#                 2050[ns]: data_from_store_regs_4 = 0xc54f07f3
+#                 2050[ns]:mix_column_off is 0x0, as expected
+#                 2050[ns]: generated_word_data = 0x919b599d
+#                 2150[ns]:check_subbytes data_in 0xd07b8489e3c7784dc1351683c54f07f3, data_out 0xd0c716f3e3350789c14f844dc57b7883
+#                 2150[ns]:word_out_comb is 0xe3350789, as expected
+#                 2150[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 2150[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 2150[ns]:reg_x_word_store_3 is 0xc1351683
+#                 2150[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2150[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2150[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2150[ns]:reg_y_word_store_3 is 0x8125755b
+#                 2150[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 2150[ns]:reg_flow_cntr is 0x00000013
+#                 2150[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 2150[ns]:word_out_comb is 0xe3350789, word_out_comb_vld is 0x1
+#                 2150[ns]: data_from_store_regs_1 = 0xd07b8489
+#                 2150[ns]: data_from_store_regs_2 = 0xe3c7784d
+#                 2150[ns]: data_from_store_regs_3 = 0xc1351683
+#                 2150[ns]: data_from_store_regs_4 = 0xc54f07f3
+#                 2150[ns]:mix_column_off is 0x0, as expected
+#                 2150[ns]: generated_word_data = 0x90e1a85f
+#                 2250[ns]:check_subbytes data_in 0xd07b8489e3c7784dc1351683c54f07f3, data_out 0xd0c716f3e3350789c14f844dc57b7883
+#                 2250[ns]:word_out_comb is 0xc14f844d, as expected
+#                 2250[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 2250[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 2250[ns]:reg_x_word_store_3 is 0xc1351683
+#                 2250[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2250[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2250[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2250[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2250[ns]:reg_y_word_store_4 is 0x0a9f400e
+#                 2250[ns]:reg_flow_cntr is 0x00000014
+#                 2250[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 2250[ns]:word_out_comb is 0xc14f844d, word_out_comb_vld is 0x1
+#                 2250[ns]: data_from_store_regs_1 = 0xd07b8489
+#                 2250[ns]: data_from_store_regs_2 = 0xe3c7784d
+#                 2250[ns]: data_from_store_regs_3 = 0xc1351683
+#                 2250[ns]: data_from_store_regs_4 = 0xc54f07f3
+#                 2250[ns]:mix_column_off is 0x0, as expected
+#                 2250[ns]: generated_word_data = 0xfbf5bace
+#                 2350[ns]:check_subbytes data_in 0xd07b8489e3c7784dc1351683c54f07f3, data_out 0xd0c716f3e3350789c14f844dc57b7883
+#                 2350[ns]:word_out_comb is 0xc57b7883, as expected
+#                 2350[ns]:reg_x_word_store_1 is 0xd07b8489
+#                 2350[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 2350[ns]:reg_x_word_store_3 is 0xc1351683
+#                 2350[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2350[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2350[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2350[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2350[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2350[ns]:reg_flow_cntr is 0x00000015
+#                 2350[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 2350[ns]:word_out_comb is 0xc57b7883, word_out_comb_vld is 0x1
+#                 2350[ns]: data_from_store_regs_1 = 0x375c14cc
+#                 2350[ns]: data_from_store_regs_2 = 0x919b599d
+#                 2350[ns]: data_from_store_regs_3 = 0x90e1a85f
+#                 2350[ns]: data_from_store_regs_4 = 0xfbf5bace
+#                 2350[ns]:mix_column_off is 0x0, as expected
+#                 2350[ns]: generated_word_data = 0xa6445e0f
+#                 2450[ns]:check_subbytes data_in 0x375c14cc919b599d90e1a85ffbf5bace, data_out 0x379ba8ce91e1bacc90f5149dfb5c595f
+#                 2450[ns]:word_out_comb is 0x379ba8ce, as expected
+#                 2450[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 2450[ns]:reg_x_word_store_2 is 0xe3c7784d
+#                 2450[ns]:reg_x_word_store_3 is 0xc1351683
+#                 2450[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2450[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2450[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2450[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2450[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2450[ns]:reg_flow_cntr is 0x00000016
+#                 2450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 2450[ns]:word_out_comb is 0x379ba8ce, word_out_comb_vld is 0x1
+#                 2450[ns]: data_from_store_regs_1 = 0x375c14cc
+#                 2450[ns]: data_from_store_regs_2 = 0x919b599d
+#                 2450[ns]: data_from_store_regs_3 = 0x90e1a85f
+#                 2450[ns]: data_from_store_regs_4 = 0xfbf5bace
+#                 2450[ns]:mix_column_off is 0x0, as expected
+#                 2450[ns]: generated_word_data = 0xdab542ab
+#                 2550[ns]:check_subbytes data_in 0x375c14cc919b599d90e1a85ffbf5bace, data_out 0x379ba8ce91e1bacc90f5149dfb5c595f
+#                 2550[ns]:word_out_comb is 0x91e1bacc, as expected
+#                 2550[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 2550[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 2550[ns]:reg_x_word_store_3 is 0xc1351683
+#                 2550[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2550[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2550[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2550[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2550[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2550[ns]:reg_flow_cntr is 0x00000017
+#                 2550[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 2550[ns]:word_out_comb is 0x91e1bacc, word_out_comb_vld is 0x1
+#                 2550[ns]: data_from_store_regs_1 = 0x375c14cc
+#                 2550[ns]: data_from_store_regs_2 = 0x919b599d
+#                 2550[ns]: data_from_store_regs_3 = 0x90e1a85f
+#                 2550[ns]: data_from_store_regs_4 = 0xfbf5bace
+#                 2550[ns]:mix_column_off is 0x0, as expected
+#                 2550[ns]: generated_word_data = 0x17400c1f
+#                 2650[ns]:check_subbytes data_in 0x375c14cc919b599d90e1a85ffbf5bace, data_out 0x379ba8ce91e1bacc90f5149dfb5c595f
+#                 2650[ns]:word_out_comb is 0x90f5149d, as expected
+#                 2650[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 2650[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 2650[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 2650[ns]:reg_x_word_store_4 is 0xc54f07f3
+#                 2650[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2650[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2650[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2650[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2650[ns]:reg_flow_cntr is 0x00000018
+#                 2650[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 2650[ns]:word_out_comb is 0x90f5149d, word_out_comb_vld is 0x1
+#                 2650[ns]: data_from_store_regs_1 = 0x375c14cc
+#                 2650[ns]: data_from_store_regs_2 = 0x919b599d
+#                 2650[ns]: data_from_store_regs_3 = 0x90e1a85f
+#                 2650[ns]: data_from_store_regs_4 = 0xfbf5bace
+#                 2650[ns]:mix_column_off is 0x0, as expected
+#                 2650[ns]: generated_word_data = 0x7c0f0bc3
+#                 2750[ns]:check_subbytes data_in 0x375c14cc919b599d90e1a85ffbf5bace, data_out 0x379ba8ce91e1bacc90f5149dfb5c595f
+#                 2750[ns]:word_out_comb is 0xfb5c595f, as expected
+#                 2750[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 2750[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 2750[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 2750[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 2750[ns]:reg_y_word_store_1 is 0x375c14cc
+#                 2750[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2750[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2750[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2750[ns]:reg_flow_cntr is 0x00000019
+#                 2750[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 2750[ns]:word_out_comb is 0xfb5c595f, word_out_comb_vld is 0x1
+#                 2750[ns]: data_from_store_regs_1 = 0xa6445e0f
+#                 2750[ns]: data_from_store_regs_2 = 0xdab542ab
+#                 2750[ns]: data_from_store_regs_3 = 0x17400c1f
+#                 2750[ns]: data_from_store_regs_4 = 0x7c0f0bc3
+#                 2750[ns]:mix_column_off is 0x0, as expected
+#                 2750[ns]: generated_word_data = 0x3b25d729
+#                 2850[ns]:check_subbytes data_in 0xa6445e0fdab542ab17400c1f7c0f0bc3, data_out 0xa6b50cc3da400b0f170f5eab7c44421f
+#                 2850[ns]:word_out_comb is 0xa6b50cc3, as expected
+#                 2850[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 2850[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 2850[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 2850[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 2850[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 2850[ns]:reg_y_word_store_2 is 0x919b599d
+#                 2850[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2850[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2850[ns]:reg_flow_cntr is 0x0000001a
+#                 2850[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 2850[ns]:word_out_comb is 0xa6b50cc3, word_out_comb_vld is 0x1
+#                 2850[ns]: data_from_store_regs_1 = 0xa6445e0f
+#                 2850[ns]: data_from_store_regs_2 = 0xdab542ab
+#                 2850[ns]: data_from_store_regs_3 = 0x17400c1f
+#                 2850[ns]: data_from_store_regs_4 = 0x7c0f0bc3
+#                 2850[ns]:mix_column_off is 0x0, as expected
+#                 2850[ns]: generated_word_data = 0xdaa74d7a
+#                 2950[ns]:check_subbytes data_in 0xa6445e0fdab542ab17400c1f7c0f0bc3, data_out 0xa6b50cc3da400b0f170f5eab7c44421f
+#                 2950[ns]:word_out_comb is 0xda400b0f, as expected
+#                 2950[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 2950[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 2950[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 2950[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 2950[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 2950[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 2950[ns]:reg_y_word_store_3 is 0x90e1a85f
+#                 2950[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 2950[ns]:reg_flow_cntr is 0x0000001b
+#                 2950[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 2950[ns]:word_out_comb is 0xda400b0f, word_out_comb_vld is 0x1
+#                 2950[ns]: data_from_store_regs_1 = 0xa6445e0f
+#                 2950[ns]: data_from_store_regs_2 = 0xdab542ab
+#                 2950[ns]: data_from_store_regs_3 = 0x17400c1f
+#                 2950[ns]: data_from_store_regs_4 = 0x7c0f0bc3
+#                 2950[ns]:mix_column_off is 0x0, as expected
+#                 2950[ns]: generated_word_data = 0xca276973
+#                 3050[ns]:check_subbytes data_in 0xa6445e0fdab542ab17400c1f7c0f0bc3, data_out 0xa6b50cc3da400b0f170f5eab7c44421f
+#                 3050[ns]:word_out_comb is 0x170f5eab, as expected
+#                 3050[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 3050[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 3050[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 3050[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 3050[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 3050[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3050[ns]:reg_y_word_store_3 is 0xca276973
+#                 3050[ns]:reg_y_word_store_4 is 0xfbf5bace
+#                 3050[ns]:reg_flow_cntr is 0x0000001c
+#                 3050[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 3050[ns]:word_out_comb is 0x170f5eab, word_out_comb_vld is 0x1
+#                 3050[ns]: data_from_store_regs_1 = 0xa6445e0f
+#                 3050[ns]: data_from_store_regs_2 = 0xdab542ab
+#                 3050[ns]: data_from_store_regs_3 = 0x17400c1f
+#                 3050[ns]: data_from_store_regs_4 = 0x7c0f0bc3
+#                 3050[ns]:mix_column_off is 0x0, as expected
+#                 3050[ns]: generated_word_data = 0x05494be7
+#                 3150[ns]:check_subbytes data_in 0xa6445e0fdab542ab17400c1f7c0f0bc3, data_out 0xa6b50cc3da400b0f170f5eab7c44421f
+#                 3150[ns]:word_out_comb is 0x7c44421f, as expected
+#                 3150[ns]:reg_x_word_store_1 is 0xa6445e0f
+#                 3150[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 3150[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 3150[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 3150[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 3150[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3150[ns]:reg_y_word_store_3 is 0xca276973
+#                 3150[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3150[ns]:reg_flow_cntr is 0x0000001d
+#                 3150[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 3150[ns]:word_out_comb is 0x7c44421f, word_out_comb_vld is 0x1
+#                 3150[ns]: data_from_store_regs_1 = 0x3b25d729
+#                 3150[ns]: data_from_store_regs_2 = 0xdaa74d7a
+#                 3150[ns]: data_from_store_regs_3 = 0xca276973
+#                 3150[ns]: data_from_store_regs_4 = 0x05494be7
+#                 3150[ns]:mix_column_off is 0x0, as expected
+#                 3150[ns]: generated_word_data = 0xd4007eab
+#                 3250[ns]:check_subbytes data_in 0x3b25d729daa74d7aca27697305494be7, data_out 0x3ba769e7da274b29ca49d77a05254d73
+#                 3250[ns]:word_out_comb is 0x3ba769e7, as expected
+#                 3250[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3250[ns]:reg_x_word_store_2 is 0xdab542ab
+#                 3250[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 3250[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 3250[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 3250[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3250[ns]:reg_y_word_store_3 is 0xca276973
+#                 3250[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3250[ns]:reg_flow_cntr is 0x0000001e
+#                 3250[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 3250[ns]:word_out_comb is 0x3ba769e7, word_out_comb_vld is 0x1
+#                 3250[ns]: data_from_store_regs_1 = 0x3b25d729
+#                 3250[ns]: data_from_store_regs_2 = 0xdaa74d7a
+#                 3250[ns]: data_from_store_regs_3 = 0xca276973
+#                 3250[ns]: data_from_store_regs_4 = 0x05494be7
+#                 3250[ns]:mix_column_off is 0x0, as expected
+#                 3250[ns]: generated_word_data = 0x897e8c73
+#                 3350[ns]:check_subbytes data_in 0x3b25d729daa74d7aca27697305494be7, data_out 0x3ba769e7da274b29ca49d77a05254d73
+#                 3350[ns]:word_out_comb is 0xda274b29, as expected
+#                 3350[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3350[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3350[ns]:reg_x_word_store_3 is 0x17400c1f
+#                 3350[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 3350[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 3350[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3350[ns]:reg_y_word_store_3 is 0xca276973
+#                 3350[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3350[ns]:reg_flow_cntr is 0x0000001f
+#                 3350[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 3350[ns]:word_out_comb is 0xda274b29, word_out_comb_vld is 0x1
+#                 3350[ns]: data_from_store_regs_1 = 0x3b25d729
+#                 3350[ns]: data_from_store_regs_2 = 0xdaa74d7a
+#                 3350[ns]: data_from_store_regs_3 = 0xca276973
+#                 3350[ns]: data_from_store_regs_4 = 0x05494be7
+#                 3350[ns]:mix_column_off is 0x0, as expected
+#                 3350[ns]: generated_word_data = 0x69eab3c4
+#                 3450[ns]:check_subbytes data_in 0x3b25d729daa74d7aca27697305494be7, data_out 0x3ba769e7da274b29ca49d77a05254d73
+#                 3450[ns]:word_out_comb is 0xca49d77a, as expected
+#                 3450[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3450[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3450[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 3450[ns]:reg_x_word_store_4 is 0x7c0f0bc3
+#                 3450[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 3450[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3450[ns]:reg_y_word_store_3 is 0xca276973
+#                 3450[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3450[ns]:reg_flow_cntr is 0x00000020
+#                 3450[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 3450[ns]:word_out_comb is 0xca49d77a, word_out_comb_vld is 0x1
+#                 3450[ns]: data_from_store_regs_1 = 0x3b25d729
+#                 3450[ns]: data_from_store_regs_2 = 0xdaa74d7a
+#                 3450[ns]: data_from_store_regs_3 = 0xca276973
+#                 3450[ns]: data_from_store_regs_4 = 0x05494be7
+#                 3450[ns]:mix_column_off is 0x0, as expected
+#                 3450[ns]: generated_word_data = 0xe799616a
+#                 3550[ns]:check_subbytes data_in 0x3b25d729daa74d7aca27697305494be7, data_out 0x3ba769e7da274b29ca49d77a05254d73
+#                 3550[ns]:word_out_comb is 0x05254d73, as expected
+#                 3550[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3550[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3550[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 3550[ns]:reg_x_word_store_4 is 0xe799616a
+#                 3550[ns]:reg_y_word_store_1 is 0x3b25d729
+#                 3550[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3550[ns]:reg_y_word_store_3 is 0xca276973
+#                 3550[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3550[ns]:reg_flow_cntr is 0x00000021
+#                 3550[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 3550[ns]:word_out_comb is 0x05254d73, word_out_comb_vld is 0x1
+#                 3550[ns]: data_from_store_regs_1 = 0xd4007eab
+#                 3550[ns]: data_from_store_regs_2 = 0x897e8c73
+#                 3550[ns]: data_from_store_regs_3 = 0x69eab3c4
+#                 3550[ns]: data_from_store_regs_4 = 0xe799616a
+#                 3550[ns]:mix_column_off is 0x0, as expected
+#                 3550[ns]: generated_word_data = 0x1cd08777
+#                 3650[ns]:check_subbytes data_in 0xd4007eab897e8c7369eab3c4e799616a, data_out 0xd47eb36a89ea61ab69997e73e7008cc4
+#                 3650[ns]:word_out_comb is 0xd47eb36a, as expected
+#                 3650[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3650[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3650[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 3650[ns]:reg_x_word_store_4 is 0xe799616a
+#                 3650[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 3650[ns]:reg_y_word_store_2 is 0xdaa74d7a
+#                 3650[ns]:reg_y_word_store_3 is 0xca276973
+#                 3650[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3650[ns]:reg_flow_cntr is 0x00000022
+#                 3650[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 3650[ns]:word_out_comb is 0xd47eb36a, word_out_comb_vld is 0x1
+#                 3650[ns]: data_from_store_regs_1 = 0xd4007eab
+#                 3650[ns]: data_from_store_regs_2 = 0x897e8c73
+#                 3650[ns]: data_from_store_regs_3 = 0x69eab3c4
+#                 3650[ns]: data_from_store_regs_4 = 0xe799616a
+#                 3650[ns]:mix_column_off is 0x0, as expected
+#                 3650[ns]: generated_word_data = 0xf26f4d07
+#                 3750[ns]:check_subbytes data_in 0xd4007eab897e8c7369eab3c4e799616a, data_out 0xd47eb36a89ea61ab69997e73e7008cc4
+#                 3750[ns]:word_out_comb is 0x89ea61ab, as expected
+#                 3750[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3750[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3750[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 3750[ns]:reg_x_word_store_4 is 0xe799616a
+#                 3750[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 3750[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 3750[ns]:reg_y_word_store_3 is 0xca276973
+#                 3750[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3750[ns]:reg_flow_cntr is 0x00000023
+#                 3750[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 3750[ns]:word_out_comb is 0x89ea61ab, word_out_comb_vld is 0x1
+#                 3750[ns]: data_from_store_regs_1 = 0xd4007eab
+#                 3750[ns]: data_from_store_regs_2 = 0x897e8c73
+#                 3750[ns]: data_from_store_regs_3 = 0x69eab3c4
+#                 3750[ns]: data_from_store_regs_4 = 0xe799616a
+#                 3750[ns]:mix_column_off is 0x0, as expected
+#                 3750[ns]: generated_word_data = 0xadabd460
+#                 3850[ns]:check_subbytes data_in 0xd4007eab897e8c7369eab3c4e799616a, data_out 0xd47eb36a89ea61ab69997e73e7008cc4
+#                 3850[ns]:word_out_comb is 0x69997e73, as expected
+#                 3850[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3850[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3850[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 3850[ns]:reg_x_word_store_4 is 0xe799616a
+#                 3850[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 3850[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 3850[ns]:reg_y_word_store_3 is 0xadabd460
+#                 3850[ns]:reg_y_word_store_4 is 0x05494be7
+#                 3850[ns]:reg_flow_cntr is 0x00000024
+#                 3850[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 3850[ns]:word_out_comb is 0x69997e73, word_out_comb_vld is 0x1
+#                 3850[ns]: data_from_store_regs_1 = 0xd4007eab
+#                 3850[ns]: data_from_store_regs_2 = 0x897e8c73
+#                 3850[ns]: data_from_store_regs_3 = 0x69eab3c4
+#                 3850[ns]: data_from_store_regs_4 = 0xe799616a
+#                 3850[ns]:mix_column_off is 0x0, as expected
+#                 3850[ns]: generated_word_data = 0x2090f540
+#                 3950[ns]:check_subbytes data_in 0xd4007eab897e8c7369eab3c4e799616a, data_out 0xd47eb36a89ea61ab69997e73e7008cc4
+#                 3950[ns]:word_out_comb is 0xe7008cc4, as expected
+#                 3950[ns]:reg_x_word_store_1 is 0xd4007eab
+#                 3950[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 3950[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 3950[ns]:reg_x_word_store_4 is 0xe799616a
+#                 3950[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 3950[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 3950[ns]:reg_y_word_store_3 is 0xadabd460
+#                 3950[ns]:reg_y_word_store_4 is 0x2090f540
+#                 3950[ns]:reg_flow_cntr is 0x00000025
+#                 3950[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 3950[ns]:word_out_comb is 0xe7008cc4, word_out_comb_vld is 0x1
+#                 3950[ns]: data_from_store_regs_1 = 0x1cd08777
+#                 3950[ns]: data_from_store_regs_2 = 0xf26f4d07
+#                 3950[ns]: data_from_store_regs_3 = 0xadabd460
+#                 3950[ns]: data_from_store_regs_4 = 0x2090f540
+#                 3950[ns]:mix_column_off is 0x0, as expected
+#                 3950[ns]: generated_word_data = 0x7a824c6b
+#                 4050[ns]:check_subbytes data_in 0x1cd08777f26f4d07adabd4602090f540, data_out 0x1c6fd440f2abf577ad90870720d04d60
+#                 4050[ns]:word_out_comb is 0x1c6fd440, as expected
+#                 4050[ns]:reg_x_word_store_1 is 0x7a824c6b
+#                 4050[ns]:reg_x_word_store_2 is 0x897e8c73
+#                 4050[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 4050[ns]:reg_x_word_store_4 is 0xe799616a
+#                 4050[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 4050[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 4050[ns]:reg_y_word_store_3 is 0xadabd460
+#                 4050[ns]:reg_y_word_store_4 is 0x2090f540
+#                 4050[ns]:reg_flow_cntr is 0x00000026
+#                 4050[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 4050[ns]:word_out_comb is 0x1c6fd440, word_out_comb_vld is 0x1
+#                 4050[ns]: data_from_store_regs_1 = 0x1cd08777
+#                 4050[ns]: data_from_store_regs_2 = 0xf26f4d07
+#                 4050[ns]: data_from_store_regs_3 = 0xadabd460
+#                 4050[ns]: data_from_store_regs_4 = 0x2090f540
+#                 4050[ns]:mix_column_off is 0x1, as expected
+#                 4050[ns]: generated_word_data = 0x39943c95
+#                 4150[ns]:check_subbytes data_in 0x1cd08777f26f4d07adabd4602090f540, data_out 0x1c6fd440f2abf577ad90870720d04d60
+#                 4150[ns]:word_out_comb is 0xf2abf577, as expected
+#                 4150[ns]:reg_x_word_store_1 is 0x7a824c6b
+#                 4150[ns]:reg_x_word_store_2 is 0x39943c95
+#                 4150[ns]:reg_x_word_store_3 is 0x69eab3c4
+#                 4150[ns]:reg_x_word_store_4 is 0xe799616a
+#                 4150[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 4150[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 4150[ns]:reg_y_word_store_3 is 0xadabd460
+#                 4150[ns]:reg_y_word_store_4 is 0x2090f540
+#                 4150[ns]:reg_flow_cntr is 0x00000027
+#                 4150[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 4150[ns]:word_out_comb is 0xf2abf577, word_out_comb_vld is 0x1
+#                 4150[ns]: data_from_store_regs_1 = 0x1cd08777
+#                 4150[ns]: data_from_store_regs_2 = 0xf26f4d07
+#                 4150[ns]: data_from_store_regs_3 = 0xadabd460
+#                 4150[ns]: data_from_store_regs_4 = 0x2090f540
+#                 4150[ns]:mix_column_off is 0x1, as expected
+#                 4150[ns]: generated_word_data = 0x16684bf5
+#                 4250[ns]:check_subbytes data_in 0x1cd08777f26f4d07adabd4602090f540, data_out 0x1c6fd440f2abf577ad90870720d04d60
+#                 4250[ns]:word_out_comb is 0xad908707, as expected
+#                 4250[ns]:reg_x_word_store_1 is 0x7a824c6b
+#                 4250[ns]:reg_x_word_store_2 is 0x39943c95
+#                 4250[ns]:reg_x_word_store_3 is 0x16684bf5
+#                 4250[ns]:reg_x_word_store_4 is 0xe799616a
+#                 4250[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 4250[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 4250[ns]:reg_y_word_store_3 is 0xadabd460
+#                 4250[ns]:reg_y_word_store_4 is 0x2090f540
+#                 4250[ns]:reg_flow_cntr is 0x00000028
+#                 4250[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4250[ns]:word_out_comb is 0xad908707, word_out_comb_vld is 0x1
+#                 4250[ns]: data_from_store_regs_1 = 0x1cd08777
+#                 4250[ns]: data_from_store_regs_2 = 0xf26f4d07
+#                 4250[ns]: data_from_store_regs_3 = 0xadabd460
+#                 4250[ns]: data_from_store_regs_4 = 0x2090f540
+#                 4250[ns]:mix_column_off is 0x1, as expected
+#                 4250[ns]: generated_word_data = 0xd7cac42a
+#                 4350[ns]:check_subbytes data_in 0x1cd08777f26f4d07adabd4602090f540, data_out 0x1c6fd440f2abf577ad90870720d04d60
+#                 4350[ns]:word_out_comb is 0x20d04d60, as expected
+#                 4350[ns]:reg_x_word_store_1 is 0x7a824c6b
+#                 4350[ns]:reg_x_word_store_2 is 0x39943c95
+#                 4350[ns]:reg_x_word_store_3 is 0x16684bf5
+#                 4350[ns]:reg_x_word_store_4 is 0xd7cac42a
+#                 4350[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 4350[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 4350[ns]:reg_y_word_store_3 is 0xadabd460
+#                 4350[ns]:reg_y_word_store_4 is 0x2090f540
+#                 4350[ns]:reg_flow_cntr is 0x00000000
+#                 4350[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4350[ns]:word_out_comb is 0x20d04d60, word_out_comb_vld is 0x1
+#                 4350[ns]: data_from_store_regs_1 = 0x1cd08777
+#                 4350[ns]: data_from_store_regs_2 = 0xf26f4d07
+#                 4350[ns]: data_from_store_regs_3 = 0xadabd460
+#                 4350[ns]: data_from_store_regs_4 = 0x2090f540
+#                 4350[ns]:mix_column_off is 0x1, as expected
+#                 4350[ns]: generated_word_data = 0xc3182098
+#                 4450[ns]:reg_x_word_store_1 is 0x7a824c6b
+#                 4450[ns]:reg_x_word_store_2 is 0x39943c95
+#                 4450[ns]:reg_x_word_store_3 is 0x16684bf5
+#                 4450[ns]:reg_x_word_store_4 is 0xc3182098
+#                 4450[ns]:reg_y_word_store_1 is 0x1cd08777
+#                 4450[ns]:reg_y_word_store_2 is 0xf26f4d07
+#                 4450[ns]:reg_y_word_store_3 is 0xadabd460
+#                 4450[ns]:reg_y_word_store_4 is 0x2090f540
+#                 4450[ns]:reg_flow_cntr is 0x00000000
+#                 4450[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4450[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                 4450[ns]: data_from_store_regs_1 = 0x1cd08777
+#                 4450[ns]: data_from_store_regs_2 = 0xf26f4d07
+#                 4450[ns]: data_from_store_regs_3 = 0xadabd460
+#                 4450[ns]: data_from_store_regs_4 = 0x2090f540
+#                 4450[ns]:data_out is 0x7a824c6b39943c9516684bf5e799616a, data_out_vld is 0x1
+#                 4450[ns]: [ERROR] actual data_out 0x7a824c6b39943c9516684bf5e799616a and predicted block_data_out 0x39943c9516684
+--- changed ----
+data_out <= {reg_x_word_store_1,reg_x_word_store_2,reg_x_word_store_3,word_in_comb_4};
+---- to -------
+data_out <= {reg_x_word_store_1,reg_x_word_store_2,reg_x_word_store_3,word_in_comb};

@@ -1,0 +1,33 @@
+*Verification goal - ensure full conformance with specification - microarchitecture in your case.
+*Verification is complete when 100% coverage is reached as defined.
+
+From SVTB_2005.06_SG.pdf - DUT used is a router.v
+
+1. Create verilog test harness file 
+	###test_top.v### - create a module
+		Define all signals as wires
+		instansiate the module (router dut(...);)
+		Loop the clock
+2. Create interface file
+	###router.if.sv#### - create a interface
+		copy all wire signals and copy them to the interface
+		change all wires to logic
+		move clock to be a input logic clock
+	2.1 By default all signals in interfaces are asynchrous (not dependent on the clock)
+		they all should be made clocking using the clocking block and then connected to the test using modport.
+
+3. Create testbench - it is encapsulated in program block. If program is automatic, it means that new spawns of program are created and they are dynamically alocated to the stack - so that multiple invocations of same program do not see each other values.
+	3.1 - inital block in the program should contain all the tasks for driving and resets for the DUT.
+	##1 defines number of clock.
+
+	3.2 to sample the values just = is used
+		data[1] = router.cd.dout
+
+4. Remove all wires from the test_top.v and change extension to the .sv file.
+	4.1 Instansiate the the interface and the test program in the test_top.
+	4.1 Ipdate the DUT instaniation information so that it uses interface not the wires.
+
+5. Compile and simulate.
+6. USe seed in order to create seed ? read on questasim seeds to do that.
+------------
+Verilog execution queue during the simulations is as follows - blocking assigments =, continous assigments, $display - in any order, then onlny LHS update of nonblocking assigments (<=). So try to use $strobe to get the actual data in in the end.

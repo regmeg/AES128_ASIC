@@ -2,7 +2,7 @@
 
 module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_exp_sbox_data_vld,key_exp_sbox_data,seed_key,seed_key_vld,rnd_word_key_val,rnd_word_key_val_vld,key_available,key_exp_val_vld,key_exp_val);
 
-// I/O signals
+//define I/O signals
 	input 											 clk;
 	input 											 reset;
 	input [`SEED_KEY_WIDTH-1:0]  key_in;
@@ -41,11 +41,10 @@ module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_ex
 	reg 											 key_available;
 	reg 											 rnd_word_key_val_vld;
 	reg [`WORD_DATA_WIDTH-1:0] rnd_word_key_val;
+	reg 											 key_exp_val_vld;
 	reg [`WORD_DATA_WIDTH-1:0] key_exp_val;
 
-//Valids
-	assign key_exp_val_vld = rnd_word_key_val_vld;
-	
+//set all the register to store all zeros, once negedge of reset comes in.
 	always @(negedge reset) begin
 		reg_seed_key_1				<= {`WORD_DATA_WIDTH{1'b0}};
 		reg_seed_key_2        <= {`WORD_DATA_WIDTH{1'b0}};
@@ -58,27 +57,23 @@ module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_ex
 		reg_key_expn          <= {`WORD_DATA_WIDTH{1'b0}};
 	end
 
-	//Wait for KEY_IN_VLD signal and save the seed key into the seed_key regs and as well in round key regs for and issue key_available
+//Wait for KEY_IN_VLD signal and save the seed key into the seed_key regs and as well in round key regs for and issue key_available
 	always @(posedge clk) begin
 		if (key_in_vld) begin
-			reg_seed_key_1        <= seed_key[`FIRST_WRD ];
-			reg_seed_key_2        <= seed_key[`SECOND_WRD];
-			reg_seed_key_3        <= seed_key[`THIRD_WRD ];
-			reg_seed_key_4        <= seed_key[`FOURTH_WRD];
-			reg_round_key_words_1 <= seed_key[`FIRST_WRD ];
-			reg_round_key_words_2 <= seed_key[`SECOND_WRD];
-			reg_round_key_words_3 <= seed_key[`THIRD_WRD ];
-			reg_round_key_words_4 <= seed_key[`FOURTH_WRD];
+			reg_seed_key_1        <= key_in[`FIRST_WRD ];
+			reg_seed_key_2        <= key_in[`SECOND_WRD];
+			reg_seed_key_3        <= key_in[`THIRD_WRD ];
+			reg_seed_key_4        <= key_in[`FOURTH_WRD];
+			reg_round_key_words_1 <= key_in[`FIRST_WRD ];
+			reg_round_key_words_2 <= key_in[`SECOND_WRD];
+			reg_round_key_words_3 <= key_in[`THIRD_WRD ];
+			reg_round_key_words_4 <= key_in[`FOURTH_WRD];
 			key_available 				<= 1'b1;
 		end else begin
 			key_available 				<= 1'b0;
 		end
 	end
 	
-
-	always @* begin
-
-	end
 	
 	//Once RND_KEY_GEN signal goes high, start generating round keys, so that they can be used in all encryption rounds
 	always @* begin
@@ -87,16 +82,15 @@ module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_ex
 		if (rnd_key_gen) begin
 			rnd_word_key_val_vld = 1'b1;
 			case (reg_key_expn[`KEY_EXPN_CNTR_CYCLES])
+			// For the first word of the key schedule perform xor of previous value [w-4] with rotworded, subbyted and xored with rcon of the previous value of key schedule [w-1], as defined in the standart.
 				2'b00 : 
 					begin
-						rnd_word_key_val = reg_round_key_words_1 ^ (subWord(RotWord(reg_round_key_words_4)) ^ {Rcon(reg_key_expn[`KEY_EXPN_CNTR_RCON_CYCLES]),{24{1'b0}}} ); 
+						key_exp_val_vld = 1'b1;
+						key_exp_val  = RotWord(reg_round_key_words_4);
+						rnd_word_key_val = reg_round_key_words_1 ^ ( key_exp_sbox_data ^ {Rcon(reg_key_expn[`KEY_EXPN_CNTR_RCON_CYCLES]),{24{1'b0}}} ); 
 							//Drive the key_expansion values to the sbox lut
-						if (key_exp_val_vld) begin
-							key_exp_val = reg_round_key_words_4;
-						end else begin
-							key_exp_val = {`WORD_DATA_WIDTH{1'b0}};
-						end
 					end
+			// For the rest of the cases xor previous value [w-4] of the word, with previous value of key schedule [w-1]
 				2'b01 : rnd_word_key_val = reg_round_key_words_2 ^ reg_round_key_words_1;
 				2'b10 : rnd_word_key_val = reg_round_key_words_3 ^ reg_round_key_words_2;
 				2'b11 : rnd_word_key_val = reg_round_key_words_4 ^ reg_round_key_words_3;
@@ -113,6 +107,7 @@ module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_ex
 				reg_key_expn[`KEY_EXPN_CNTR_RCON_CYCLES] <= reg_key_expn[`KEY_EXPN_CNTR_RCON_CYCLES] + 1'b1;
 			end
 			
+			//save the  output value in the regs, so that they can be used for generation of the next keys.
 			case (reg_key_expn[`KEY_EXPN_CNTR_CYCLES])
 				2'b00 : reg_round_key_words_1 <= rnd_word_key_val;
 				2'b01 : reg_round_key_words_2 <= rnd_word_key_val;
@@ -132,7 +127,7 @@ module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_ex
 		end
 	end
 	
-	//Once rnd_key_gen goes high and counter is at z, issue the seed key.
+	//Once rnd_key_gen goes high, issue the seed key.
 	always @* begin
 		seed_key_vld = 1'b0;
 		seed_key		 = {`SEED_KEY_WIDTH{1'b0}};
@@ -142,28 +137,20 @@ module key_expansion (clk,reset,key_in,key_in_vld,rnd_key_gen,data_in_vld,key_ex
 		end
 	end
 	
-	//Implement subWord by passing data into sbox module
-	function [`WORD_DATA_WIDTH-1:0] subWord;
-		input [`WORD_DATA_WIDTH-1:0] round_key_word;
-		begin
-			if (key_exp_sbox_data_vld) begin
-					subWord = key_exp_sbox_data;
-			end else begin
-					subWord = {`WORD_DATA_WIDTH{1'b0}};
-			end
-		end
-	endfunction
-	
+	//Implement the rot word function, by simply shifting bytes to the left by one place.
 	function [`WORD_DATA_WIDTH-1:0] RotWord;
 		input [`WORD_DATA_WIDTH-1:0] round_key_word;
 		begin
-			RotWord[`FIRST_WRD_BYTE]  = round_key_word[`SECOND_WRD_BYTE];
-			RotWord[`SECOND_WRD_BYTE] = round_key_word[`THIRD_WRD_BYTE];
-			RotWord[`THIRD_WRD_BYTE]  = round_key_word[`FOURTH_WRD_BYTE];
-			RotWord[`FOURTH_WRD_BYTE] = round_key_word[`FIRST_WRD_BYTE];
+
+			RotWord[`FIRST_WRD_BYTE]  = round_key_word[`FOURTH_WRD_BYTE];
+			RotWord[`SECOND_WRD_BYTE] = round_key_word[`FIRST_WRD_BYTE];
+			RotWord[`THIRD_WRD_BYTE]  = round_key_word[`SECOND_WRD_BYTE];
+			RotWord[`FOURTH_WRD_BYTE] = round_key_word[`THIRD_WRD_BYTE];
+
 		end
 	endfunction
 	
+	//generate rcon bytes, as defined in the standart
 	function [7:0] Rcon;
 		input [`KEY_EXPN_CNTR_RCON_WIDTH-1 : 0] counter_cycle;
 		begin

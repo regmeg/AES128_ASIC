@@ -1,0 +1,88 @@
+Verication Plan - 
+	*Using DPI - for everything except flow cntrl.
+	* comp.ist.utl.pt/ec-csc/Code/Ciphers/AES_Encrypt.cpp
+	*Do not forget about plusargs and seed based system.
+	*dont forget the chip reset
+	*dont forget to fill in the values for the subbytes and keyvalues
+	*checkers off on, defines, same for all other compilations.
+
+##########
+Flow CNTRL
+##########
+**What checker should check:
+	-reset
+	-DATA_ACCEPT is issued after key available or on the last counter cycle
+	-After BLOCK_DATA_IN , reg_x_word_store stores a value and issues RND_KEY_GEN
+	-Cycle later data is forwared into combinational logic in shift rows manner.
+	-The output is correct after one stage of sub_bytes; mix_column and stored in one of reg_y_word_store registers - transactional model using DPI
+	-The switching between x and y registers works
+
+	//still to check
+	//data is stored correctly
+	//-Counter is working and reseting properly.
+	//-MIX collumns is swtiched off on the last encryption cycle (penultimate encryption cycle - 0x24)
+	-After last encryption to data out is high and holds the right value - RND_KEY_GEN is killed.
+
+**What should be surrounding the DUT:
+	Driver - drives the inputs block data 
+	Transactional model of the comb logic - using DPI - how to do that - is there is a point to that ? you will see when you start coding.
+	Checker - check the functioonality decribed above. 
+** How testing works -
+	No need to check for all values of DATA in or key values - it is irrelevant. - Just couple of tests with random values.	
+
+#######
+Key exapnsion
+########
+**What checker should check:
+	-After KEY_IN_VLD, two coppies of the key from KEY_IN are stored in REG_SEED_KEY_{1,2,3,4} and REG_ROUND_KEY_WORDS_{1,2,3,4} - the same cycle issue KEY_AVAILABLE signal.
+	- Once data_in_valid goes high seed key is going to be issued into block_wide_add_rnd_key.
+	-Once RND_KEY_GEN  goes high, new round key are being generated - use dpi to check - and is output to the right signal - check your luck at first, then do some more complex debugging if it does not work.
+	-Counter is renewed every 4 cycles
+	- each four cycles four new different words of the new rounds keys are expanded - use dpi to check.
+	-once the tenth encryption cycle is hit, the key expansion stops, due to RND_KEY_GEN low.
+	- instantiate sbox for this module, it has been already verified, hence it can be used.
+
+**What should be surrounding the DUT:
+	Driver - drives the inputs - key data. 
+	Transactional model of the flow_cntrl
+** How testing works -
+	Key should be checked for all values- make tests with ranges and create coverage - no need to do that straight away - as the complete coverage is going to be hit only for top tests.
+
+#######################
+Block wide add rnd key
+#######################
+	- Just a test bench with keys and data in - check output via the dpi.
+	- It is all combinational.
+	- No need for coverage at this stage - just launch certain ranges.
+	- do not forget the seed values
+
+##########
+Sub bytes
+##########
+	-check reset
+	-check sbox tables writing
+	-check the subbyt operation through the dpi
+	-check sub_Bbytes on the block data
+	-check subbytes on the key data.
+	-sbox_available - check that is works
+	- check your luck - if it is not working
+	- just certain ranges - no need for coverage
+	- dont forget to program the sbox table.
+	- do not forget the seed values
+
+############
+mix columns
+###########
+	-check the mix columns operation through the dpi
+	- check your luck - if it is not working
+	- just certain ranges - no need for coverage
+	- check mix_columns off signal
+	- do not forget the seed values
+
+######################
+word_wide_add_rnd_key
+#####################
+	- Just a test bench with keys and data in - check output via the dpi.
+	- It is all combinational.
+	- No need for coverage at this stage - just launch certain ranges.
+	- do not forget the seed values

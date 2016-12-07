@@ -1,0 +1,179 @@
+# vsim -do {run -all} -c -sv_seed 1502356462 -sv_lib aes flow_cntr_test_top 
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.flow_cntr_test_top(fast)
+# Loading work.flow_cntr_test(fast)
+# Loading work.flow_cntr(fast)
+# ** Warning: (vsim-PLI-3691) flow_cntr_test_top.sv(33): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /flow_cntr_test_top
+# Loading ./aes.so
+# run -all 
+# ** Error: (vsim-PLI-3107) flow_cntr_test_top.sv(32): $dumpports : File "test.vcd" is already in use.
+#         Region: /flow_cntr_test_top
+#                    0[ns]: reset - 0x1
+#                   30[ns]: reset - 0x0, should have reset triggered
+#                   50[ns]:reg_x_word_store_1 is 0x00000000
+#                   50[ns]:reg_x_word_store_2 is 0x00000000
+#                   50[ns]:reg_x_word_store_3 is 0x00000000
+#                   50[ns]:reg_x_word_store_4 is 0x00000000
+#                   50[ns]:reg_y_word_store_1 is 0x00000000
+#                   50[ns]:reg_y_word_store_2 is 0x00000000
+#                   50[ns]:reg_y_word_store_3 is 0x00000000
+#                   50[ns]:reg_y_word_store_4 is 0x00000000
+#                   50[ns]:reg_flow_cntr is 0x00000000
+#                   50[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                   50[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                   50[ns]: data_from_store_regs_1 = 0x00000000
+#                   50[ns]: data_from_store_regs_2 = 0x00000000
+#                   50[ns]: data_from_store_regs_3 = 0x00000000
+#                   50[ns]: data_from_store_regs_4 = 0x00000000
+#                  150[ns]:data_accep = 0x1, as expected
+#                  250[ns]:data_accep = 0x0, as expected
+#                  250[ns]: generated_data = 0x8de3f4fb49a6b087a23b64f8ccbba838
+#                  250[ns]:reg_x_word_store_1 is 0x00000000
+#                  250[ns]:reg_x_word_store_2 is 0x00000000
+#                  250[ns]:reg_x_word_store_3 is 0x00000000
+#                  250[ns]:reg_x_word_store_4 is 0x00000000
+#                  250[ns]:reg_y_word_store_1 is 0x00000000
+#                  250[ns]:reg_y_word_store_2 is 0x00000000
+#                  250[ns]:reg_y_word_store_3 is 0x00000000
+#                  250[ns]:reg_y_word_store_4 is 0x00000000
+#                  250[ns]:reg_flow_cntr is 0x00000000
+#                  250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                  250[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  250[ns]: data_from_store_regs_1 = 0x00000000
+#                  250[ns]: data_from_store_regs_2 = 0x00000000
+#                  250[ns]: data_from_store_regs_3 = 0x00000000
+#                  250[ns]: data_from_store_regs_4 = 0x00000000
+# i am first counter                 450[ns]:reg_x_word_store_1 is 0x8de3f4fb
+#                  450[ns]:reg_x_word_store_2 is 0x49a6b087
+#                  450[ns]:reg_x_word_store_3 is 0xa23b64f8
+#                  450[ns]:reg_x_word_store_4 is 0xccbba838
+#                  450[ns]:reg_y_word_store_1 is 0x00000000
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x0, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0xa83b49fb, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0x8de3f4fb
+#                  450[ns]: data_from_store_regs_2 = 0x49a6b087
+#                  450[ns]: data_from_store_regs_3 = 0xa23b64f8
+#                  450[ns]: data_from_store_regs_4 = 0xccbba838
+#                  450[ns]:reg_x_word_store_1 is 0x8de3f4fb
+#                  450[ns]:reg_x_word_store_1 is 0x49a6b087
+#                  450[ns]:reg_x_word_store_3 is 0xa23b64f8
+#                  450[ns]:reg_x_word_store_4 is 0xccbba838
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  8d  e3  f4  fb  49  a6  b0  87  a2  3b  64  f8  cc  bb  a8  38 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  8d  a6  64  38  49  3b  a8  fb  a2  bb  f4  87  cc  e3  b0  f8 
+# check_subbytes data_in 0x8de3f4fb49a6b087a23b64f8ccbba838, data_out 0x8da66438493ba8fba2bbf487cce3b0f8
+#                  450[ns]: [ERROR] word_out_comb after subbytes is a83b49fb0, but should be 8da664380
+#                  550[ns]:reg_x_word_store_1 is 0x8de3f4fb
+#                  550[ns]:reg_x_word_store_2 is 0x49a6b087
+#                  550[ns]:reg_x_word_store_3 is 0xa23b64f8
+#                  550[ns]:reg_x_word_store_4 is 0xccbba838
+#                  550[ns]:reg_y_word_store_1 is 0x00000000
+#                  550[ns]:reg_y_word_store_2 is 0x00000000
+#                  550[ns]:reg_y_word_store_3 is 0x00000000
+#                  550[ns]:reg_y_word_store_4 is 0x00000000
+#                  550[ns]:reg_flow_cntr is 0x00000002
+#                  550[ns]: counter_on = 0x0, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  550[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  550[ns]: data_from_store_regs_1 = 0x8de3f4fb
+#                  550[ns]: data_from_store_regs_2 = 0x49a6b087
+#                  550[ns]: data_from_store_regs_3 = 0xa23b64f8
+#                  550[ns]: data_from_store_regs_4 = 0xccbba838
+# ** Note: $finish    : flow_cntr_tb.sv(223)
+#    Time: 550 ns  Iteration: 1  Instance: /flow_cntr_test_top/flow_cntr_test
+------------
+changed 
+-----------
+
+		if      ((input_cycle == 2'h1) && counter_on) begin
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_1[`FIRST_WRD_BYTE ];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_2[`FOURTH_WRD_BYTE];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_3[`THIRD_WRD_BYTE ];
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_4[`SECOND_WRD_BYTE];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am first counter");
+		end
+			//Send second word with applied shift_rows
+		else if ((input_cycle == 2'h2)  && counter_on) begin
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_1[`SECOND_WRD_BYTE];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_2[`FIRST_WRD_BYTE ];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_3[`FOURTH_WRD_BYTE];
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_4[`THIRD_WRD_BYTE ];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am second counter");
+		end
+			//Send third word with applied shift_rows
+		else if ((input_cycle == 2'h3)  && counter_on) begin
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_1[`THIRD_WRD_BYTE ];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_2[`SECOND_WRD_BYTE];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_3[`FIRST_WRD_BYTE ];
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_4[`FOURTH_WRD_BYTE];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am third counter");
+		end
+			//Send fourth word with applied shift_rows
+		else if ((input_cycle == 2'h0)  && counter_on) begin
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_1[`FOURTH_WRD_BYTE];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_2[`THIRD_WRD_BYTE ];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_3[`SECOND_WRD_BYTE];
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_4[`FIRST_WRD_BYTE ];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am fourth counter");
+		end
+		
+		
+----------
+to
+---------
+
+		if      ((input_cycle == 2'h1) && counter_on) begin
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_1[`FOURTH_WRD_BYTE];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_2[`THIRD_WRD_BYTE ];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_3[`SECOND_WRD_BYTE];
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_4[`FIRST_WRD_BYTE ];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am first counter");
+		end
+			//Send second word with applied shift_rows
+		else if ((input_cycle == 2'h2)  && counter_on) begin
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_2[`FOURTH_WRD_BYTE];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_3[`THIRD_WRD_BYTE ];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_4[`SECOND_WRD_BYTE];
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_1[`FIRST_WRD_BYTE ];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am second counter");
+		end
+			//Send third word with applied shift_rows
+		else if ((input_cycle == 2'h3)  && counter_on) begin
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_3[`FOURTH_WRD_BYTE];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_4[`THIRD_WRD_BYTE ];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_1[`SECOND_WRD_BYTE];
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_2[`FIRST_WRD_BYTE ];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am third counter");
+		end
+			//Send fourth word with applied shift_rows
+		else if ((input_cycle == 2'h0)  && counter_on) begin
+			word_out_comb[`FOURTH_WRD_BYTE] = data_from_store_regs_4[`FOURTH_WRD_BYTE];
+			word_out_comb[`THIRD_WRD_BYTE ] = data_from_store_regs_1[`THIRD_WRD_BYTE ];
+			word_out_comb[`SECOND_WRD_BYTE] = data_from_store_regs_2[`SECOND_WRD_BYTE];
+			word_out_comb[`FIRST_WRD_BYTE ] = data_from_store_regs_3[`FIRST_WRD_BYTE ];
+			//word_out_comb_vld = 1'b1;
+			$write ("i am fourth counter");
+		end
+	end

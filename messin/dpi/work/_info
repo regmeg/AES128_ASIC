@@ -1,0 +1,41 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/user/final_year_project/asic_project/messin/dpi
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1436535405
+VnM9G0lIje[<DZ;PIEE95C2
+04 8 4 work switches fast 0
+=1-24b6fdfd2b29-559fca6d-63c9d-7472
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.2c;57
+vswitches
+DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+IQPVaA<kQU50oCJIo]NK[I3
+V`JN@9S9cnhjKRR_L]QIcM3
+S1
+Z1 d/home/user/final_year_project/asic_project/messin/dpi
+w1436535365
+8dpi_test_2.sv
+Fdpi_test_2.sv
+L0 1
+OL;L;10.2c;57
+r1
+31
+o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s105 dpi_test_2_sv_unit
+!s90 dpi_test_2.sv|
+!s110 1436535398
+!i10b 1
+!s100 V>Y4N`RG]CZozoPUcZeWL3
+!s85 0
+!s108 1436535398.655387
+!s107 dpi_test_2.sv|
+!i111 0

@@ -1,0 +1,5 @@
+# vsim -do {log -r /*; run -all} -c -sv_seed 2104639016 -wlf run1.wlf -sv_lib aes subbytes_test_top 
+# ** Error: (vsim-3763) SystemVerilog DPI cannot access file './aes.so'
+# No such file or directory. (errno = ENOENT)
+# Use the -help option for complete vsim usage.
+# Error loading design

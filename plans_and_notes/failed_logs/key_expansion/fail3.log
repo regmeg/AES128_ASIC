@@ -1,0 +1,608 @@
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes key_expansion_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: key_expansion_tb.sv(78): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.key_expansion_test_top(fast)
+# Loading work.key_expansion_test(fast)
+# Loading work.subbytes_test(fast)
+# ** Warning: (vsim-PLI-3691) key_expansion_test_top.sv(60): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /key_expansion_test_top
+# Loading ./aes.so
+# Sv_Seed = 776101995
+# run -all 
+#                    0[ns]: key_expansion reset - 0x1
+#                    0[ns]: Sbox reset - 0x1
+#                   30[ns]: key_expansion reset - 0x0, should have reset triggered
+#                   30[ns]: Sbox reset - 0x0, should have reset triggered
+#                   50[ns]: sbox_data = 0x16bb54b00f2d99416842e6bf0d89a18cdf2855cee9871e9b948ed9691198f8e19e1dc186b95735610ef6034866b53e708a8bbd4b1f74dde8c6b4a61c2e2578ba08ae7a65eaf4566ca94ed58d6d37c8e779e4959162acd3c25c2406490a3a32e0db0b5ede14b8ee4688902a22dc4f816073195d643d7ea7c41744975fec130ccdd2f3ff1021dab6bcf5389d928f40a351a89f3c507f02f94585334d43fbaaefd0cf584c4a39becb6a5bb1fc20ed00d153842fe329b3d63b52a05a6e1b1a2c830975b227ebe28012079a059618c323c7041531d871f1e5a534ccf73f362693fdb7c072a49cafa2d4adf04759fa7dc982ca76abd7fe2b670130c56f6bf27b777c63, writing to the sbox lut tables
+#                   50[ns]:reg_seed_key_1 is 0x00000000
+#                   50[ns]:reg_seed_key_2 is 0x00000000
+#                   50[ns]:reg_seed_key_3 is 0x00000000
+#                   50[ns]:reg_seed_key_4 is 0x00000000
+#                   50[ns]:reg_round_key_words_1 is 0x00000000
+#                   50[ns]:reg_round_key_words_2 is 0x00000000
+#                   50[ns]:reg_round_key_words_3 is 0x00000000
+#                   50[ns]:reg_round_key_words_4 is 0x00000000
+#                   50[ns]:reg_key_expn is 0x00000000
+#                   50[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                  150[ns]: generated_seed_key = 0x8e8e695e302a87a07853b6d074049875
+#                  150[ns]: C model key_schedule[000] = 0x8e8e695e
+#                  150[ns]: C model key_schedule[001] = 0x302a87a0
+#                  150[ns]: C model key_schedule[002] = 0x7853b6d0
+#                  150[ns]: C model key_schedule[003] = 0x74049875
+#                  150[ns]: C model key_schedule[004] = 0x7dc8f4cc
+#                  150[ns]: C model key_schedule[005] = 0x4de2736c
+#                  150[ns]: C model key_schedule[006] = 0x35b1c5bc
+#                  150[ns]: C model key_schedule[007] = 0x41b55dc9
+#                  150[ns]: C model key_schedule[008] = 0x69dee24f
+#                  150[ns]: C model key_schedule[009] = 0x243c9123
+#                  150[ns]: C model key_schedule[010] = 0x118d549f
+#                  150[ns]: C model key_schedule[011] = 0x50380956
+#                  150[ns]: C model key_schedule[012] = 0x6adf531c
+#                  150[ns]: C model key_schedule[013] = 0x4ee3c23f
+#                  150[ns]: C model key_schedule[014] = 0x5f6e96a0
+#                  150[ns]: C model key_schedule[015] = 0x0f569ff6
+#                  150[ns]: C model key_schedule[016] = 0xd304116a
+#                  150[ns]: C model key_schedule[017] = 0x9de7d355
+#                  150[ns]: C model key_schedule[018] = 0xc28945f5
+#                  150[ns]: C model key_schedule[019] = 0xcddfda03
+#                  150[ns]: C model key_schedule[020] = 0x5d536ad7
+#                  150[ns]: C model key_schedule[021] = 0xc0b4b982
+#                  150[ns]: C model key_schedule[022] = 0x023dfc77
+#                  150[ns]: C model key_schedule[023] = 0xcfe22674
+#                  150[ns]: C model key_schedule[024] = 0x6b457c5d
+#                  150[ns]: C model key_schedule[025] = 0xabf1c5df
+#                  150[ns]: C model key_schedule[026] = 0xa9cc39a8
+#                  150[ns]: C model key_schedule[027] = 0x662e1fdc
+#                  150[ns]: C model key_schedule[028] = 0x1a85fa6e
+#                  150[ns]: C model key_schedule[029] = 0xb1743fb1
+#                  150[ns]: C model key_schedule[030] = 0x18b80619
+#                  150[ns]: C model key_schedule[031] = 0x7e9619c5
+#                  150[ns]: C model key_schedule[032] = 0x0a515c9d
+#                  150[ns]: C model key_schedule[033] = 0xbb25632c
+#                  150[ns]: C model key_schedule[034] = 0xa39d6535
+#                  150[ns]: C model key_schedule[035] = 0xdd0b7cf0
+#                  150[ns]: C model key_schedule[036] = 0x3a41d05c
+#                  150[ns]: C model key_schedule[037] = 0x8164b370
+#                  150[ns]: C model key_schedule[038] = 0x22f9d645
+#                  150[ns]: C model key_schedule[039] = 0xfff2aab5
+#                  150[ns]: C model key_schedule[040] = 0x1a57c64a
+#                  150[ns]: C model key_schedule[041] = 0x9b33753a
+#                  150[ns]: C model key_schedule[042] = 0xb9caa37f
+#                  150[ns]: C model key_schedule[043] = 0x463809ca
+#                  350[ns]: Key_expansion seed key output 0x8e8e695e302a87a07853b6d074049875 and input seed key 0x8e8e695e302a87a07853b6d074049875 do match
+#                  350[ns]: seed_key_vld is 1'b1, as it should be
+#                  350[ns]: key_available is 1'b1, as it should be
+#                  350[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  350[ns]:reg_seed_key_2 is 0x302a87a0
+#                  350[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  350[ns]:reg_seed_key_4 is 0x74049875
+#                  350[ns]:reg_round_key_words_1 is 0x8e8e695e
+#                  350[ns]:reg_round_key_words_2 is 0x302a87a0
+#                  350[ns]:reg_round_key_words_3 is 0x7853b6d0
+#                  350[ns]:reg_round_key_words_4 is 0x74049875
+#                  350[ns]:reg_key_expn is 0x00000000
+#                  350[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                  450[ns]: [ERROR] the rnd_word_key_val key output 0x8f8e695e and c model round_key[          4] 0x7dc8f4cc do not match
+#                  450[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                  450[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  450[ns]:reg_seed_key_2 is 0x302a87a0
+#                  450[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  450[ns]:reg_seed_key_4 is 0x74049875
+#                  450[ns]:reg_round_key_words_1 is 0x8f8e695e
+#                  450[ns]:reg_round_key_words_2 is 0x302a87a0
+#                  450[ns]:reg_round_key_words_3 is 0x7853b6d0
+#                  450[ns]:reg_round_key_words_4 is 0x74049875
+#                  450[ns]:reg_key_expn is 0x00000001
+#                  450[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                  550[ns]: [ERROR] the rnd_word_key_val key output 0xbfa4eefe and c model round_key[          5] 0x4de2736c do not match
+#                  550[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                  550[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  550[ns]:reg_seed_key_2 is 0x302a87a0
+#                  550[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  550[ns]:reg_seed_key_4 is 0x74049875
+#                  550[ns]:reg_round_key_words_1 is 0x8f8e695e
+#                  550[ns]:reg_round_key_words_2 is 0xbfa4eefe
+#                  550[ns]:reg_round_key_words_3 is 0x7853b6d0
+#                  550[ns]:reg_round_key_words_4 is 0x74049875
+#                  550[ns]:reg_key_expn is 0x00000002
+#                  550[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                  650[ns]: [ERROR] the rnd_word_key_val key output 0xc7f7582e and c model round_key[          6] 0x35b1c5bc do not match
+#                  650[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                  650[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  650[ns]:reg_seed_key_2 is 0x302a87a0
+#                  650[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  650[ns]:reg_seed_key_4 is 0x74049875
+#                  650[ns]:reg_round_key_words_1 is 0x8f8e695e
+#                  650[ns]:reg_round_key_words_2 is 0xbfa4eefe
+#                  650[ns]:reg_round_key_words_3 is 0xc7f7582e
+#                  650[ns]:reg_round_key_words_4 is 0x74049875
+#                  650[ns]:reg_key_expn is 0x00000003
+#                  650[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                  750[ns]: [ERROR] the rnd_word_key_val key output 0xb3f3c05b and c model round_key[          7] 0x41b55dc9 do not match
+#                  750[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                  750[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  750[ns]:reg_seed_key_2 is 0x302a87a0
+#                  750[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  750[ns]:reg_seed_key_4 is 0x74049875
+#                  750[ns]:reg_round_key_words_1 is 0x8f8e695e
+#                  750[ns]:reg_round_key_words_2 is 0xbfa4eefe
+#                  750[ns]:reg_round_key_words_3 is 0xc7f7582e
+#                  750[ns]:reg_round_key_words_4 is 0xb3f3c05b
+#                  750[ns]:reg_key_expn is 0x00000004
+#                  750[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                  850[ns]: [ERROR] the rnd_word_key_val key output 0x1f7c2fc3 and c model round_key[          8] 0x69dee24f do not match
+#                  850[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                  850[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  850[ns]:reg_seed_key_2 is 0x302a87a0
+#                  850[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  850[ns]:reg_seed_key_4 is 0x74049875
+#                  850[ns]:reg_round_key_words_1 is 0x1f7c2fc3
+#                  850[ns]:reg_round_key_words_2 is 0xbfa4eefe
+#                  850[ns]:reg_round_key_words_3 is 0xc7f7582e
+#                  850[ns]:reg_round_key_words_4 is 0xb3f3c05b
+#                  850[ns]:reg_key_expn is 0x00000005
+#                  850[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                  950[ns]: [ERROR] the rnd_word_key_val key output 0xa0d8c13d and c model round_key[          9] 0x243c9123 do not match
+#                  950[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                  950[ns]:reg_seed_key_1 is 0x8e8e695e
+#                  950[ns]:reg_seed_key_2 is 0x302a87a0
+#                  950[ns]:reg_seed_key_3 is 0x7853b6d0
+#                  950[ns]:reg_seed_key_4 is 0x74049875
+#                  950[ns]:reg_round_key_words_1 is 0x1f7c2fc3
+#                  950[ns]:reg_round_key_words_2 is 0xa0d8c13d
+#                  950[ns]:reg_round_key_words_3 is 0xc7f7582e
+#                  950[ns]:reg_round_key_words_4 is 0xb3f3c05b
+#                  950[ns]:reg_key_expn is 0x00000006
+#                  950[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 1050[ns]: [ERROR] the rnd_word_key_val key output 0x672f9913 and c model round_key[         10] 0x118d549f do not match
+#                 1050[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1050[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1050[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1050[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1050[ns]:reg_seed_key_4 is 0x74049875
+#                 1050[ns]:reg_round_key_words_1 is 0x1f7c2fc3
+#                 1050[ns]:reg_round_key_words_2 is 0xa0d8c13d
+#                 1050[ns]:reg_round_key_words_3 is 0x672f9913
+#                 1050[ns]:reg_round_key_words_4 is 0xb3f3c05b
+#                 1050[ns]:reg_key_expn is 0x00000007
+#                 1050[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 1150[ns]: [ERROR] the rnd_word_key_val key output 0xd4dc5948 and c model round_key[         11] 0x50380956 do not match
+#                 1150[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1150[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1150[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1150[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1150[ns]:reg_seed_key_4 is 0x74049875
+#                 1150[ns]:reg_round_key_words_1 is 0x1f7c2fc3
+#                 1150[ns]:reg_round_key_words_2 is 0xa0d8c13d
+#                 1150[ns]:reg_round_key_words_3 is 0x672f9913
+#                 1150[ns]:reg_round_key_words_4 is 0xd4dc5948
+#                 1150[ns]:reg_key_expn is 0x00000008
+#                 1150[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 1250[ns]: [ERROR] the rnd_word_key_val key output 0x767195fa and c model round_key[         12] 0x6adf531c do not match
+#                 1250[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1250[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1250[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1250[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1250[ns]:reg_seed_key_4 is 0x74049875
+#                 1250[ns]:reg_round_key_words_1 is 0x767195fa
+#                 1250[ns]:reg_round_key_words_2 is 0xa0d8c13d
+#                 1250[ns]:reg_round_key_words_3 is 0x672f9913
+#                 1250[ns]:reg_round_key_words_4 is 0xd4dc5948
+#                 1250[ns]:reg_key_expn is 0x00000009
+#                 1250[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 1350[ns]: [ERROR] the rnd_word_key_val key output 0xd6a954c7 and c model round_key[         13] 0x4ee3c23f do not match
+#                 1350[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1350[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1350[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1350[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1350[ns]:reg_seed_key_4 is 0x74049875
+#                 1350[ns]:reg_round_key_words_1 is 0x767195fa
+#                 1350[ns]:reg_round_key_words_2 is 0xd6a954c7
+#                 1350[ns]:reg_round_key_words_3 is 0x672f9913
+#                 1350[ns]:reg_round_key_words_4 is 0xd4dc5948
+#                 1350[ns]:reg_key_expn is 0x0000000a
+#                 1350[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 1450[ns]: [ERROR] the rnd_word_key_val key output 0xb186cdd4 and c model round_key[         14] 0x5f6e96a0 do not match
+#                 1450[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1450[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1450[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1450[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1450[ns]:reg_seed_key_4 is 0x74049875
+#                 1450[ns]:reg_round_key_words_1 is 0x767195fa
+#                 1450[ns]:reg_round_key_words_2 is 0xd6a954c7
+#                 1450[ns]:reg_round_key_words_3 is 0xb186cdd4
+#                 1450[ns]:reg_round_key_words_4 is 0xd4dc5948
+#                 1450[ns]:reg_key_expn is 0x0000000b
+#                 1450[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 1550[ns]: [ERROR] the rnd_word_key_val key output 0x655a949c and c model round_key[         15] 0x0f569ff6 do not match
+#                 1550[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1550[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1550[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1550[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1550[ns]:reg_seed_key_4 is 0x74049875
+#                 1550[ns]:reg_round_key_words_1 is 0x767195fa
+#                 1550[ns]:reg_round_key_words_2 is 0xd6a954c7
+#                 1550[ns]:reg_round_key_words_3 is 0xb186cdd4
+#                 1550[ns]:reg_round_key_words_4 is 0x655a949c
+#                 1550[ns]:reg_key_expn is 0x0000000c
+#                 1550[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 1650[ns]: [ERROR] the rnd_word_key_val key output 0x36f75ea8 and c model round_key[         16] 0xd304116a do not match
+#                 1650[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1650[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1650[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1650[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1650[ns]:reg_seed_key_4 is 0x74049875
+#                 1650[ns]:reg_round_key_words_1 is 0x36f75ea8
+#                 1650[ns]:reg_round_key_words_2 is 0xd6a954c7
+#                 1650[ns]:reg_round_key_words_3 is 0xb186cdd4
+#                 1650[ns]:reg_round_key_words_4 is 0x655a949c
+#                 1650[ns]:reg_key_expn is 0x0000000d
+#                 1650[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 1750[ns]: [ERROR] the rnd_word_key_val key output 0xe05e0a6f and c model round_key[         17] 0x9de7d355 do not match
+#                 1750[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1750[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1750[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1750[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1750[ns]:reg_seed_key_4 is 0x74049875
+#                 1750[ns]:reg_round_key_words_1 is 0x36f75ea8
+#                 1750[ns]:reg_round_key_words_2 is 0xe05e0a6f
+#                 1750[ns]:reg_round_key_words_3 is 0xb186cdd4
+#                 1750[ns]:reg_round_key_words_4 is 0x655a949c
+#                 1750[ns]:reg_key_expn is 0x0000000e
+#                 1750[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 1850[ns]: [ERROR] the rnd_word_key_val key output 0x51d8c7bb and c model round_key[         18] 0xc28945f5 do not match
+#                 1850[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1850[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1850[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1850[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1850[ns]:reg_seed_key_4 is 0x74049875
+#                 1850[ns]:reg_round_key_words_1 is 0x36f75ea8
+#                 1850[ns]:reg_round_key_words_2 is 0xe05e0a6f
+#                 1850[ns]:reg_round_key_words_3 is 0x51d8c7bb
+#                 1850[ns]:reg_round_key_words_4 is 0x655a949c
+#                 1850[ns]:reg_key_expn is 0x0000000f
+#                 1850[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 1950[ns]: [ERROR] the rnd_word_key_val key output 0x34825327 and c model round_key[         19] 0xcddfda03 do not match
+#                 1950[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 1950[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 1950[ns]:reg_seed_key_2 is 0x302a87a0
+#                 1950[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 1950[ns]:reg_seed_key_4 is 0x74049875
+#                 1950[ns]:reg_round_key_words_1 is 0x36f75ea8
+#                 1950[ns]:reg_round_key_words_2 is 0xe05e0a6f
+#                 1950[ns]:reg_round_key_words_3 is 0x51d8c7bb
+#                 1950[ns]:reg_round_key_words_4 is 0x34825327
+#                 1950[ns]:reg_key_expn is 0x00000010
+#                 1950[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 2050[ns]: [ERROR] the rnd_word_key_val key output 0x6b497c76 and c model round_key[         20] 0x5d536ad7 do not match
+#                 2050[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2050[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2050[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2050[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2050[ns]:reg_seed_key_4 is 0x74049875
+#                 2050[ns]:reg_round_key_words_1 is 0x6b497c76
+#                 2050[ns]:reg_round_key_words_2 is 0xe05e0a6f
+#                 2050[ns]:reg_round_key_words_3 is 0x51d8c7bb
+#                 2050[ns]:reg_round_key_words_4 is 0x34825327
+#                 2050[ns]:reg_key_expn is 0x00000011
+#                 2050[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 2150[ns]: [ERROR] the rnd_word_key_val key output 0x8b177619 and c model round_key[         21] 0xc0b4b982 do not match
+#                 2150[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2150[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2150[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2150[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2150[ns]:reg_seed_key_4 is 0x74049875
+#                 2150[ns]:reg_round_key_words_1 is 0x6b497c76
+#                 2150[ns]:reg_round_key_words_2 is 0x8b177619
+#                 2150[ns]:reg_round_key_words_3 is 0x51d8c7bb
+#                 2150[ns]:reg_round_key_words_4 is 0x34825327
+#                 2150[ns]:reg_key_expn is 0x00000012
+#                 2150[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 2250[ns]: [ERROR] the rnd_word_key_val key output 0xdacfb1a2 and c model round_key[         22] 0x023dfc77 do not match
+#                 2250[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2250[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2250[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2250[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2250[ns]:reg_seed_key_4 is 0x74049875
+#                 2250[ns]:reg_round_key_words_1 is 0x6b497c76
+#                 2250[ns]:reg_round_key_words_2 is 0x8b177619
+#                 2250[ns]:reg_round_key_words_3 is 0xdacfb1a2
+#                 2250[ns]:reg_round_key_words_4 is 0x34825327
+#                 2250[ns]:reg_key_expn is 0x00000013
+#                 2250[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 2350[ns]: [ERROR] the rnd_word_key_val key output 0xee4de285 and c model round_key[         23] 0xcfe22674 do not match
+#                 2350[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2350[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2350[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2350[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2350[ns]:reg_seed_key_4 is 0x74049875
+#                 2350[ns]:reg_round_key_words_1 is 0x6b497c76
+#                 2350[ns]:reg_round_key_words_2 is 0x8b177619
+#                 2350[ns]:reg_round_key_words_3 is 0xdacfb1a2
+#                 2350[ns]:reg_round_key_words_4 is 0xee4de285
+#                 2350[ns]:reg_key_expn is 0x00000014
+#                 2350[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 2450[ns]: [ERROR] the rnd_word_key_val key output 0x535a91ba and c model round_key[         24] 0x6b457c5d do not match
+#                 2450[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2450[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2450[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2450[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2450[ns]:reg_seed_key_4 is 0x74049875
+#                 2450[ns]:reg_round_key_words_1 is 0x535a91ba
+#                 2450[ns]:reg_round_key_words_2 is 0x8b177619
+#                 2450[ns]:reg_round_key_words_3 is 0xdacfb1a2
+#                 2450[ns]:reg_round_key_words_4 is 0xee4de285
+#                 2450[ns]:reg_key_expn is 0x00000015
+#                 2450[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 2550[ns]: [ERROR] the rnd_word_key_val key output 0xd84de7a3 and c model round_key[         25] 0xabf1c5df do not match
+#                 2550[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2550[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2550[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2550[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2550[ns]:reg_seed_key_4 is 0x74049875
+#                 2550[ns]:reg_round_key_words_1 is 0x535a91ba
+#                 2550[ns]:reg_round_key_words_2 is 0xd84de7a3
+#                 2550[ns]:reg_round_key_words_3 is 0xdacfb1a2
+#                 2550[ns]:reg_round_key_words_4 is 0xee4de285
+#                 2550[ns]:reg_key_expn is 0x00000016
+#                 2550[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 2650[ns]: [ERROR] the rnd_word_key_val key output 0x02825601 and c model round_key[         26] 0xa9cc39a8 do not match
+#                 2650[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2650[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2650[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2650[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2650[ns]:reg_seed_key_4 is 0x74049875
+#                 2650[ns]:reg_round_key_words_1 is 0x535a91ba
+#                 2650[ns]:reg_round_key_words_2 is 0xd84de7a3
+#                 2650[ns]:reg_round_key_words_3 is 0x02825601
+#                 2650[ns]:reg_round_key_words_4 is 0xee4de285
+#                 2650[ns]:reg_key_expn is 0x00000017
+#                 2650[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 2750[ns]: [ERROR] the rnd_word_key_val key output 0xeccfb484 and c model round_key[         27] 0x662e1fdc do not match
+#                 2750[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2750[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2750[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2750[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2750[ns]:reg_seed_key_4 is 0x74049875
+#                 2750[ns]:reg_round_key_words_1 is 0x535a91ba
+#                 2750[ns]:reg_round_key_words_2 is 0xd84de7a3
+#                 2750[ns]:reg_round_key_words_3 is 0x02825601
+#                 2750[ns]:reg_round_key_words_4 is 0xeccfb484
+#                 2750[ns]:reg_key_expn is 0x00000018
+#                 2750[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 2850[ns]: [ERROR] the rnd_word_key_val key output 0x3bb9092d and c model round_key[         28] 0x1a85fa6e do not match
+#                 2850[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2850[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2850[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2850[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2850[ns]:reg_seed_key_4 is 0x74049875
+#                 2850[ns]:reg_round_key_words_1 is 0x3bb9092d
+#                 2850[ns]:reg_round_key_words_2 is 0xd84de7a3
+#                 2850[ns]:reg_round_key_words_3 is 0x02825601
+#                 2850[ns]:reg_round_key_words_4 is 0xeccfb484
+#                 2850[ns]:reg_key_expn is 0x00000019
+#                 2850[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 2950[ns]: [ERROR] the rnd_word_key_val key output 0xe3f4ee8e and c model round_key[         29] 0xb1743fb1 do not match
+#                 2950[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 2950[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 2950[ns]:reg_seed_key_2 is 0x302a87a0
+#                 2950[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 2950[ns]:reg_seed_key_4 is 0x74049875
+#                 2950[ns]:reg_round_key_words_1 is 0x3bb9092d
+#                 2950[ns]:reg_round_key_words_2 is 0xe3f4ee8e
+#                 2950[ns]:reg_round_key_words_3 is 0x02825601
+#                 2950[ns]:reg_round_key_words_4 is 0xeccfb484
+#                 2950[ns]:reg_key_expn is 0x0000001a
+#                 2950[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 3050[ns]: [ERROR] the rnd_word_key_val key output 0xe176b88f and c model round_key[         30] 0x18b80619 do not match
+#                 3050[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3050[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3050[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3050[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3050[ns]:reg_seed_key_4 is 0x74049875
+#                 3050[ns]:reg_round_key_words_1 is 0x3bb9092d
+#                 3050[ns]:reg_round_key_words_2 is 0xe3f4ee8e
+#                 3050[ns]:reg_round_key_words_3 is 0xe176b88f
+#                 3050[ns]:reg_round_key_words_4 is 0xeccfb484
+#                 3050[ns]:reg_key_expn is 0x0000001b
+#                 3050[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 3150[ns]: [ERROR] the rnd_word_key_val key output 0x0db90c0b and c model round_key[         31] 0x7e9619c5 do not match
+#                 3150[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3150[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3150[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3150[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3150[ns]:reg_seed_key_4 is 0x74049875
+#                 3150[ns]:reg_round_key_words_1 is 0x3bb9092d
+#                 3150[ns]:reg_round_key_words_2 is 0xe3f4ee8e
+#                 3150[ns]:reg_round_key_words_3 is 0xe176b88f
+#                 3150[ns]:reg_round_key_words_4 is 0x0db90c0b
+#                 3150[ns]:reg_key_expn is 0x0000001c
+#                 3150[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 3250[ns]: [ERROR] the rnd_word_key_val key output 0x75338472 and c model round_key[         32] 0x0a515c9d do not match
+#                 3250[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3250[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3250[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3250[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3250[ns]:reg_seed_key_4 is 0x74049875
+#                 3250[ns]:reg_round_key_words_1 is 0x75338472
+#                 3250[ns]:reg_round_key_words_2 is 0xe3f4ee8e
+#                 3250[ns]:reg_round_key_words_3 is 0xe176b88f
+#                 3250[ns]:reg_round_key_words_4 is 0x0db90c0b
+#                 3250[ns]:reg_key_expn is 0x0000001d
+#                 3250[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 3350[ns]: [ERROR] the rnd_word_key_val key output 0x96c76afc and c model round_key[         33] 0xbb25632c do not match
+#                 3350[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3350[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3350[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3350[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3350[ns]:reg_seed_key_4 is 0x74049875
+#                 3350[ns]:reg_round_key_words_1 is 0x75338472
+#                 3350[ns]:reg_round_key_words_2 is 0x96c76afc
+#                 3350[ns]:reg_round_key_words_3 is 0xe176b88f
+#                 3350[ns]:reg_round_key_words_4 is 0x0db90c0b
+#                 3350[ns]:reg_key_expn is 0x0000001e
+#                 3350[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 3450[ns]: [ERROR] the rnd_word_key_val key output 0x77b1d273 and c model round_key[         34] 0xa39d6535 do not match
+#                 3450[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3450[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3450[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3450[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3450[ns]:reg_seed_key_4 is 0x74049875
+#                 3450[ns]:reg_round_key_words_1 is 0x75338472
+#                 3450[ns]:reg_round_key_words_2 is 0x96c76afc
+#                 3450[ns]:reg_round_key_words_3 is 0x77b1d273
+#                 3450[ns]:reg_round_key_words_4 is 0x0db90c0b
+#                 3450[ns]:reg_key_expn is 0x0000001f
+#                 3450[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 3550[ns]: [ERROR] the rnd_word_key_val key output 0x7a08de78 and c model round_key[         35] 0xdd0b7cf0 do not match
+#                 3550[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3550[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3550[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3550[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3550[ns]:reg_seed_key_4 is 0x74049875
+#                 3550[ns]:reg_round_key_words_1 is 0x75338472
+#                 3550[ns]:reg_round_key_words_2 is 0x96c76afc
+#                 3550[ns]:reg_round_key_words_3 is 0x77b1d273
+#                 3550[ns]:reg_round_key_words_4 is 0x7a08de78
+#                 3550[ns]:reg_key_expn is 0x00000020
+#                 3550[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 3650[ns]: [ERROR] the rnd_word_key_val key output 0xb9657a59 and c model round_key[         36] 0x3a41d05c do not match
+#                 3650[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3650[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3650[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3650[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3650[ns]:reg_seed_key_4 is 0x74049875
+#                 3650[ns]:reg_round_key_words_1 is 0xb9657a59
+#                 3650[ns]:reg_round_key_words_2 is 0x96c76afc
+#                 3650[ns]:reg_round_key_words_3 is 0x77b1d273
+#                 3650[ns]:reg_round_key_words_4 is 0x7a08de78
+#                 3650[ns]:reg_key_expn is 0x00000021
+#                 3650[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 3750[ns]: [ERROR] the rnd_word_key_val key output 0x2fa210a5 and c model round_key[         37] 0x8164b370 do not match
+#                 3750[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3750[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3750[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3750[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3750[ns]:reg_seed_key_4 is 0x74049875
+#                 3750[ns]:reg_round_key_words_1 is 0xb9657a59
+#                 3750[ns]:reg_round_key_words_2 is 0x2fa210a5
+#                 3750[ns]:reg_round_key_words_3 is 0x77b1d273
+#                 3750[ns]:reg_round_key_words_4 is 0x7a08de78
+#                 3750[ns]:reg_key_expn is 0x00000022
+#                 3750[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 3850[ns]: [ERROR] the rnd_word_key_val key output 0x5813c2d6 and c model round_key[         38] 0x22f9d645 do not match
+#                 3850[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3850[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3850[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3850[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3850[ns]:reg_seed_key_4 is 0x74049875
+#                 3850[ns]:reg_round_key_words_1 is 0xb9657a59
+#                 3850[ns]:reg_round_key_words_2 is 0x2fa210a5
+#                 3850[ns]:reg_round_key_words_3 is 0x5813c2d6
+#                 3850[ns]:reg_round_key_words_4 is 0x7a08de78
+#                 3850[ns]:reg_key_expn is 0x00000023
+#                 3850[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 3950[ns]: [ERROR] the rnd_word_key_val key output 0x221b1cae and c model round_key[         39] 0xfff2aab5 do not match
+#                 3950[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 3950[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 3950[ns]:reg_seed_key_2 is 0x302a87a0
+#                 3950[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 3950[ns]:reg_seed_key_4 is 0x74049875
+#                 3950[ns]:reg_round_key_words_1 is 0xb9657a59
+#                 3950[ns]:reg_round_key_words_2 is 0x2fa210a5
+#                 3950[ns]:reg_round_key_words_3 is 0x5813c2d6
+#                 3950[ns]:reg_round_key_words_4 is 0x221b1cae
+#                 3950[ns]:reg_key_expn is 0x00000024
+#                 3950[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 4050[ns]: [ERROR] the rnd_word_key_val key output 0x555567e5 and c model round_key[         40] 0x1a57c64a do not match
+#                 4050[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 4050[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 4050[ns]:reg_seed_key_2 is 0x302a87a0
+#                 4050[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 4050[ns]:reg_seed_key_4 is 0x74049875
+#                 4050[ns]:reg_round_key_words_1 is 0x555567e5
+#                 4050[ns]:reg_round_key_words_2 is 0x2fa210a5
+#                 4050[ns]:reg_round_key_words_3 is 0x5813c2d6
+#                 4050[ns]:reg_round_key_words_4 is 0x221b1cae
+#                 4050[ns]:reg_key_expn is 0x00000025
+#                 4050[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x1
+#                 4150[ns]: [ERROR] the rnd_word_key_val key output 0x7af77740 and c model round_key[         41] 0x9b33753a do not match
+#                 4150[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 4150[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 4150[ns]:reg_seed_key_2 is 0x302a87a0
+#                 4150[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 4150[ns]:reg_seed_key_4 is 0x74049875
+#                 4150[ns]:reg_round_key_words_1 is 0x555567e5
+#                 4150[ns]:reg_round_key_words_2 is 0x7af77740
+#                 4150[ns]:reg_round_key_words_3 is 0x5813c2d6
+#                 4150[ns]:reg_round_key_words_4 is 0x221b1cae
+#                 4150[ns]:reg_key_expn is 0x00000026
+#                 4150[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x2
+#                 4250[ns]: [ERROR] the rnd_word_key_val key output 0x22e4b596 and c model round_key[         42] 0xb9caa37f do not match
+#                 4250[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 4250[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 4250[ns]:reg_seed_key_2 is 0x302a87a0
+#                 4250[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 4250[ns]:reg_seed_key_4 is 0x74049875
+#                 4250[ns]:reg_round_key_words_1 is 0x555567e5
+#                 4250[ns]:reg_round_key_words_2 is 0x7af77740
+#                 4250[ns]:reg_round_key_words_3 is 0x22e4b596
+#                 4250[ns]:reg_round_key_words_4 is 0x221b1cae
+#                 4250[ns]:reg_key_expn is 0x00000027
+#                 4250[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x3
+#                 4350[ns]: [ERROR] the rnd_word_key_val key output 0x00ffa938 and c model round_key[         43] 0x463809ca do not match
+#                 4350[ns]: rnd_word_key_val_vld is 1'b1, as it should be
+#                 4350[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 4350[ns]:reg_seed_key_2 is 0x302a87a0
+#                 4350[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 4350[ns]:reg_seed_key_4 is 0x74049875
+#                 4350[ns]:reg_round_key_words_1 is 0x555567e5
+#                 4350[ns]:reg_round_key_words_2 is 0x7af77740
+#                 4350[ns]:reg_round_key_words_3 is 0x22e4b596
+#                 4350[ns]:reg_round_key_words_4 is 0x00ffa938
+#                 4350[ns]:reg_key_expn is 0x00000028
+#                 4350[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+#                 4550[ns]:reg_seed_key_1 is 0x8e8e695e
+#                 4550[ns]:reg_seed_key_2 is 0x302a87a0
+#                 4550[ns]:reg_seed_key_3 is 0x7853b6d0
+#                 4550[ns]:reg_seed_key_4 is 0x74049875
+#                 4550[ns]:reg_round_key_words_1 is 0x8e8e695e
+#                 4550[ns]:reg_round_key_words_2 is 0x302a87a0
+#                 4550[ns]:reg_round_key_words_3 is 0x7853b6d0
+#                 4550[ns]:reg_round_key_words_4 is 0x74049875
+#                 4550[ns]:reg_key_expn is 0x00000000
+#                 4550[ns]: reg_key_expn[`KEY_EXPN_CNTR_CYCLES] is 0x0
+# ** Note: $finish    : key_expansion_tb.sv(161)
+#    Time: 4550 ns  Iteration: 2  Instance: /key_expansion_test_top/key_expansion_test
+	- added debug statements to the rotword function, and spotted the error - 
+	
+			$display("RotWord is called, input %x", round_key_word); 
+			RotWord[`FIRST_WRD_BYTE]  = round_key_word[`SECOND_WRD_BYTE];
+			RotWord[`SECOND_WRD_BYTE] = round_key_word[`THIRD_WRD_BYTE];
+			RotWord[`THIRD_WRD_BYTE]  = round_key_word[`FOURTH_WRD_BYTE];
+			RotWord[`FOURTH_WRD_BYTE] = round_key_word[`FIRST_WRD_BYTE];
+			$display("RotWord is called, output %x", RotWord); 
+			
+- roblem was the rotword - changed - 
+			RotWord[`FIRST_WRD_BYTE]  = round_key_word[`SECOND_WRD_BYTE];
+			RotWord[`SECOND_WRD_BYTE] = round_key_word[`THIRD_WRD_BYTE];
+			RotWord[`THIRD_WRD_BYTE]  = round_key_word[`FOURTH_WRD_BYTE];
+			RotWord[`FOURTH_WRD_BYTE] = round_key_word[`FIRST_WRD_BYTE];
+
+to
+
+			RotWord[`FIRST_WRD_BYTE]  = round_key_word[`FOURTH_WRD_BYTE];
+			RotWord[`SECOND_WRD_BYTE] = round_key_word[`FIRST_WRD_BYTE];
+			RotWord[`THIRD_WRD_BYTE]  = round_key_word[`SECOND_WRD_BYTE];
+			RotWord[`FOURTH_WRD_BYTE] = round_key_word[`THIRD_WRD_BYTE];

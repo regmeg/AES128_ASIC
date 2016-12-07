@@ -1,0 +1,31 @@
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes add_round_key_block_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: add_round_key_block_tb.sv(42): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.add_round_key_block_test_top(fast)
+# Loading work.add_round_key_block_test(fast)
+# ** Warning: (vsim-PLI-3691) add_round_key_block_test_top.sv(23): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /add_round_key_block_test_top
+# Loading ./aes.so
+# Sv_Seed = 716963975
+# run -all 
+#                   50[ns]: generated key = 0x611f6ec1c2c1064d09fd135eb43a8748, generated_data = 0x959bbd7fede3436b30610cca0719d6c1
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  89  51  23  b3  94  1f  9c  39  26  45  22  2f  be  d3  84  f4 
+# Printing state round key used for AddRounkey 
+# 48873ab45e13fd094d06c1c2c16e1f61
+#                   50[ns]: C model output = 0xf484d3be2f224526399c1f94b3235189
+#                  150[ns]: The C model and DUT values match: C: 0xf484d3be2f224526399c1f94b3235189,DUT: 0xf484d3be2f224526399c1f94b3235189, data_out_vld = 1b'1
+# ** Note: $finish    : add_round_key_block_tb.sv(84)
+#    Time: 150 ns  Iteration: 1  Instance: /add_round_key_block_test_top/add_round_key_block_test

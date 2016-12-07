@@ -1,0 +1,236 @@
+
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes flow_cntr_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: flow_cntr_tb.sv(109): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: flow_cntr_tb.sv(121): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.flow_cntr_test_top(fast)
+# Loading work.flow_cntr_test(fast)
+# Loading work.flow_cntr(fast)
+# ** Warning: (vsim-PLI-3691) flow_cntr_test_top.sv(33): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /flow_cntr_test_top
+# Loading ./aes.so
+# Sv_Seed = 1632580016
+# run -all 
+# ** Error: (vsim-PLI-3107) flow_cntr_test_top.sv(32): $dumpports : File "test.vcd" is already in use.
+#         Region: /flow_cntr_test_top
+#                    0[ns]: reset - 0x1
+#                   30[ns]: reset - 0x0, should have reset triggered
+#                   50[ns]:reg_x_word_store_1 is 0x00000000
+#                   50[ns]:reg_x_word_store_2 is 0x00000000
+#                   50[ns]:reg_x_word_store_3 is 0x00000000
+#                   50[ns]:reg_x_word_store_4 is 0x00000000
+#                   50[ns]:reg_y_word_store_1 is 0x00000000
+#                   50[ns]:reg_y_word_store_2 is 0x00000000
+#                   50[ns]:reg_y_word_store_3 is 0x00000000
+#                   50[ns]:reg_y_word_store_4 is 0x00000000
+#                   50[ns]:reg_flow_cntr is 0x00000000
+#                   50[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                   50[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                   50[ns]: data_from_store_regs_1 = 0x00000000
+#                   50[ns]: data_from_store_regs_2 = 0x00000000
+#                   50[ns]: data_from_store_regs_3 = 0x00000000
+#                   50[ns]: data_from_store_regs_4 = 0x00000000
+#                  150[ns]:data_accep = 0x1, as expected
+#                  250[ns]:data_accep = 0x0, as expected
+#                  250[ns]: generated_block_data = 0x3bb4f1f570e9de6323387d424bc6dbe6
+#                  250[ns]:reg_x_word_store_1 is 0x00000000
+#                  250[ns]:reg_x_word_store_2 is 0x00000000
+#                  250[ns]:reg_x_word_store_3 is 0x00000000
+#                  250[ns]:reg_x_word_store_4 is 0x00000000
+#                  250[ns]:reg_y_word_store_1 is 0x00000000
+#                  250[ns]:reg_y_word_store_2 is 0x00000000
+#                  250[ns]:reg_y_word_store_3 is 0x00000000
+#                  250[ns]:reg_y_word_store_4 is 0x00000000
+#                  250[ns]:reg_flow_cntr is 0x00000000
+#                  250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                  250[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  250[ns]: data_from_store_regs_1 = 0x00000000
+#                  250[ns]: data_from_store_regs_2 = 0x00000000
+#                  250[ns]: data_from_store_regs_3 = 0x00000000
+#                  250[ns]: data_from_store_regs_4 = 0x00000000
+# i am first counter                 350[ns]: generated_word_data = 0x1086e519
+# i am second counter                 450[ns]:reg_x_word_store_1 is 0x1086e519
+#                  450[ns]:reg_x_word_store_2 is 0x70e9de63
+#                  450[ns]:reg_x_word_store_3 is 0x23387d42
+#                  450[ns]:reg_x_word_store_4 is 0x4bc6dbe6
+#                  450[ns]:reg_y_word_store_1 is 0x00000000
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0x3be97de6, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0x1086e519
+#                  450[ns]: data_from_store_regs_2 = 0x70e9de63
+#                  450[ns]: data_from_store_regs_3 = 0x23387d42
+#                  450[ns]: data_from_store_regs_4 = 0x4bc6dbe6
+#                  450[ns]: [ERROR] reg_x_word_store_1 is 01086e519 which is not same as block_data_in[`FIRST_WRD] =0x3bb4f1f5
+#                  450[ns]:reg_x_word_store_1 is 0x70e9de63
+#                  450[ns]:reg_x_word_store_3 is 0x23387d42
+#                  450[ns]:reg_x_word_store_4 is 0x4bc6dbe6
+#                  450[ns]:check_subbytes data_in 0x1086e51970e9de6323387d424bc6dbe6, data_out 0x10e97de67038db1923c6e5634b86de42
+#                  450[ns]: [ERROR] word_out_comb after subbytes is 3be97de60, but should be 10e97de60
+#                  450[ns]: generated_word_data = 0xbc2a2302
+# i am third counter                 550[ns]:check_subbytes data_in 0x1086e51970e9de6323387d424bc6dbe6, data_out 0x10e97de67038db1923c6e5634b86de42
+#                  550[ns]:word_out_comb is 0x7038db19, as expected
+#                  550[ns]: generated_word_data = 0x9cf45040
+# i am fourth counter                 650[ns]:check_subbytes data_in 0x1086e51970e9de6323387d424bc6dbe6, data_out 0x10e97de67038db1923c6e5634b86de42
+#                  650[ns]:word_out_comb is 0x23c6e563, as expected
+#                  650[ns]: generated_word_data = 0xcc6ed43c
+# i am first counter                 750[ns]:check_subbytes data_in 0x1086e51970e9de6323387d424bc6dbe6, data_out 0x10e97de67038db1923c6e5634b86de42
+#                  750[ns]:word_out_comb is 0x4b86de42, as expected
+#                  750[ns]: generated_word_data = 0xe9dd1611
+# i am second counter                 850[ns]:check_subbytes data_in 0xe9dd1611bc2a23029cf45040cc6ed43c, data_out 0xe92a503cbcf4d4119c6e1602ccdd2340
+#                  850[ns]: [ERROR] word_out_comb after subbytes is 2a503c0, but should be e92a503c0
+#                  850[ns]: generated_word_data = 0x578b2448
+# i am third counter                 950[ns]:check_subbytes data_in 0xe9dd1611578b24489cf45040cc6ed43c, data_out 0xe98b503c57f4d4119c6e1648ccdd2440
+#                  950[ns]: [ERROR] word_out_comb after subbytes is bcf4d4110, but should be 57f4d4110
+#                  950[ns]: generated_word_data = 0xc72be821
+# i am fourth counter                1050[ns]:check_subbytes data_in 0xe9dd1611578b2448c72be821cc6ed43c, data_out 0xe98be83c572bd411c76e1648ccdd2421
+#                 1050[ns]: [ERROR] word_out_comb after subbytes is 9c6e16480, but should be c76e16480
+#                 1050[ns]: generated_word_data = 0xb0beca21
+# i am first counter                1150[ns]:check_subbytes data_in 0xe9dd1611578b2448c72be821b0beca21, data_out 0xe98be821572bca11c7be1648b0dd2421
+#                 1150[ns]: [ERROR] word_out_comb after subbytes is ccdd24210, but should be b0dd24210
+#                 1150[ns]: generated_word_data = 0xc65d4462
+# i am second counter                1250[ns]:check_subbytes data_in 0xc65d446270e9de6323387d424bc6dbe6, data_out 0xc6e97de67038db6223c644634b5dde42
+#                 1250[ns]: [ERROR] word_out_comb after subbytes is 10e97de60, but should be c6e97de60
+#                 1250[ns]: generated_word_data = 0x28373ef5
+# i am third counter                1350[ns]:check_subbytes data_in 0xc65d446270e9de6323387d424bc6dbe6, data_out 0xc6e97de67038db6223c644634b5dde42
+#                 1350[ns]:word_out_comb is 0x7038db62, as expected
+#                 1350[ns]: generated_word_data = 0x3c59942c
+# i am fourth counter                1450[ns]:check_subbytes data_in 0xc65d446270e9de6323387d424bc6dbe6, data_out 0xc6e97de67038db6223c644634b5dde42
+#                 1450[ns]:word_out_comb is 0x23c64463, as expected
+#                 1450[ns]: generated_word_data = 0x17ba9944
+# i am first counter                1550[ns]:check_subbytes data_in 0xc65d446270e9de6323387d424bc6dbe6, data_out 0xc6e97de67038db6223c644634b5dde42
+#                 1550[ns]:word_out_comb is 0x4b5dde42, as expected
+#                 1550[ns]: generated_word_data = 0x7eada1b4
+# i am second counter                1650[ns]:check_subbytes data_in 0x7eada1b428373ef53c59942c17ba9944, data_out 0x7e379444285999b43cbaa1f517ad3e2c
+#                 1650[ns]: [ERROR] word_out_comb after subbytes is e93794440, but should be 7e3794440
+#                 1650[ns]: generated_word_data = 0xb348ef93
+# i am third counter                1750[ns]:check_subbytes data_in 0x7eada1b4b348ef933c59942c17ba9944, data_out 0x7e489444b35999b43cbaa19317adef2c
+#                 1750[ns]: [ERROR] word_out_comb after subbytes is 285999b40, but should be b35999b40
+#                 1750[ns]: generated_word_data = 0xa9fddb61
+# i am fourth counter                1850[ns]:check_subbytes data_in 0x7eada1b4b348ef93a9fddb6117ba9944, data_out 0x7e48db44b3fd99b4a9baa19317adef61
+#                 1850[ns]: [ERROR] word_out_comb after subbytes is 3cbaa1930, but should be a9baa1930
+#                 1850[ns]: generated_word_data = 0xc423ad33
+# i am first counter                1950[ns]:check_subbytes data_in 0x7eada1b4b348ef93a9fddb61c423ad33, data_out 0x7e48db33b3fdadb4a923a193c4adef61
+#                 1950[ns]: [ERROR] word_out_comb after subbytes is 17adef610, but should be c4adef610
+#                 1950[ns]: generated_word_data = 0x66ac2692
+# i am second counter                2050[ns]:check_subbytes data_in 0x66ac269270e9de6323387d424bc6dbe6, data_out 0x66e97de67038db9223c626634bacde42
+#                 2050[ns]: [ERROR] word_out_comb after subbytes is c6e97de60, but should be 66e97de60
+#                 2050[ns]: generated_word_data = 0xd39cea64
+# i am third counter                2150[ns]:check_subbytes data_in 0x66ac269270e9de6323387d424bc6dbe6, data_out 0x66e97de67038db9223c626634bacde42
+#                 2150[ns]:word_out_comb is 0x7038db92, as expected
+#                 2150[ns]: generated_word_data = 0x7a1c9bd5
+# i am fourth counter                2250[ns]:check_subbytes data_in 0x66ac269270e9de6323387d424bc6dbe6, data_out 0x66e97de67038db9223c626634bacde42
+#                 2250[ns]:word_out_comb is 0x23c62663, as expected
+#                 2250[ns]: generated_word_data = 0x5bffc268
+# i am first counter                2350[ns]:check_subbytes data_in 0x66ac269270e9de6323387d424bc6dbe6, data_out 0x66e97de67038db9223c626634bacde42
+#                 2350[ns]:word_out_comb is 0x4bacde42, as expected
+#                 2350[ns]: generated_word_data = 0xfd1bf773
+# i am second counter                2450[ns]:check_subbytes data_in 0xfd1bf773d39cea647a1c9bd55bffc268, data_out 0xfd9c9b68d31cc2737afff7645b1bead5
+#                 2450[ns]: [ERROR] word_out_comb after subbytes is 7e9c9b680, but should be fd9c9b680
+#                 2450[ns]: generated_word_data = 0x133bf629
+# i am third counter                2550[ns]:check_subbytes data_in 0xfd1bf773133bf6297a1c9bd55bffc268, data_out 0xfd3b9b68131cc2737afff7295b1bf6d5
+#                 2550[ns]: [ERROR] word_out_comb after subbytes is d31cc2730, but should be 131cc2730
+#                 2550[ns]: generated_word_data = 0x1eff1878
+# i am fourth counter                2650[ns]:check_subbytes data_in 0xfd1bf773133bf6291eff18785bffc268, data_out 0xfd3b186813ffc2731efff7295b1bf678
+#                 2650[ns]: [ERROR] word_out_comb after subbytes is 7afff7290, but should be 1efff7290
+#                 2650[ns]: generated_word_data = 0x9f2647d6
+# i am first counter                2750[ns]:check_subbytes data_in 0xfd1bf773133bf6291eff18789f2647d6, data_out 0xfd3b18d613ff47731e26f7299f1bf678
+#                 2750[ns]: [ERROR] word_out_comb after subbytes is 5b1bf6780, but should be 9f1bf6780
+#                 2750[ns]: generated_word_data = 0x353a73c3
+# i am second counter                2850[ns]:check_subbytes data_in 0x353a73c370e9de6323387d424bc6dbe6, data_out 0x35e97de67038dbc323c673634b3ade42
+#                 2850[ns]: [ERROR] word_out_comb after subbytes is 66e97de60, but should be 35e97de60
+#                 2850[ns]: generated_word_data = 0x54e326d9
+# i am third counter                2950[ns]:check_subbytes data_in 0x353a73c370e9de6323387d424bc6dbe6, data_out 0x35e97de67038dbc323c673634b3ade42
+#                 2950[ns]:word_out_comb is 0x7038dbc3, as expected
+#                 2950[ns]: generated_word_data = 0x18f4fceb
+# i am fourth counter                3050[ns]:check_subbytes data_in 0x353a73c370e9de6323387d424bc6dbe6, data_out 0x35e97de67038dbc323c673634b3ade42
+#                 3050[ns]:word_out_comb is 0x23c67363, as expected
+#                 3050[ns]: generated_word_data = 0xce2e5923
+# i am first counter                3150[ns]:check_subbytes data_in 0x353a73c370e9de6323387d424bc6dbe6, data_out 0x35e97de67038dbc323c673634b3ade42
+#                 3150[ns]:word_out_comb is 0x4b3ade42, as expected
+#                 3150[ns]: generated_word_data = 0x06fe4c77
+# i am second counter                3250[ns]:check_subbytes data_in 0x06fe4c7754e326d918f4fcebce2e5923, data_out 0x06e3fc2354f45977182e4cd9cefe26eb
+#                 3250[ns]: [ERROR] word_out_comb after subbytes is fde3fc230, but should be 6e3fc230
+#                 3250[ns]: generated_word_data = 0xeacaae1a
+# i am third counter                3350[ns]:check_subbytes data_in 0x06fe4c77eacaae1a18f4fcebce2e5923, data_out 0x06cafc23eaf45977182e4c1acefeaeeb
+#                 3350[ns]: [ERROR] word_out_comb after subbytes is 54f459770, but should be eaf459770
+#                 3350[ns]: generated_word_data = 0x5176c1e3
+# i am fourth counter                3450[ns]:check_subbytes data_in 0x06fe4c77eacaae1a5176c1e3ce2e5923, data_out 0x06cac123ea765977512e4c1acefeaee3
+#                 3450[ns]: [ERROR] word_out_comb after subbytes is 182e4c1a0, but should be 512e4c1a0
+#                 3450[ns]: generated_word_data = 0x199c3e36
+# i am first counter                3550[ns]:check_subbytes data_in 0x06fe4c77eacaae1a5176c1e3199c3e36, data_out 0x06cac136ea763e77519c4c1a19feaee3
+#                 3550[ns]: [ERROR] word_out_comb after subbytes is cefeaee30, but should be 19feaee30
+#                 3550[ns]: generated_word_data = 0x17244d77
+# i am second counter                3650[ns]:check_subbytes data_in 0x17244d7770e9de6323387d424bc6dbe6, data_out 0x17e97de67038db7723c64d634b24de42
+#                 3650[ns]: [ERROR] word_out_comb after subbytes is 35e97de60, but should be 17e97de60
+#                 3650[ns]: generated_word_data = 0xdbb26e86
+# i am third counter                3750[ns]:check_subbytes data_in 0x17244d7770e9de6323387d424bc6dbe6, data_out 0x17e97de67038db7723c64d634b24de42
+#                 3750[ns]:word_out_comb is 0x7038db77, as expected
+#                 3750[ns]: generated_word_data = 0x90d85157
+# i am fourth counter                3850[ns]:check_subbytes data_in 0x17244d7770e9de6323387d424bc6dbe6, data_out 0x17e97de67038db7723c64d634b24de42
+#                 3850[ns]:word_out_comb is 0x23c64d63, as expected
+#                 3850[ns]: generated_word_data = 0xf839e558
+# i am first counter                3950[ns]:check_subbytes data_in 0x17244d7770e9de6323387d424bc6dbe6, data_out 0x17e97de67038db7723c64d634b24de42
+#                 3950[ns]:word_out_comb is 0x4b24de42, as expected
+#                 3950[ns]: generated_word_data = 0x2372a1f9
+# i am second counter                4050[ns]:check_subbytes data_in 0x2372a1f9dbb26e8690d85157f839e558, data_out 0x23b25158dbd8e5f99039a186f8726e57
+#                 4050[ns]: [ERROR] word_out_comb after subbytes is 6b251580, but should be 23b251580
+#                 4050[ns]: generated_word_data = 0xb8920d46
+# i am third counter                4150[ns]:check_subbytes data_in 0x2372a1f9b8920d4690d85157f839e558, data_out 0x23925158b8d8e5f99039a146f8720d57
+#                 4150[ns]: [ERROR] word_out_comb after subbytes is dbd8e5f90, but should be b8d8e5f90
+#                 4150[ns]: generated_word_data = 0x67369801
+#                 4250[ns]:check_subbytes data_in 0x2372a1f9b8920d4667369801f839e558, data_out 0x23929858b836e5f96739a146f8720d01
+#                 4250[ns]: [ERROR] word_out_comb after subbytes is 9039a1460, but should be 6739a1460
+#                 4250[ns]: generated_word_data = 0xcbae4b0d
+#                 4350[ns]:check_subbytes data_in 0x2372a1f9b8920d4667369801cbae4b0d, data_out 0x2392980db8364bf967aea146cb720d01
+#                 4350[ns]: [ERROR] word_out_comb after subbytes is 00, but should be cb720d010
+#                 4350[ns]: generated_word_data = 0xed53fc94
+#                 4450[ns]:reg_x_word_store_1 is 0x17244d77
+#                 4450[ns]:reg_x_word_store_2 is 0x70e9de63
+#                 4450[ns]:reg_x_word_store_3 is 0x23387d42
+#                 4450[ns]:reg_x_word_store_4 is 0x4bc6dbe6
+#                 4450[ns]:reg_y_word_store_1 is 0x2372a1f9
+#                 4450[ns]:reg_y_word_store_2 is 0xb8920d46
+#                 4450[ns]:reg_y_word_store_3 is 0x67369801
+#                 4450[ns]:reg_y_word_store_4 is 0xed53fc94
+#                 4450[ns]:reg_flow_cntr is 0x00000000
+#                 4450[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4450[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                 4450[ns]: data_from_store_regs_1 = 0x2372a1f9
+#                 4450[ns]: data_from_store_regs_2 = 0xb8920d46
+#                 4450[ns]: data_from_store_regs_3 = 0x67369801
+#                 4450[ns]: data_from_store_regs_4 = 0xed53fc94
+------------
+wrong wiring ? 
+
+				3'b01_1 : reg_y_word_store_1 <= word_in_comb;
+				3'b01_0 : reg_x_word_store_1 <= word_in_comb;
+				3'b10_1 : reg_y_word_store_2 <= word_in_comb;
+				3'b10_0 : reg_x_word_store_2 <= word_in_comb;
+				3'b11_1 : reg_y_word_store_3 <= word_in_comb;
+				3'b11_0 : reg_x_word_store_3 <= word_in_comb;
+				3'b00_1 : reg_y_word_store_4 <= word_in_comb;
+				3'b00_0 : reg_x_word_store_4 <= word_in_comb;
+				
+								3'b01_1 : reg_y_word_store_1 <= word_in_comb;
+				3'b01_0 : reg_x_word_store_1 <= word_in_comb;
+				3'b10_1 : reg_y_word_store_2 <= word_in_comb;
+				3'b10_0 : reg_y_word_store_2 <= word_in_comb;
+				3'b11_1 : reg_y_word_store_3 <= word_in_comb;
+				3'b11_0 : reg_y_word_store_3 <= word_in_comb;
+				3'b00_1 : reg_y_word_store_4 <= word_in_comb;
+				3'b00_0 : reg_y_word_store_4 <= word_in_comb;

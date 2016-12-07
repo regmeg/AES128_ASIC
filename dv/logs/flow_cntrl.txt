@@ -1,0 +1,977 @@
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes flow_cntr_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: flow_cntr_tb.sv(107): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: flow_cntr_tb.sv(122): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.flow_cntr_test_top(fast)
+# Loading work.flow_cntr_test(fast)
+# Loading work.flow_cntr(fast)
+# ** Warning: (vsim-PLI-3691) flow_cntr_test_top.sv(38): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /flow_cntr_test_top
+# Loading ./aes.so
+# Sv_Seed = 2942269533
+# run -all 
+# ** Error: (vsim-PLI-3107) flow_cntr_test_top.sv(35): $dumpports : File "test.vcd" is already in use.
+#         Region: /flow_cntr_test_top
+#                    0[ns]: reset - 0x1
+#                   30[ns]: reset - 0x0, should have reset triggered
+#                   50[ns]:reg_x_word_store_1 is 0x00000000
+#                   50[ns]:reg_x_word_store_2 is 0x00000000
+#                   50[ns]:reg_x_word_store_3 is 0x00000000
+#                   50[ns]:reg_x_word_store_4 is 0x00000000
+#                   50[ns]:reg_y_word_store_1 is 0x00000000
+#                   50[ns]:reg_y_word_store_2 is 0x00000000
+#                   50[ns]:reg_y_word_store_3 is 0x00000000
+#                   50[ns]:reg_y_word_store_4 is 0x00000000
+#                   50[ns]:reg_flow_cntr is 0x00000000
+#                   50[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                   50[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                   50[ns]: data_from_store_regs_1 = 0x00000000
+#                   50[ns]: data_from_store_regs_2 = 0x00000000
+#                   50[ns]: data_from_store_regs_3 = 0x00000000
+#                   50[ns]: data_from_store_regs_4 = 0x00000000
+#                  150[ns]:data_accep = 0x1, as expected
+#                  250[ns]:data_accep = 0x0, as expected
+#                  250[ns]: generated_block_data = 0xe0dfae75cd29e7b3b18caee2da7963b9
+#                  250[ns]:reg_x_word_store_1 is 0x00000000
+#                  250[ns]:reg_x_word_store_2 is 0x00000000
+#                  250[ns]:reg_x_word_store_3 is 0x00000000
+#                  250[ns]:reg_x_word_store_4 is 0x00000000
+#                  250[ns]:reg_y_word_store_1 is 0x00000000
+#                  250[ns]:reg_y_word_store_2 is 0x00000000
+#                  250[ns]:reg_y_word_store_3 is 0x00000000
+#                  250[ns]:reg_y_word_store_4 is 0x00000000
+#                  250[ns]:reg_flow_cntr is 0x00000000
+#                  250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                  250[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  250[ns]: data_from_store_regs_1 = 0x00000000
+#                  250[ns]: data_from_store_regs_2 = 0x00000000
+#                  250[ns]: data_from_store_regs_3 = 0x00000000
+#                  250[ns]: data_from_store_regs_4 = 0x00000000
+#                  350[ns]: generated_word_data = 0xbf819c38
+#                  450[ns]:reg_x_word_store_1 is 0xe0dfae75
+#                  450[ns]:reg_x_word_store_2 is 0xcd29e7b3
+#                  450[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  450[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  450[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0xe029aeb9, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0xe0dfae75
+#                  450[ns]: data_from_store_regs_2 = 0xcd29e7b3
+#                  450[ns]: data_from_store_regs_3 = 0xb18caee2
+#                  450[ns]: data_from_store_regs_4 = 0xda7963b9
+#                  450[ns]:reg_x_word_store_1 is 0xe0dfae75
+#                  450[ns]:reg_x_word_store_1 is 0xcd29e7b3
+#                  450[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  450[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  450[ns]: generated_word_data = 0x23532c00
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  e0  29  ae  b9  cd  8c  63  75  b1  79  ae  b3  da  df  e7  e2 
+#                  450[ns]:check_subbytes data_in 0xe0dfae75cd29e7b3b18caee2da7963b9, data_out 0xe029aeb9cd8c6375b179aeb3dadfe7e2
+#                  450[ns]:word_out_comb is 0xe029aeb9, as expected
+#                  450[ns]:reg_x_word_store_1 is 0xe0dfae75
+#                  450[ns]:reg_x_word_store_2 is 0xcd29e7b3
+#                  450[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  450[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  450[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0xe029aeb9, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0xe0dfae75
+#                  450[ns]: data_from_store_regs_2 = 0xcd29e7b3
+#                  450[ns]: data_from_store_regs_3 = 0xb18caee2
+#                  450[ns]: data_from_store_regs_4 = 0xda7963b9
+#                  450[ns]:mix_column_off is 0x0, as expected
+#                  550[ns]: generated_word_data = 0x5cf61a00
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  e0  29  ae  b9  cd  8c  63  75  b1  79  ae  b3  da  df  e7  e2 
+#                  550[ns]:check_subbytes data_in 0xe0dfae75cd29e7b3b18caee2da7963b9, data_out 0xe029aeb9cd8c6375b179aeb3dadfe7e2
+#                  550[ns]:word_out_comb is 0xcd8c6375, as expected
+#                  550[ns]:reg_x_word_store_1 is 0xe0dfae75
+#                  550[ns]:reg_x_word_store_2 is 0xcd29e7b3
+#                  550[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  550[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  550[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  550[ns]:reg_y_word_store_2 is 0x23532c00
+#                  550[ns]:reg_y_word_store_3 is 0x00000000
+#                  550[ns]:reg_y_word_store_4 is 0x00000000
+#                  550[ns]:reg_flow_cntr is 0x00000003
+#                  550[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                  550[ns]:word_out_comb is 0xcd8c6375, word_out_comb_vld is 0x1
+#                  550[ns]: data_from_store_regs_1 = 0xe0dfae75
+#                  550[ns]: data_from_store_regs_2 = 0xcd29e7b3
+#                  550[ns]: data_from_store_regs_3 = 0xb18caee2
+#                  550[ns]: data_from_store_regs_4 = 0xda7963b9
+#                  550[ns]:mix_column_off is 0x0, as expected
+#                  650[ns]: generated_word_data = 0xe0325344
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  e0  29  ae  b9  cd  8c  63  75  b1  79  ae  b3  da  df  e7  e2 
+#                  650[ns]:check_subbytes data_in 0xe0dfae75cd29e7b3b18caee2da7963b9, data_out 0xe029aeb9cd8c6375b179aeb3dadfe7e2
+#                  650[ns]:word_out_comb is 0xb179aeb3, as expected
+#                  650[ns]:reg_x_word_store_1 is 0xe0dfae75
+#                  650[ns]:reg_x_word_store_2 is 0xcd29e7b3
+#                  650[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  650[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  650[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  650[ns]:reg_y_word_store_2 is 0x23532c00
+#                  650[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                  650[ns]:reg_y_word_store_4 is 0x00000000
+#                  650[ns]:reg_flow_cntr is 0x00000004
+#                  650[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                  650[ns]:word_out_comb is 0xb179aeb3, word_out_comb_vld is 0x1
+#                  650[ns]: data_from_store_regs_1 = 0xe0dfae75
+#                  650[ns]: data_from_store_regs_2 = 0xcd29e7b3
+#                  650[ns]: data_from_store_regs_3 = 0xb18caee2
+#                  650[ns]: data_from_store_regs_4 = 0xda7963b9
+#                  650[ns]:mix_column_off is 0x0, as expected
+#                  750[ns]: generated_word_data = 0x2ca894ef
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  e0  29  ae  b9  cd  8c  63  75  b1  79  ae  b3  da  df  e7  e2 
+#                  750[ns]:check_subbytes data_in 0xe0dfae75cd29e7b3b18caee2da7963b9, data_out 0xe029aeb9cd8c6375b179aeb3dadfe7e2
+#                  750[ns]:word_out_comb is 0xdadfe7e2, as expected
+#                  750[ns]:reg_x_word_store_1 is 0xe0dfae75
+#                  750[ns]:reg_x_word_store_2 is 0xcd29e7b3
+#                  750[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  750[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  750[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  750[ns]:reg_y_word_store_2 is 0x23532c00
+#                  750[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                  750[ns]:reg_y_word_store_4 is 0xe0325344
+#                  750[ns]:reg_flow_cntr is 0x00000005
+#                  750[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                  750[ns]:word_out_comb is 0xdadfe7e2, word_out_comb_vld is 0x1
+#                  750[ns]: data_from_store_regs_1 = 0xbf819c38
+#                  750[ns]: data_from_store_regs_2 = 0x23532c00
+#                  750[ns]: data_from_store_regs_3 = 0x5cf61a00
+#                  750[ns]: data_from_store_regs_4 = 0xe0325344
+#                  750[ns]:mix_column_off is 0x0, as expected
+#                  850[ns]: generated_word_data = 0xf65ec1cc
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bf  53  1a  44  23  f6  53  38  5c  32  9c  00  e0  81  2c  00 
+#                  850[ns]:check_subbytes data_in 0xbf819c3823532c005cf61a00e0325344, data_out 0xbf531a4423f653385c329c00e0812c00
+#                  850[ns]:word_out_comb is 0xbf531a44, as expected
+#                  850[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                  850[ns]:reg_x_word_store_2 is 0xcd29e7b3
+#                  850[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  850[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  850[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  850[ns]:reg_y_word_store_2 is 0x23532c00
+#                  850[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                  850[ns]:reg_y_word_store_4 is 0xe0325344
+#                  850[ns]:reg_flow_cntr is 0x00000006
+#                  850[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                  850[ns]:word_out_comb is 0xbf531a44, word_out_comb_vld is 0x1
+#                  850[ns]: data_from_store_regs_1 = 0xbf819c38
+#                  850[ns]: data_from_store_regs_2 = 0x23532c00
+#                  850[ns]: data_from_store_regs_3 = 0x5cf61a00
+#                  850[ns]: data_from_store_regs_4 = 0xe0325344
+#                  850[ns]:mix_column_off is 0x0, as expected
+#                  950[ns]: generated_word_data = 0x88c864e2
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bf  53  1a  44  23  f6  53  38  5c  32  9c  00  e0  81  2c  00 
+#                  950[ns]:check_subbytes data_in 0xbf819c3823532c005cf61a00e0325344, data_out 0xbf531a4423f653385c329c00e0812c00
+#                  950[ns]:word_out_comb is 0x23f65338, as expected
+#                  950[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                  950[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                  950[ns]:reg_x_word_store_3 is 0xb18caee2
+#                  950[ns]:reg_x_word_store_4 is 0xda7963b9
+#                  950[ns]:reg_y_word_store_1 is 0xbf819c38
+#                  950[ns]:reg_y_word_store_2 is 0x23532c00
+#                  950[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                  950[ns]:reg_y_word_store_4 is 0xe0325344
+#                  950[ns]:reg_flow_cntr is 0x00000007
+#                  950[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                  950[ns]:word_out_comb is 0x23f65338, word_out_comb_vld is 0x1
+#                  950[ns]: data_from_store_regs_1 = 0xbf819c38
+#                  950[ns]: data_from_store_regs_2 = 0x23532c00
+#                  950[ns]: data_from_store_regs_3 = 0x5cf61a00
+#                  950[ns]: data_from_store_regs_4 = 0xe0325344
+#                  950[ns]:mix_column_off is 0x0, as expected
+#                 1050[ns]: generated_word_data = 0xd88ab3a7
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bf  53  1a  44  23  f6  53  38  5c  32  9c  00  e0  81  2c  00 
+#                 1050[ns]:check_subbytes data_in 0xbf819c3823532c005cf61a00e0325344, data_out 0xbf531a4423f653385c329c00e0812c00
+#                 1050[ns]:word_out_comb is 0x5c329c00, as expected
+#                 1050[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                 1050[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1050[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1050[ns]:reg_x_word_store_4 is 0xda7963b9
+#                 1050[ns]:reg_y_word_store_1 is 0xbf819c38
+#                 1050[ns]:reg_y_word_store_2 is 0x23532c00
+#                 1050[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                 1050[ns]:reg_y_word_store_4 is 0xe0325344
+#                 1050[ns]:reg_flow_cntr is 0x00000008
+#                 1050[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 1050[ns]:word_out_comb is 0x5c329c00, word_out_comb_vld is 0x1
+#                 1050[ns]: data_from_store_regs_1 = 0xbf819c38
+#                 1050[ns]: data_from_store_regs_2 = 0x23532c00
+#                 1050[ns]: data_from_store_regs_3 = 0x5cf61a00
+#                 1050[ns]: data_from_store_regs_4 = 0xe0325344
+#                 1050[ns]:mix_column_off is 0x0, as expected
+#                 1150[ns]: generated_word_data = 0x74438f05
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bf  53  1a  44  23  f6  53  38  5c  32  9c  00  e0  81  2c  00 
+#                 1150[ns]:check_subbytes data_in 0xbf819c3823532c005cf61a00e0325344, data_out 0xbf531a4423f653385c329c00e0812c00
+#                 1150[ns]:word_out_comb is 0xe0812c00, as expected
+#                 1150[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                 1150[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1150[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1150[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1150[ns]:reg_y_word_store_1 is 0xbf819c38
+#                 1150[ns]:reg_y_word_store_2 is 0x23532c00
+#                 1150[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                 1150[ns]:reg_y_word_store_4 is 0xe0325344
+#                 1150[ns]:reg_flow_cntr is 0x00000009
+#                 1150[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 1150[ns]:word_out_comb is 0xe0812c00, word_out_comb_vld is 0x1
+#                 1150[ns]: data_from_store_regs_1 = 0x2ca894ef
+#                 1150[ns]: data_from_store_regs_2 = 0xf65ec1cc
+#                 1150[ns]: data_from_store_regs_3 = 0x88c864e2
+#                 1150[ns]: data_from_store_regs_4 = 0xd88ab3a7
+#                 1150[ns]:mix_column_off is 0x0, as expected
+#                 1250[ns]: generated_word_data = 0x38a6b979
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  2c  5e  64  a7  f6  c8  b3  ef  88  8a  94  cc  d8  a8  c1  e2 
+#                 1250[ns]:check_subbytes data_in 0x2ca894eff65ec1cc88c864e2d88ab3a7, data_out 0x2c5e64a7f6c8b3ef888a94ccd8a8c1e2
+#                 1250[ns]:word_out_comb is 0x2c5e64a7, as expected
+#                 1250[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                 1250[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1250[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1250[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1250[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1250[ns]:reg_y_word_store_2 is 0x23532c00
+#                 1250[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                 1250[ns]:reg_y_word_store_4 is 0xe0325344
+#                 1250[ns]:reg_flow_cntr is 0x0000000a
+#                 1250[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 1250[ns]:word_out_comb is 0x2c5e64a7, word_out_comb_vld is 0x1
+#                 1250[ns]: data_from_store_regs_1 = 0x2ca894ef
+#                 1250[ns]: data_from_store_regs_2 = 0xf65ec1cc
+#                 1250[ns]: data_from_store_regs_3 = 0x88c864e2
+#                 1250[ns]: data_from_store_regs_4 = 0xd88ab3a7
+#                 1250[ns]:mix_column_off is 0x0, as expected
+#                 1350[ns]: generated_word_data = 0x7dbd2124
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  2c  5e  64  a7  f6  c8  b3  ef  88  8a  94  cc  d8  a8  c1  e2 
+#                 1350[ns]:check_subbytes data_in 0x2ca894eff65ec1cc88c864e2d88ab3a7, data_out 0x2c5e64a7f6c8b3ef888a94ccd8a8c1e2
+#                 1350[ns]:word_out_comb is 0xf6c8b3ef, as expected
+#                 1350[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                 1350[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1350[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1350[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1350[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1350[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1350[ns]:reg_y_word_store_3 is 0x5cf61a00
+#                 1350[ns]:reg_y_word_store_4 is 0xe0325344
+#                 1350[ns]:reg_flow_cntr is 0x0000000b
+#                 1350[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 1350[ns]:word_out_comb is 0xf6c8b3ef, word_out_comb_vld is 0x1
+#                 1350[ns]: data_from_store_regs_1 = 0x2ca894ef
+#                 1350[ns]: data_from_store_regs_2 = 0xf65ec1cc
+#                 1350[ns]: data_from_store_regs_3 = 0x88c864e2
+#                 1350[ns]: data_from_store_regs_4 = 0xd88ab3a7
+#                 1350[ns]:mix_column_off is 0x0, as expected
+#                 1450[ns]: generated_word_data = 0xc741352c
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  2c  5e  64  a7  f6  c8  b3  ef  88  8a  94  cc  d8  a8  c1  e2 
+#                 1450[ns]:check_subbytes data_in 0x2ca894eff65ec1cc88c864e2d88ab3a7, data_out 0x2c5e64a7f6c8b3ef888a94ccd8a8c1e2
+#                 1450[ns]:word_out_comb is 0x888a94cc, as expected
+#                 1450[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                 1450[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1450[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1450[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1450[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1450[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1450[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 1450[ns]:reg_y_word_store_4 is 0xe0325344
+#                 1450[ns]:reg_flow_cntr is 0x0000000c
+#                 1450[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 1450[ns]:word_out_comb is 0x888a94cc, word_out_comb_vld is 0x1
+#                 1450[ns]: data_from_store_regs_1 = 0x2ca894ef
+#                 1450[ns]: data_from_store_regs_2 = 0xf65ec1cc
+#                 1450[ns]: data_from_store_regs_3 = 0x88c864e2
+#                 1450[ns]: data_from_store_regs_4 = 0xd88ab3a7
+#                 1450[ns]:mix_column_off is 0x0, as expected
+#                 1550[ns]: generated_word_data = 0xbd562fda
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  2c  5e  64  a7  f6  c8  b3  ef  88  8a  94  cc  d8  a8  c1  e2 
+#                 1550[ns]:check_subbytes data_in 0x2ca894eff65ec1cc88c864e2d88ab3a7, data_out 0x2c5e64a7f6c8b3ef888a94ccd8a8c1e2
+#                 1550[ns]:word_out_comb is 0xd8a8c1e2, as expected
+#                 1550[ns]:reg_x_word_store_1 is 0x2ca894ef
+#                 1550[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1550[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1550[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1550[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1550[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1550[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 1550[ns]:reg_y_word_store_4 is 0xc741352c
+#                 1550[ns]:reg_flow_cntr is 0x0000000d
+#                 1550[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 1550[ns]:word_out_comb is 0xd8a8c1e2, word_out_comb_vld is 0x1
+#                 1550[ns]: data_from_store_regs_1 = 0x74438f05
+#                 1550[ns]: data_from_store_regs_2 = 0x38a6b979
+#                 1550[ns]: data_from_store_regs_3 = 0x7dbd2124
+#                 1550[ns]: data_from_store_regs_4 = 0xc741352c
+#                 1550[ns]:mix_column_off is 0x0, as expected
+#                 1650[ns]: generated_word_data = 0x0b7905aa
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  74  a6  21  2c  38  bd  35  05  7d  41  8f  79  c7  43  b9  24 
+#                 1650[ns]:check_subbytes data_in 0x74438f0538a6b9797dbd2124c741352c, data_out 0x74a6212c38bd35057d418f79c743b924
+#                 1650[ns]:word_out_comb is 0x74a6212c, as expected
+#                 1650[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 1650[ns]:reg_x_word_store_2 is 0xf65ec1cc
+#                 1650[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1650[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1650[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1650[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1650[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 1650[ns]:reg_y_word_store_4 is 0xc741352c
+#                 1650[ns]:reg_flow_cntr is 0x0000000e
+#                 1650[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 1650[ns]:word_out_comb is 0x74a6212c, word_out_comb_vld is 0x1
+#                 1650[ns]: data_from_store_regs_1 = 0x74438f05
+#                 1650[ns]: data_from_store_regs_2 = 0x38a6b979
+#                 1650[ns]: data_from_store_regs_3 = 0x7dbd2124
+#                 1650[ns]: data_from_store_regs_4 = 0xc741352c
+#                 1650[ns]:mix_column_off is 0x0, as expected
+#                 1750[ns]: generated_word_data = 0xfca78380
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  74  a6  21  2c  38  bd  35  05  7d  41  8f  79  c7  43  b9  24 
+#                 1750[ns]:check_subbytes data_in 0x74438f0538a6b9797dbd2124c741352c, data_out 0x74a6212c38bd35057d418f79c743b924
+#                 1750[ns]:word_out_comb is 0x38bd3505, as expected
+#                 1750[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 1750[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 1750[ns]:reg_x_word_store_3 is 0x88c864e2
+#                 1750[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1750[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1750[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1750[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 1750[ns]:reg_y_word_store_4 is 0xc741352c
+#                 1750[ns]:reg_flow_cntr is 0x0000000f
+#                 1750[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 1750[ns]:word_out_comb is 0x38bd3505, word_out_comb_vld is 0x1
+#                 1750[ns]: data_from_store_regs_1 = 0x74438f05
+#                 1750[ns]: data_from_store_regs_2 = 0x38a6b979
+#                 1750[ns]: data_from_store_regs_3 = 0x7dbd2124
+#                 1750[ns]: data_from_store_regs_4 = 0xc741352c
+#                 1750[ns]:mix_column_off is 0x0, as expected
+#                 1850[ns]: generated_word_data = 0xe3e2d195
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  74  a6  21  2c  38  bd  35  05  7d  41  8f  79  c7  43  b9  24 
+#                 1850[ns]:check_subbytes data_in 0x74438f0538a6b9797dbd2124c741352c, data_out 0x74a6212c38bd35057d418f79c743b924
+#                 1850[ns]:word_out_comb is 0x7d418f79, as expected
+#                 1850[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 1850[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 1850[ns]:reg_x_word_store_3 is 0xfca78380
+#                 1850[ns]:reg_x_word_store_4 is 0xd88ab3a7
+#                 1850[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1850[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1850[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 1850[ns]:reg_y_word_store_4 is 0xc741352c
+#                 1850[ns]:reg_flow_cntr is 0x00000010
+#                 1850[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 1850[ns]:word_out_comb is 0x7d418f79, word_out_comb_vld is 0x1
+#                 1850[ns]: data_from_store_regs_1 = 0x74438f05
+#                 1850[ns]: data_from_store_regs_2 = 0x38a6b979
+#                 1850[ns]: data_from_store_regs_3 = 0x7dbd2124
+#                 1850[ns]: data_from_store_regs_4 = 0xc741352c
+#                 1850[ns]:mix_column_off is 0x0, as expected
+#                 1950[ns]: generated_word_data = 0x3113bb32
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  74  a6  21  2c  38  bd  35  05  7d  41  8f  79  c7  43  b9  24 
+#                 1950[ns]:check_subbytes data_in 0x74438f0538a6b9797dbd2124c741352c, data_out 0x74a6212c38bd35057d418f79c743b924
+#                 1950[ns]:word_out_comb is 0xc743b924, as expected
+#                 1950[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 1950[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 1950[ns]:reg_x_word_store_3 is 0xfca78380
+#                 1950[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 1950[ns]:reg_y_word_store_1 is 0x74438f05
+#                 1950[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 1950[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 1950[ns]:reg_y_word_store_4 is 0xc741352c
+#                 1950[ns]:reg_flow_cntr is 0x00000011
+#                 1950[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 1950[ns]:word_out_comb is 0xc743b924, word_out_comb_vld is 0x1
+#                 1950[ns]: data_from_store_regs_1 = 0xbd562fda
+#                 1950[ns]: data_from_store_regs_2 = 0x0b7905aa
+#                 1950[ns]: data_from_store_regs_3 = 0xfca78380
+#                 1950[ns]: data_from_store_regs_4 = 0xe3e2d195
+#                 1950[ns]:mix_column_off is 0x0, as expected
+#                 2050[ns]: generated_word_data = 0x9300ee27
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bd  79  83  95  0b  a7  d1  da  fc  e2  2f  aa  e3  56  05  80 
+#                 2050[ns]:check_subbytes data_in 0xbd562fda0b7905aafca78380e3e2d195, data_out 0xbd7983950ba7d1dafce22faae3560580
+#                 2050[ns]:word_out_comb is 0xbd798395, as expected
+#                 2050[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 2050[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 2050[ns]:reg_x_word_store_3 is 0xfca78380
+#                 2050[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2050[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2050[ns]:reg_y_word_store_2 is 0x38a6b979
+#                 2050[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 2050[ns]:reg_y_word_store_4 is 0xc741352c
+#                 2050[ns]:reg_flow_cntr is 0x00000012
+#                 2050[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 2050[ns]:word_out_comb is 0xbd798395, word_out_comb_vld is 0x1
+#                 2050[ns]: data_from_store_regs_1 = 0xbd562fda
+#                 2050[ns]: data_from_store_regs_2 = 0x0b7905aa
+#                 2050[ns]: data_from_store_regs_3 = 0xfca78380
+#                 2050[ns]: data_from_store_regs_4 = 0xe3e2d195
+#                 2050[ns]:mix_column_off is 0x0, as expected
+#                 2150[ns]: generated_word_data = 0x5f3b9a1f
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bd  79  83  95  0b  a7  d1  da  fc  e2  2f  aa  e3  56  05  80 
+#                 2150[ns]:check_subbytes data_in 0xbd562fda0b7905aafca78380e3e2d195, data_out 0xbd7983950ba7d1dafce22faae3560580
+#                 2150[ns]:word_out_comb is 0x0ba7d1da, as expected
+#                 2150[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 2150[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 2150[ns]:reg_x_word_store_3 is 0xfca78380
+#                 2150[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2150[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2150[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2150[ns]:reg_y_word_store_3 is 0x7dbd2124
+#                 2150[ns]:reg_y_word_store_4 is 0xc741352c
+#                 2150[ns]:reg_flow_cntr is 0x00000013
+#                 2150[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 2150[ns]:word_out_comb is 0x0ba7d1da, word_out_comb_vld is 0x1
+#                 2150[ns]: data_from_store_regs_1 = 0xbd562fda
+#                 2150[ns]: data_from_store_regs_2 = 0x0b7905aa
+#                 2150[ns]: data_from_store_regs_3 = 0xfca78380
+#                 2150[ns]: data_from_store_regs_4 = 0xe3e2d195
+#                 2150[ns]:mix_column_off is 0x0, as expected
+#                 2250[ns]: generated_word_data = 0x9fdba703
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bd  79  83  95  0b  a7  d1  da  fc  e2  2f  aa  e3  56  05  80 
+#                 2250[ns]:check_subbytes data_in 0xbd562fda0b7905aafca78380e3e2d195, data_out 0xbd7983950ba7d1dafce22faae3560580
+#                 2250[ns]:word_out_comb is 0xfce22faa, as expected
+#                 2250[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 2250[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 2250[ns]:reg_x_word_store_3 is 0xfca78380
+#                 2250[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2250[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2250[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2250[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2250[ns]:reg_y_word_store_4 is 0xc741352c
+#                 2250[ns]:reg_flow_cntr is 0x00000014
+#                 2250[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 2250[ns]:word_out_comb is 0xfce22faa, word_out_comb_vld is 0x1
+#                 2250[ns]: data_from_store_regs_1 = 0xbd562fda
+#                 2250[ns]: data_from_store_regs_2 = 0x0b7905aa
+#                 2250[ns]: data_from_store_regs_3 = 0xfca78380
+#                 2250[ns]: data_from_store_regs_4 = 0xe3e2d195
+#                 2250[ns]:mix_column_off is 0x0, as expected
+#                 2350[ns]: generated_word_data = 0x376c406a
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bd  79  83  95  0b  a7  d1  da  fc  e2  2f  aa  e3  56  05  80 
+#                 2350[ns]:check_subbytes data_in 0xbd562fda0b7905aafca78380e3e2d195, data_out 0xbd7983950ba7d1dafce22faae3560580
+#                 2350[ns]:word_out_comb is 0xe3560580, as expected
+#                 2350[ns]:reg_x_word_store_1 is 0xbd562fda
+#                 2350[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 2350[ns]:reg_x_word_store_3 is 0xfca78380
+#                 2350[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2350[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2350[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2350[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2350[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2350[ns]:reg_flow_cntr is 0x00000015
+#                 2350[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 2350[ns]:word_out_comb is 0xe3560580, word_out_comb_vld is 0x1
+#                 2350[ns]: data_from_store_regs_1 = 0x3113bb32
+#                 2350[ns]: data_from_store_regs_2 = 0x9300ee27
+#                 2350[ns]: data_from_store_regs_3 = 0x5f3b9a1f
+#                 2350[ns]: data_from_store_regs_4 = 0x9fdba703
+#                 2350[ns]:mix_column_off is 0x0, as expected
+#                 2450[ns]: generated_word_data = 0x8550302c
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  31  00  9a  03  93  3b  a7  32  5f  db  bb  27  9f  13  ee  1f 
+#                 2450[ns]:check_subbytes data_in 0x3113bb329300ee275f3b9a1f9fdba703, data_out 0x31009a03933ba7325fdbbb279f13ee1f
+#                 2450[ns]:word_out_comb is 0x31009a03, as expected
+#                 2450[ns]:reg_x_word_store_1 is 0x376c406a
+#                 2450[ns]:reg_x_word_store_2 is 0x0b7905aa
+#                 2450[ns]:reg_x_word_store_3 is 0xfca78380
+#                 2450[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2450[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2450[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2450[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2450[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2450[ns]:reg_flow_cntr is 0x00000016
+#                 2450[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 2450[ns]:word_out_comb is 0x31009a03, word_out_comb_vld is 0x1
+#                 2450[ns]: data_from_store_regs_1 = 0x3113bb32
+#                 2450[ns]: data_from_store_regs_2 = 0x9300ee27
+#                 2450[ns]: data_from_store_regs_3 = 0x5f3b9a1f
+#                 2450[ns]: data_from_store_regs_4 = 0x9fdba703
+#                 2450[ns]:mix_column_off is 0x0, as expected
+#                 2550[ns]: generated_word_data = 0x64880714
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  31  00  9a  03  93  3b  a7  32  5f  db  bb  27  9f  13  ee  1f 
+#                 2550[ns]:check_subbytes data_in 0x3113bb329300ee275f3b9a1f9fdba703, data_out 0x31009a03933ba7325fdbbb279f13ee1f
+#                 2550[ns]:word_out_comb is 0x933ba732, as expected
+#                 2550[ns]:reg_x_word_store_1 is 0x376c406a
+#                 2550[ns]:reg_x_word_store_2 is 0x8550302c
+#                 2550[ns]:reg_x_word_store_3 is 0xfca78380
+#                 2550[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2550[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2550[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2550[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2550[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2550[ns]:reg_flow_cntr is 0x00000017
+#                 2550[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 2550[ns]:word_out_comb is 0x933ba732, word_out_comb_vld is 0x1
+#                 2550[ns]: data_from_store_regs_1 = 0x3113bb32
+#                 2550[ns]: data_from_store_regs_2 = 0x9300ee27
+#                 2550[ns]: data_from_store_regs_3 = 0x5f3b9a1f
+#                 2550[ns]: data_from_store_regs_4 = 0x9fdba703
+#                 2550[ns]:mix_column_off is 0x0, as expected
+#                 2650[ns]: generated_word_data = 0x3770cb86
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  31  00  9a  03  93  3b  a7  32  5f  db  bb  27  9f  13  ee  1f 
+#                 2650[ns]:check_subbytes data_in 0x3113bb329300ee275f3b9a1f9fdba703, data_out 0x31009a03933ba7325fdbbb279f13ee1f
+#                 2650[ns]:word_out_comb is 0x5fdbbb27, as expected
+#                 2650[ns]:reg_x_word_store_1 is 0x376c406a
+#                 2650[ns]:reg_x_word_store_2 is 0x8550302c
+#                 2650[ns]:reg_x_word_store_3 is 0x64880714
+#                 2650[ns]:reg_x_word_store_4 is 0xe3e2d195
+#                 2650[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2650[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2650[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2650[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2650[ns]:reg_flow_cntr is 0x00000018
+#                 2650[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 2650[ns]:word_out_comb is 0x5fdbbb27, word_out_comb_vld is 0x1
+#                 2650[ns]: data_from_store_regs_1 = 0x3113bb32
+#                 2650[ns]: data_from_store_regs_2 = 0x9300ee27
+#                 2650[ns]: data_from_store_regs_3 = 0x5f3b9a1f
+#                 2650[ns]: data_from_store_regs_4 = 0x9fdba703
+#                 2650[ns]:mix_column_off is 0x0, as expected
+#                 2750[ns]: generated_word_data = 0x9f579e29
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  31  00  9a  03  93  3b  a7  32  5f  db  bb  27  9f  13  ee  1f 
+#                 2750[ns]:check_subbytes data_in 0x3113bb329300ee275f3b9a1f9fdba703, data_out 0x31009a03933ba7325fdbbb279f13ee1f
+#                 2750[ns]:word_out_comb is 0x9f13ee1f, as expected
+#                 2750[ns]:reg_x_word_store_1 is 0x376c406a
+#                 2750[ns]:reg_x_word_store_2 is 0x8550302c
+#                 2750[ns]:reg_x_word_store_3 is 0x64880714
+#                 2750[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 2750[ns]:reg_y_word_store_1 is 0x3113bb32
+#                 2750[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2750[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2750[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2750[ns]:reg_flow_cntr is 0x00000019
+#                 2750[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 2750[ns]:word_out_comb is 0x9f13ee1f, word_out_comb_vld is 0x1
+#                 2750[ns]: data_from_store_regs_1 = 0x376c406a
+#                 2750[ns]: data_from_store_regs_2 = 0x8550302c
+#                 2750[ns]: data_from_store_regs_3 = 0x64880714
+#                 2750[ns]: data_from_store_regs_4 = 0x3770cb86
+#                 2750[ns]:mix_column_off is 0x0, as expected
+#                 2850[ns]: generated_word_data = 0xc72ec7b2
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  37  50  07  86  85  88  cb  6a  64  70  40  2c  37  6c  30  14 
+#                 2850[ns]:check_subbytes data_in 0x376c406a8550302c648807143770cb86, data_out 0x375007868588cb6a6470402c376c3014
+#                 2850[ns]:word_out_comb is 0x37500786, as expected
+#                 2850[ns]:reg_x_word_store_1 is 0x376c406a
+#                 2850[ns]:reg_x_word_store_2 is 0x8550302c
+#                 2850[ns]:reg_x_word_store_3 is 0x64880714
+#                 2850[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 2850[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 2850[ns]:reg_y_word_store_2 is 0x9300ee27
+#                 2850[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2850[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2850[ns]:reg_flow_cntr is 0x0000001a
+#                 2850[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 2850[ns]:word_out_comb is 0x37500786, word_out_comb_vld is 0x1
+#                 2850[ns]: data_from_store_regs_1 = 0x376c406a
+#                 2850[ns]: data_from_store_regs_2 = 0x8550302c
+#                 2850[ns]: data_from_store_regs_3 = 0x64880714
+#                 2850[ns]: data_from_store_regs_4 = 0x3770cb86
+#                 2850[ns]:mix_column_off is 0x0, as expected
+#                 2950[ns]: generated_word_data = 0x1048cde1
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  37  50  07  86  85  88  cb  6a  64  70  40  2c  37  6c  30  14 
+#                 2950[ns]:check_subbytes data_in 0x376c406a8550302c648807143770cb86, data_out 0x375007868588cb6a6470402c376c3014
+#                 2950[ns]:word_out_comb is 0x8588cb6a, as expected
+#                 2950[ns]:reg_x_word_store_1 is 0x376c406a
+#                 2950[ns]:reg_x_word_store_2 is 0x8550302c
+#                 2950[ns]:reg_x_word_store_3 is 0x64880714
+#                 2950[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 2950[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 2950[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 2950[ns]:reg_y_word_store_3 is 0x5f3b9a1f
+#                 2950[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 2950[ns]:reg_flow_cntr is 0x0000001b
+#                 2950[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 2950[ns]:word_out_comb is 0x8588cb6a, word_out_comb_vld is 0x1
+#                 2950[ns]: data_from_store_regs_1 = 0x376c406a
+#                 2950[ns]: data_from_store_regs_2 = 0x8550302c
+#                 2950[ns]: data_from_store_regs_3 = 0x64880714
+#                 2950[ns]: data_from_store_regs_4 = 0x3770cb86
+#                 2950[ns]:mix_column_off is 0x0, as expected
+#                 3050[ns]: generated_word_data = 0x54243958
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  37  50  07  86  85  88  cb  6a  64  70  40  2c  37  6c  30  14 
+#                 3050[ns]:check_subbytes data_in 0x376c406a8550302c648807143770cb86, data_out 0x375007868588cb6a6470402c376c3014
+#                 3050[ns]:word_out_comb is 0x6470402c, as expected
+#                 3050[ns]:reg_x_word_store_1 is 0x376c406a
+#                 3050[ns]:reg_x_word_store_2 is 0x8550302c
+#                 3050[ns]:reg_x_word_store_3 is 0x64880714
+#                 3050[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 3050[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 3050[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3050[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3050[ns]:reg_y_word_store_4 is 0x9fdba703
+#                 3050[ns]:reg_flow_cntr is 0x0000001c
+#                 3050[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 3050[ns]:word_out_comb is 0x6470402c, word_out_comb_vld is 0x1
+#                 3050[ns]: data_from_store_regs_1 = 0x376c406a
+#                 3050[ns]: data_from_store_regs_2 = 0x8550302c
+#                 3050[ns]: data_from_store_regs_3 = 0x64880714
+#                 3050[ns]: data_from_store_regs_4 = 0x3770cb86
+#                 3050[ns]:mix_column_off is 0x0, as expected
+#                 3150[ns]: generated_word_data = 0xc74d1154
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  37  50  07  86  85  88  cb  6a  64  70  40  2c  37  6c  30  14 
+#                 3150[ns]:check_subbytes data_in 0x376c406a8550302c648807143770cb86, data_out 0x375007868588cb6a6470402c376c3014
+#                 3150[ns]:word_out_comb is 0x376c3014, as expected
+#                 3150[ns]:reg_x_word_store_1 is 0x376c406a
+#                 3150[ns]:reg_x_word_store_2 is 0x8550302c
+#                 3150[ns]:reg_x_word_store_3 is 0x64880714
+#                 3150[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 3150[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 3150[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3150[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3150[ns]:reg_y_word_store_4 is 0x54243958
+#                 3150[ns]:reg_flow_cntr is 0x0000001d
+#                 3150[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 3150[ns]:word_out_comb is 0x376c3014, word_out_comb_vld is 0x1
+#                 3150[ns]: data_from_store_regs_1 = 0x9f579e29
+#                 3150[ns]: data_from_store_regs_2 = 0xc72ec7b2
+#                 3150[ns]: data_from_store_regs_3 = 0x1048cde1
+#                 3150[ns]: data_from_store_regs_4 = 0x54243958
+#                 3150[ns]:mix_column_off is 0x0, as expected
+#                 3250[ns]: generated_word_data = 0x582640c1
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  9f  2e  cd  58  c7  48  39  29  10  24  9e  b2  54  57  c7  e1 
+#                 3250[ns]:check_subbytes data_in 0x9f579e29c72ec7b21048cde154243958, data_out 0x9f2ecd58c748392910249eb25457c7e1
+#                 3250[ns]:word_out_comb is 0x9f2ecd58, as expected
+#                 3250[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3250[ns]:reg_x_word_store_2 is 0x8550302c
+#                 3250[ns]:reg_x_word_store_3 is 0x64880714
+#                 3250[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 3250[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 3250[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3250[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3250[ns]:reg_y_word_store_4 is 0x54243958
+#                 3250[ns]:reg_flow_cntr is 0x0000001e
+#                 3250[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 3250[ns]:word_out_comb is 0x9f2ecd58, word_out_comb_vld is 0x1
+#                 3250[ns]: data_from_store_regs_1 = 0x9f579e29
+#                 3250[ns]: data_from_store_regs_2 = 0xc72ec7b2
+#                 3250[ns]: data_from_store_regs_3 = 0x1048cde1
+#                 3250[ns]: data_from_store_regs_4 = 0x54243958
+#                 3250[ns]:mix_column_off is 0x0, as expected
+#                 3350[ns]: generated_word_data = 0x504c1700
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  9f  2e  cd  58  c7  48  39  29  10  24  9e  b2  54  57  c7  e1 
+#                 3350[ns]:check_subbytes data_in 0x9f579e29c72ec7b21048cde154243958, data_out 0x9f2ecd58c748392910249eb25457c7e1
+#                 3350[ns]:word_out_comb is 0xc7483929, as expected
+#                 3350[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3350[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3350[ns]:reg_x_word_store_3 is 0x64880714
+#                 3350[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 3350[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 3350[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3350[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3350[ns]:reg_y_word_store_4 is 0x54243958
+#                 3350[ns]:reg_flow_cntr is 0x0000001f
+#                 3350[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 3350[ns]:word_out_comb is 0xc7483929, word_out_comb_vld is 0x1
+#                 3350[ns]: data_from_store_regs_1 = 0x9f579e29
+#                 3350[ns]: data_from_store_regs_2 = 0xc72ec7b2
+#                 3350[ns]: data_from_store_regs_3 = 0x1048cde1
+#                 3350[ns]: data_from_store_regs_4 = 0x54243958
+#                 3350[ns]:mix_column_off is 0x0, as expected
+#                 3450[ns]: generated_word_data = 0x165365db
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  9f  2e  cd  58  c7  48  39  29  10  24  9e  b2  54  57  c7  e1 
+#                 3450[ns]:check_subbytes data_in 0x9f579e29c72ec7b21048cde154243958, data_out 0x9f2ecd58c748392910249eb25457c7e1
+#                 3450[ns]:word_out_comb is 0x10249eb2, as expected
+#                 3450[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3450[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3450[ns]:reg_x_word_store_3 is 0x504c1700
+#                 3450[ns]:reg_x_word_store_4 is 0x3770cb86
+#                 3450[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 3450[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3450[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3450[ns]:reg_y_word_store_4 is 0x54243958
+#                 3450[ns]:reg_flow_cntr is 0x00000020
+#                 3450[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 3450[ns]:word_out_comb is 0x10249eb2, word_out_comb_vld is 0x1
+#                 3450[ns]: data_from_store_regs_1 = 0x9f579e29
+#                 3450[ns]: data_from_store_regs_2 = 0xc72ec7b2
+#                 3450[ns]: data_from_store_regs_3 = 0x1048cde1
+#                 3450[ns]: data_from_store_regs_4 = 0x54243958
+#                 3450[ns]:mix_column_off is 0x0, as expected
+#                 3550[ns]: generated_word_data = 0x5e909346
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  9f  2e  cd  58  c7  48  39  29  10  24  9e  b2  54  57  c7  e1 
+#                 3550[ns]:check_subbytes data_in 0x9f579e29c72ec7b21048cde154243958, data_out 0x9f2ecd58c748392910249eb25457c7e1
+#                 3550[ns]:word_out_comb is 0x5457c7e1, as expected
+#                 3550[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3550[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3550[ns]:reg_x_word_store_3 is 0x504c1700
+#                 3550[ns]:reg_x_word_store_4 is 0x165365db
+#                 3550[ns]:reg_y_word_store_1 is 0x9f579e29
+#                 3550[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3550[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3550[ns]:reg_y_word_store_4 is 0x54243958
+#                 3550[ns]:reg_flow_cntr is 0x00000021
+#                 3550[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x1, is_mod_1_to_4 = 0x1
+#                 3550[ns]:word_out_comb is 0x5457c7e1, word_out_comb_vld is 0x1
+#                 3550[ns]: data_from_store_regs_1 = 0xc74d1154
+#                 3550[ns]: data_from_store_regs_2 = 0x582640c1
+#                 3550[ns]: data_from_store_regs_3 = 0x504c1700
+#                 3550[ns]: data_from_store_regs_4 = 0x165365db
+#                 3550[ns]:mix_column_off is 0x0, as expected
+#                 3650[ns]: generated_word_data = 0xe66189c1
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  c7  26  17  db  58  4c  65  54  50  53  11  c1  16  4d  40  00 
+#                 3650[ns]:check_subbytes data_in 0xc74d1154582640c1504c1700165365db, data_out 0xc72617db584c6554505311c1164d4000
+#                 3650[ns]:word_out_comb is 0xc72617db, as expected
+#                 3650[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3650[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3650[ns]:reg_x_word_store_3 is 0x504c1700
+#                 3650[ns]:reg_x_word_store_4 is 0x165365db
+#                 3650[ns]:reg_y_word_store_1 is 0x5e909346
+#                 3650[ns]:reg_y_word_store_2 is 0xc72ec7b2
+#                 3650[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3650[ns]:reg_y_word_store_4 is 0x54243958
+#                 3650[ns]:reg_flow_cntr is 0x00000022
+#                 3650[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                 3650[ns]:word_out_comb is 0xc72617db, word_out_comb_vld is 0x1
+#                 3650[ns]: data_from_store_regs_1 = 0xc74d1154
+#                 3650[ns]: data_from_store_regs_2 = 0x582640c1
+#                 3650[ns]: data_from_store_regs_3 = 0x504c1700
+#                 3650[ns]: data_from_store_regs_4 = 0x165365db
+#                 3650[ns]:mix_column_off is 0x0, as expected
+#                 3750[ns]: generated_word_data = 0x5fc5e999
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  c7  26  17  db  58  4c  65  54  50  53  11  c1  16  4d  40  00 
+#                 3750[ns]:check_subbytes data_in 0xc74d1154582640c1504c1700165365db, data_out 0xc72617db584c6554505311c1164d4000
+#                 3750[ns]:word_out_comb is 0x584c6554, as expected
+#                 3750[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3750[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3750[ns]:reg_x_word_store_3 is 0x504c1700
+#                 3750[ns]:reg_x_word_store_4 is 0x165365db
+#                 3750[ns]:reg_y_word_store_1 is 0x5e909346
+#                 3750[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 3750[ns]:reg_y_word_store_3 is 0x1048cde1
+#                 3750[ns]:reg_y_word_store_4 is 0x54243958
+#                 3750[ns]:reg_flow_cntr is 0x00000023
+#                 3750[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x3, is_mod_1_to_4 = 0x1
+#                 3750[ns]:word_out_comb is 0x584c6554, word_out_comb_vld is 0x1
+#                 3750[ns]: data_from_store_regs_1 = 0xc74d1154
+#                 3750[ns]: data_from_store_regs_2 = 0x582640c1
+#                 3750[ns]: data_from_store_regs_3 = 0x504c1700
+#                 3750[ns]: data_from_store_regs_4 = 0x165365db
+#                 3750[ns]:mix_column_off is 0x0, as expected
+#                 3850[ns]: generated_word_data = 0x1704e8bb
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  c7  26  17  db  58  4c  65  54  50  53  11  c1  16  4d  40  00 
+#                 3850[ns]:check_subbytes data_in 0xc74d1154582640c1504c1700165365db, data_out 0xc72617db584c6554505311c1164d4000
+#                 3850[ns]:word_out_comb is 0x505311c1, as expected
+#                 3850[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3850[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3850[ns]:reg_x_word_store_3 is 0x504c1700
+#                 3850[ns]:reg_x_word_store_4 is 0x165365db
+#                 3850[ns]:reg_y_word_store_1 is 0x5e909346
+#                 3850[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 3850[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 3850[ns]:reg_y_word_store_4 is 0x54243958
+#                 3850[ns]:reg_flow_cntr is 0x00000024
+#                 3850[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x4, is_mod_1_to_4 = 0x1
+#                 3850[ns]:word_out_comb is 0x505311c1, word_out_comb_vld is 0x1
+#                 3850[ns]: data_from_store_regs_1 = 0xc74d1154
+#                 3850[ns]: data_from_store_regs_2 = 0x582640c1
+#                 3850[ns]: data_from_store_regs_3 = 0x504c1700
+#                 3850[ns]: data_from_store_regs_4 = 0x165365db
+#                 3850[ns]:mix_column_off is 0x0, as expected
+#                 3950[ns]: generated_word_data = 0x1faf4865
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  c7  26  17  db  58  4c  65  54  50  53  11  c1  16  4d  40  00 
+#                 3950[ns]:check_subbytes data_in 0xc74d1154582640c1504c1700165365db, data_out 0xc72617db584c6554505311c1164d4000
+#                 3950[ns]:word_out_comb is 0x164d4000, as expected
+#                 3950[ns]:reg_x_word_store_1 is 0xc74d1154
+#                 3950[ns]:reg_x_word_store_2 is 0x582640c1
+#                 3950[ns]:reg_x_word_store_3 is 0x504c1700
+#                 3950[ns]:reg_x_word_store_4 is 0x165365db
+#                 3950[ns]:reg_y_word_store_1 is 0x5e909346
+#                 3950[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 3950[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 3950[ns]:reg_y_word_store_4 is 0x1704e8bb
+#                 3950[ns]:reg_flow_cntr is 0x00000025
+#                 3950[ns]: counter_on = 0x1, input_cycle = 0x1, cntr_mod_with_eight = 0x5, is_mod_1_to_4 = 0x0
+#                 3950[ns]:word_out_comb is 0x164d4000, word_out_comb_vld is 0x1
+#                 3950[ns]: data_from_store_regs_1 = 0x5e909346
+#                 3950[ns]: data_from_store_regs_2 = 0xe66189c1
+#                 3950[ns]: data_from_store_regs_3 = 0x5fc5e999
+#                 3950[ns]: data_from_store_regs_4 = 0x1704e8bb
+#                 3950[ns]:mix_column_off is 0x0, as expected
+#                 4050[ns]: generated_word_data = 0x3f2a4a9a
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  5e  61  e9  bb  e6  c5  e8  46  5f  04  93  c1  17  90  89  99 
+#                 4050[ns]:check_subbytes data_in 0x5e909346e66189c15fc5e9991704e8bb, data_out 0x5e61e9bbe6c5e8465f0493c117908999
+#                 4050[ns]:word_out_comb is 0x5e61e9bb, as expected
+#                 4050[ns]:reg_x_word_store_1 is 0x1faf4865
+#                 4050[ns]:reg_x_word_store_2 is 0x582640c1
+#                 4050[ns]:reg_x_word_store_3 is 0x504c1700
+#                 4050[ns]:reg_x_word_store_4 is 0x165365db
+#                 4050[ns]:reg_y_word_store_1 is 0x5e909346
+#                 4050[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 4050[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 4050[ns]:reg_y_word_store_4 is 0x1704e8bb
+#                 4050[ns]:reg_flow_cntr is 0x00000026
+#                 4050[ns]: counter_on = 0x1, input_cycle = 0x2, cntr_mod_with_eight = 0x6, is_mod_1_to_4 = 0x0
+#                 4050[ns]:word_out_comb is 0x5e61e9bb, word_out_comb_vld is 0x1
+#                 4050[ns]: data_from_store_regs_1 = 0x5e909346
+#                 4050[ns]: data_from_store_regs_2 = 0xe66189c1
+#                 4050[ns]: data_from_store_regs_3 = 0x5fc5e999
+#                 4050[ns]: data_from_store_regs_4 = 0x1704e8bb
+#                 4050[ns]:mix_column_off is 0x1, as expected
+#                 4150[ns]: generated_word_data = 0x7172993c
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  5e  61  e9  bb  e6  c5  e8  46  5f  04  93  c1  17  90  89  99 
+#                 4150[ns]:check_subbytes data_in 0x5e909346e66189c15fc5e9991704e8bb, data_out 0x5e61e9bbe6c5e8465f0493c117908999
+#                 4150[ns]:word_out_comb is 0xe6c5e846, as expected
+#                 4150[ns]:reg_x_word_store_1 is 0x1faf4865
+#                 4150[ns]:reg_x_word_store_2 is 0x3f2a4a9a
+#                 4150[ns]:reg_x_word_store_3 is 0x504c1700
+#                 4150[ns]:reg_x_word_store_4 is 0x165365db
+#                 4150[ns]:reg_y_word_store_1 is 0x5e909346
+#                 4150[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 4150[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 4150[ns]:reg_y_word_store_4 is 0x1704e8bb
+#                 4150[ns]:reg_flow_cntr is 0x00000027
+#                 4150[ns]: counter_on = 0x1, input_cycle = 0x3, cntr_mod_with_eight = 0x7, is_mod_1_to_4 = 0x0
+#                 4150[ns]:word_out_comb is 0xe6c5e846, word_out_comb_vld is 0x1
+#                 4150[ns]: data_from_store_regs_1 = 0x5e909346
+#                 4150[ns]: data_from_store_regs_2 = 0xe66189c1
+#                 4150[ns]: data_from_store_regs_3 = 0x5fc5e999
+#                 4150[ns]: data_from_store_regs_4 = 0x1704e8bb
+#                 4150[ns]:mix_column_off is 0x1, as expected
+#                 4250[ns]: generated_word_data = 0xb952fda9
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  5e  61  e9  bb  e6  c5  e8  46  5f  04  93  c1  17  90  89  99 
+#                 4250[ns]:check_subbytes data_in 0x5e909346e66189c15fc5e9991704e8bb, data_out 0x5e61e9bbe6c5e8465f0493c117908999
+#                 4250[ns]:word_out_comb is 0x5f0493c1, as expected
+#                 4250[ns]:reg_x_word_store_1 is 0x1faf4865
+#                 4250[ns]:reg_x_word_store_2 is 0x3f2a4a9a
+#                 4250[ns]:reg_x_word_store_3 is 0x7172993c
+#                 4250[ns]:reg_x_word_store_4 is 0x165365db
+#                 4250[ns]:reg_y_word_store_1 is 0x5e909346
+#                 4250[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 4250[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 4250[ns]:reg_y_word_store_4 is 0x1704e8bb
+#                 4250[ns]:reg_flow_cntr is 0x00000028
+#                 4250[ns]: counter_on = 0x1, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4250[ns]:word_out_comb is 0x5f0493c1, word_out_comb_vld is 0x1
+#                 4250[ns]: data_from_store_regs_1 = 0x5e909346
+#                 4250[ns]: data_from_store_regs_2 = 0xe66189c1
+#                 4250[ns]: data_from_store_regs_3 = 0x5fc5e999
+#                 4250[ns]: data_from_store_regs_4 = 0x1704e8bb
+#                 4250[ns]:mix_column_off is 0x1, as expected
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  5e  61  e9  bb  e6  c5  e8  46  5f  04  93  c1  17  90  89  99 
+#                 4350[ns]:check_subbytes data_in 0x5e909346e66189c15fc5e9991704e8bb, data_out 0x5e61e9bbe6c5e8465f0493c117908999
+#                 4350[ns]:word_out_comb is 0x17908999, as expected
+#                 4350[ns]:reg_x_word_store_1 is 0x1faf4865
+#                 4350[ns]:reg_x_word_store_2 is 0x3f2a4a9a
+#                 4350[ns]:reg_x_word_store_3 is 0x7172993c
+#                 4350[ns]:reg_x_word_store_4 is 0xb952fda9
+#                 4350[ns]:reg_y_word_store_1 is 0x5e909346
+#                 4350[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 4350[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 4350[ns]:reg_y_word_store_4 is 0x1704e8bb
+#                 4350[ns]:reg_flow_cntr is 0x00000000
+#                 4350[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4350[ns]:word_out_comb is 0x17908999, word_out_comb_vld is 0x1
+#                 4350[ns]: data_from_store_regs_1 = 0x5e909346
+#                 4350[ns]: data_from_store_regs_2 = 0xe66189c1
+#                 4350[ns]: data_from_store_regs_3 = 0x5fc5e999
+#                 4350[ns]: data_from_store_regs_4 = 0x1704e8bb
+#                 4350[ns]:mix_column_off is 0x1, as expected
+#                 4450[ns]:reg_x_word_store_1 is 0x1faf4865
+#                 4450[ns]:reg_x_word_store_2 is 0x3f2a4a9a
+#                 4450[ns]:reg_x_word_store_3 is 0x7172993c
+#                 4450[ns]:reg_x_word_store_4 is 0xb952fda9
+#                 4450[ns]:reg_y_word_store_1 is 0x5e909346
+#                 4450[ns]:reg_y_word_store_2 is 0xe66189c1
+#                 4450[ns]:reg_y_word_store_3 is 0x5fc5e999
+#                 4450[ns]:reg_y_word_store_4 is 0x1704e8bb
+#                 4450[ns]:reg_flow_cntr is 0x00000000
+#                 4450[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                 4450[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                 4450[ns]: data_from_store_regs_1 = 0x5e909346
+#                 4450[ns]: data_from_store_regs_2 = 0xe66189c1
+#                 4450[ns]: data_from_store_regs_3 = 0x5fc5e999
+#                 4450[ns]: data_from_store_regs_4 = 0x1704e8bb
+#                 4450[ns]:data_out is 0x1faf48653f2a4a9a7172993cb952fda9, data_out_vld is 0x1
+# ** Note: $finish    : flow_cntr_tb.sv(256)
+#    Time: 4450 ns  Iteration: 2  Instance: /flow_cntr_test_top/flow_cntr_test

@@ -1,0 +1,34 @@
+Notes:
+*The project has a minimum word count of 5,000 words. The length of the project should be around 50 pages.
+
+
+Writin plan-
+
+Lit review
+
+Project format:
+	-Title page
+	-Signed declaration
+	-Summary - 1 hour, 03.08
+	-Contents page
+	-List of symbols and/or figures
+	-Introduction (this should include a literature review - the one you  have expanded,work on it - work with aes standart, exaplain it in a great detail) 03.08
+	-Main body of report comprising a number of chapters/sections
+		-Microarch 04.08
+		-DE implemenation of Microarch 04.08
+		- C model - go through the functions you've created as well as already defined and what dpi is.
+		-DV implemenatation and -Debugging 05.08
+		 - dont include full logs in the report, provide them in appendicies.
+			test plan and checks implemenatation 
+		-Performance of the design 05.08
+	-Conclusions 06.08
+	-Recommendations for future work 06.08
+	-References
+	-Appendices (code,debug logs, gallois fields mathematics (theory notes)) 06.08
+
+Formatting -
+	Left 30mm, righ 25mm.
+	1.5 life spacing
+	References should be present throughout all the work.
+	
+

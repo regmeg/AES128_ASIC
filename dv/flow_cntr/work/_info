@@ -1,0 +1,138 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/user/final_year_project/asic_project/dv/flow_cntr
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1439234575
+V4cZT6lAL0UE96=ChX=dDY3
+04 18 4 work flow_cntr_test_top fast 0
+=1-24b6fdfd2b29-55c8fa0f-a7b78-39bd
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.2c;57
+vflow_cntr
+Z1 DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+Z2 !s110 1439234570
+IV=8ME_W]HB>IN<2H>8WKn2
+Z3 V`JN@9S9cnhjKRR_L]QIcM3
+Z4 !s105 flow_cntr_v_unit
+S1
+Z5 d/home/user/final_year_project/asic_project/dv/flow_cntr
+w1438803434
+Z6 8/home/user/final_year_project/asic_project/de/flow_cntr.v
+Z7 F/home/user/final_year_project/asic_project/de/flow_cntr.v
+L0 3
+Z8 OL;L;10.2c;57
+r1
+31
+Z9 !s108 1439234570.127716
+Z10 !s107 /home/user/final_year_project/asic_project/de/chip_defines.v|/home/user/final_year_project/asic_project/de/flow_cntr.v|flow_cntr_tb.sv|flow_cntr_test_top.sv|flow_cntr_if.sv|
+Z11 !s90 -sv|flow_cntr_if.sv|flow_cntr_test_top.sv|flow_cntr_tb.sv|/home/user/final_year_project/asic_project/de/flow_cntr.v|+incdir+/home/user/final_year_project/asic_project/de|
+Z12 o-sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z13 !s92 -sv +incdir+/home/user/final_year_project/asic_project/de -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 QgMeTVF:436WgYn4ULgF]2
+!s85 0
+!i111 0
+Yflow_cntr_io
+R1
+R2
+IlLo?an?]4daWl6IkobY[[1
+R3
+S1
+R5
+w1438811298
+8flow_cntr_if.sv
+Fflow_cntr_if.sv
+L0 4
+R8
+r1
+31
+R9
+R10
+R11
+R12
+R13
+!s105 flow_cntr_if_sv_unit
+!i10b 1
+!s100 kJAU:LZdBK>a:Pe;ihO0j0
+!s85 0
+!i111 0
+4flow_cntr_test
+R1
+R2
+IZC`8^<U;^>?;DDlHf9kiA3
+R3
+S1
+R5
+w1438813865
+8flow_cntr_tb.sv
+Fflow_cntr_tb.sv
+L0 4
+R8
+r1
+31
+R9
+R10
+R11
+R12
+R13
+!s105 flow_cntr_tb_sv_unit
+!i10b 1
+!s100 ^7ebN?AH^55DO>SEW6@jT0
+!s85 0
+!i111 0
+vflow_cntr_test_top
+R1
+R2
+Ig:WTOT:9Z`;WBbof?N8kP3
+R3
+S1
+R5
+w1438811562
+8flow_cntr_test_top.sv
+Fflow_cntr_test_top.sv
+L0 2
+R8
+r1
+31
+R9
+R10
+R11
+R12
+R13
+!s105 flow_cntr_test_top_sv_unit
+!i10b 1
+!s100 TP4HJXHNGeN4Ha^fAV7OA1
+!s85 0
+!i111 0
+vflow_cntrl
+R1
+IDQ42oELT>:08_Hh1QhBa83
+R3
+S1
+R5
+w1437502190
+R6
+R7
+L0 3
+R8
+r1
+31
+R10
+R11
+R12
+R13
+R4
+!s110 1437502336
+!s108 1437502336.121261
+!s100 aT?WI0mDeYYoPo5k64ede0
+!i10b 1
+!s85 0
+!i111 0

@@ -1,0 +1,15 @@
+Design ideas -
+
+Make everything define based - do not use any hardcoded values.
+
+AES is a symetric cryptosystem, hence is uses the same key for encrypt and decrypt - hence it should use the same key. Key should be securely stored. 
+
+Preprogram and store key on the registers - that's the way to do it. Registers should be accesible and key should be reprogrammable - it could be reprogrammed automatically by some cpu some certain amount of time.
+
+For embedded testing - just do rtl to gatelist conversion and e2e tests.
+
+Backend deals with physical design , it's opposite to front end which deals with logical design
+
+#Arch#
+Arch should include all blocks, signals, they description, registers (for keys and preprogrammed tables).
+It basically should explain how chips works on the bit level - pretty much the same as AES algorithm.

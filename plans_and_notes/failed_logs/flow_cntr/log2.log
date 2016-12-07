@@ -1,0 +1,115 @@
+vsim -sv_lib aes -sv_seed random -c -do "run -all" flow_cntr_test_top
+Reading pref.tcl 
+
+# 10.2c
+
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes flow_cntr_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: flow_cntr_tb.sv(100): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.flow_cntr_test_top(fast)
+# Loading work.flow_cntr_test(fast)
+# Loading work.flow_cntr(fast)
+# ** Warning: (vsim-PLI-3691) flow_cntr_test_top.sv(33): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /flow_cntr_test_top
+# Loading ./aes.so
+# Sv_Seed = 3092073723
+# run -all 
+# ** Error: (vsim-PLI-3107) flow_cntr_test_top.sv(32): $dumpports : File "test.vcd" is already in use.
+#         Region: /flow_cntr_test_top
+#                    0[ns]: reset - 0x1
+#                   30[ns]: reset - 0x0, should have reset triggered
+#                   50[ns]:reg_x_word_store_1 is 0x00000000
+#                   50[ns]:reg_x_word_store_2 is 0x00000000
+#                   50[ns]:reg_x_word_store_3 is 0x00000000
+#                   50[ns]:reg_x_word_store_4 is 0x00000000
+#                   50[ns]:reg_y_word_store_1 is 0x00000000
+#                   50[ns]:reg_y_word_store_2 is 0x00000000
+#                   50[ns]:reg_y_word_store_3 is 0x00000000
+#                   50[ns]:reg_y_word_store_4 is 0x00000000
+#                   50[ns]:reg_flow_cntr is 0x00000000
+#                   50[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                   50[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                   50[ns]: data_from_store_regs_1 = 0x00000000
+#                   50[ns]: data_from_store_regs_2 = 0x00000000
+#                   50[ns]: data_from_store_regs_3 = 0x00000000
+#                   50[ns]: data_from_store_regs_4 = 0x00000000
+#                  150[ns]:data_accep = 0x1, as expected
+#                  250[ns]:data_accep = 0x0, as expected
+#                  250[ns]: generated_data = 0xb66d2c63d94efec9d134e3019efc8a4f
+#                  250[ns]:reg_x_word_store_1 is 0x00000000
+#                  250[ns]:reg_x_word_store_2 is 0x00000000
+#                  250[ns]:reg_x_word_store_3 is 0x00000000
+#                  250[ns]:reg_x_word_store_4 is 0x00000000
+#                  250[ns]:reg_y_word_store_1 is 0x00000000
+#                  250[ns]:reg_y_word_store_2 is 0x00000000
+#                  250[ns]:reg_y_word_store_3 is 0x00000000
+#                  250[ns]:reg_y_word_store_4 is 0x00000000
+#                  250[ns]:reg_flow_cntr is 0x00000000
+#                  250[ns]: counter_on = 0x0, input_cycle = 0x0, cntr_mod_with_eight = 0x0, is_mod_1_to_4 = 0x0
+#                  250[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  250[ns]: data_from_store_regs_1 = 0x00000000
+#                  250[ns]: data_from_store_regs_2 = 0x00000000
+#                  250[ns]: data_from_store_regs_3 = 0x00000000
+#                  250[ns]: data_from_store_regs_4 = 0x00000000
+# i am first counter                 450[ns]:reg_x_word_store_1 is 0xb66d2c63
+#                  450[ns]:reg_x_word_store_2 is 0xd94efec9
+#                  450[ns]:reg_x_word_store_3 is 0xd134e301
+#                  450[ns]:reg_x_word_store_4 is 0x9efc8a4f
+#                  450[ns]:reg_y_word_store_1 is 0x00000000
+#                  450[ns]:reg_y_word_store_2 is 0x00000000
+#                  450[ns]:reg_y_word_store_3 is 0x00000000
+#                  450[ns]:reg_y_word_store_4 is 0x00000000
+#                  450[ns]:reg_flow_cntr is 0x00000002
+#                  450[ns]: counter_on = 0x0, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  450[ns]:word_out_comb is 0xb64ee34f, word_out_comb_vld is 0x1
+#                  450[ns]: data_from_store_regs_1 = 0xb66d2c63
+#                  450[ns]: data_from_store_regs_2 = 0xd94efec9
+#                  450[ns]: data_from_store_regs_3 = 0xd134e301
+#                  450[ns]: data_from_store_regs_4 = 0x9efc8a4f
+#                  450[ns]:reg_x_word_store_1 is 0xb66d2c63
+#                  450[ns]:reg_x_word_store_1 is 0xd94efec9
+#                  450[ns]:reg_x_word_store_3 is 0xd134e301
+#                  450[ns]:reg_x_word_store_4 is 0x9efc8a4f
+#                  450check_subbytes data_in 0xb66d2c63d94efec9d134e3019efc8a4f, data_out 0xb64ee34fd9348a63d1fc2cc99e6dfe01
+#                  450[ns]:word_out_comb is 0xb64ee34f, as expected
+#                  550check_subbytes data_in 0xb66d2c63d94efec9d134e3019efc8a4f, data_out 0xb64ee34fd9348a63d1fc2cc99e6dfe01
+#                  550[ns]: [ERROR] word_out_comb after subbytes is 00, but should be d9348a630
+#                  650check_subbytes data_in 0xb66d2c63d94efec9d134e3019efc8a4f, data_out 0xb64ee34fd9348a63d1fc2cc99e6dfe01
+#                  650[ns]: [ERROR] word_out_comb after subbytes is 00, but should be d1fc2cc90
+#                  750check_subbytes data_in 0xb66d2c63d94efec9d134e3019efc8a4f, data_out 0xb64ee34fd9348a63d1fc2cc99e6dfe01
+#                  750[ns]: [ERROR] word_out_comb after subbytes is 00, but should be 9e6dfe010
+#                  850[ns]:reg_x_word_store_1 is 0xb66d2c63
+#                  850[ns]:reg_x_word_store_2 is 0xd94efec9
+#                  850[ns]:reg_x_word_store_3 is 0xd134e301
+#                  850[ns]:reg_x_word_store_4 is 0x9efc8a4f
+#                  850[ns]:reg_y_word_store_1 is 0x00000000
+#                  850[ns]:reg_y_word_store_2 is 0x00000000
+#                  850[ns]:reg_y_word_store_3 is 0x00000000
+#                  850[ns]:reg_y_word_store_4 is 0x00000000
+#                  850[ns]:reg_flow_cntr is 0x00000002
+#                  850[ns]: counter_on = 0x0, input_cycle = 0x2, cntr_mod_with_eight = 0x2, is_mod_1_to_4 = 0x1
+#                  850[ns]:word_out_comb is 0x00000000, word_out_comb_vld is 0x0
+#                  850[ns]: data_from_store_regs_1 = 0xb66d2c63
+#                  850[ns]: data_from_store_regs_2 = 0xd94efec9
+#                  850[ns]: data_from_store_regs_3 = 0xd134e301
+#                  850[ns]: data_from_store_regs_4 = 0x9efc8a4f
+# ** Note: $finish    : flow_cntr_tb.sv(225)
+#    Time: 850 ns  Iteration: 1  Instance: /flow_cntr_test_top/flow_cntr_test
+---------
+counter on was binded in block_data_in_vld, which went low, so it was changed to 1'b1, see the wave
+------------
+			changed
+				counter_on <= block_data_in_vld;
+			to 
+				counter_on <= 2'b1;

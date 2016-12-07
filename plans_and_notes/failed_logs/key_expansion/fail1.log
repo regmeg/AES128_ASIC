@@ -1,0 +1,122 @@
+# vsim -do {run -all} -c -sv_seed 4206570720 -sv_lib aes key_expansion_test_top 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: key_expansion_tb.sv(74): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.key_expansion_test_top(fast)
+# Loading work.key_expansion_test(fast)
+# Loading work.subbytes_test(fast)
+# ** Warning: (vsim-PLI-3691) key_expansion_test_top.sv(60): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /key_expansion_test_top
+# Loading ./aes.so
+# run -all 
+#                    0[ns]: key_expansion reset - 0x1
+#                    0[ns]: Sbox reset - 0x1
+#                   30[ns]: key_expansion reset - 0x0, should have reset triggered
+#                   30[ns]: Sbox reset - 0x0, should have reset triggered
+#                   50[ns]: sbox_data = 0x16bb54b00f2d99416842e6bf0d89a18cdf2855cee9871e9b948ed9691198f8e19e1dc186b95735610ef6034866b53e708a8bbd4b1f74dde8c6b4a61c2e2578ba08ae7a65eaf4566ca94ed58d6d37c8e779e4959162acd3c25c2406490a3a32e0db0b5ede14b8ee4688902a22dc4f816073195d643d7ea7c41744975fec130ccdd2f3ff1021dab6bcf5389d928f40a351a89f3c507f02f94585334d43fbaaefd0cf584c4a39becb6a5bb1fc20ed00d153842fe329b3d63b52a05a6e1b1a2c830975b227ebe28012079a059618c323c7041531d871f1e5a534ccf73f362693fdb7c072a49cafa2d4adf04759fa7dc982ca76abd7fe2b670130c56f6bf27b777c63, writing to the sbox lut tables
+#                   50[ns]:reg_seed_key_1 is 0x00000000
+#                   50[ns]:reg_seed_key_2 is 0x00000000
+#                   50[ns]:reg_seed_key_3 is 0x00000000
+#                   50[ns]:reg_seed_key_4 is 0x00000000
+#                   50[ns]:reg_round_key_words_1 is 0x00000000
+#                   50[ns]:reg_round_key_words_2 is 0x00000000
+#                   50[ns]:reg_round_key_words_3 is 0x00000000
+#                   50[ns]:reg_round_key_words_4 is 0x00000000
+#                   50[ns]:reg_key_expn is 0x00000000
+#                  150[ns]: generated_seed_key = 0x8681ccca2131ed4c5c784e4ecae8fa9e
+#                  150[ns]: C model key_schedule[000] = 0x9efae8ca
+#                  150[ns]: C model key_schedule[001] = 0x4e4e785c
+#                  150[ns]: C model key_schedule[002] = 0x4ced3121
+#                  150[ns]: C model key_schedule[003] = 0xcacc8186
+#                  150[ns]: C model key_schedule[004] = 0x89ecfebe
+#                  150[ns]: C model key_schedule[005] = 0xc7a286e2
+#                  150[ns]: C model key_schedule[006] = 0x8b4fb7c3
+#                  150[ns]: C model key_schedule[007] = 0x41833645
+#                  150[ns]: C model key_schedule[008] = 0x67e9903d
+#                  150[ns]: C model key_schedule[009] = 0xa04b16df
+#                  150[ns]: C model key_schedule[010] = 0x2b04a11c
+#                  150[ns]: C model key_schedule[011] = 0x6a879759
+#                  150[ns]: C model key_schedule[012] = 0x75ff863f
+#                  150[ns]: C model key_schedule[013] = 0xd5b490e0
+#                  150[ns]: C model key_schedule[014] = 0xfeb031fc
+#                  150[ns]: C model key_schedule[015] = 0x9437a6a5
+#                  150[ns]: C model key_schedule[016] = 0x6be9901d
+#                  150[ns]: C model key_schedule[017] = 0xbe5d00fd
+#                  150[ns]: C model key_schedule[018] = 0x40ed3101
+#                  150[ns]: C model key_schedule[019] = 0xd4da97a4
+#                  150[ns]: C model key_schedule[020] = 0x6dff8655
+#                  150[ns]: C model key_schedule[021] = 0xd3a286a8
+#                  150[ns]: C model key_schedule[022] = 0x934fb7a9
+#                  150[ns]: C model key_schedule[023] = 0x4795200d
+#                  150[ns]: C model key_schedule[024] = 0x674851f5
+#                  150[ns]: C model key_schedule[025] = 0xb4ead75d
+#                  150[ns]: C model key_schedule[026] = 0x27a560f4
+#                  150[ns]: C model key_schedule[027] = 0x603040f9
+#                  150[ns]: C model key_schedule[028] = 0x315e4725
+#                  150[ns]: C model key_schedule[029] = 0x85b49078
+#                  150[ns]: C model key_schedule[030] = 0xa211f08c
+#                  150[ns]: C model key_schedule[031] = 0xc221b075
+#                  150[ns]: C model key_schedule[032] = 0xa7485100
+#                  150[ns]: C model key_schedule[033] = 0x22fcc178
+#                  150[ns]: C model key_schedule[034] = 0x80ed31f4
+#                  150[ns]: C model key_schedule[035] = 0x42cc8181
+#                  150[ns]: C model key_schedule[036] = 0xaa5e472c
+#                  150[ns]: C model key_schedule[037] = 0x88a28654
+#                  150[ns]: C model key_schedule[038] = 0x084fb7a0
+#                  150[ns]: C model key_schedule[039] = 0x4a833621
+#                  150[ns]: C model key_schedule[040] = 0x705bbafa
+#                  150[ns]: C model key_schedule[041] = 0xf8f93cae
+#                  150[ns]: C model key_schedule[042] = 0xf0b68b0e
+#                  150[ns]: C model key_schedule[043] = 0xba35bd2f
+#                  350[ns]: [ERROR] the key_expansion seed key output 0x00000000000000000000000000000000 and input seed key 0x8681ccca2131ed4c5c784e4ecae8fa9e do not match
+#                  350[ns]: seed_key_vld is 1'b1, as it should be
+# ** Note: $finish    : key_expansion_tb.sv(168)
+#    Time: 350 ns  Iteration: 1  Instance: /key_expansion_test_top/key_expansion_test
+
+
+------------------------
+Resolve - the seed key was driven by the wrong singal - changed
+	always @(posedge clk) begin
+		if (key_in_vld) begin
+			reg_seed_key_1        <= seed_key[`FIRST_WRD ];
+			reg_seed_key_2        <= seed_key[`SECOND_WRD];
+			reg_seed_key_3        <= seed_key[`THIRD_WRD ];
+			reg_seed_key_4        <= seed_key[`FOURTH_WRD];
+			reg_round_key_words_1 <= seed_key[`FIRST_WRD ];
+			reg_round_key_words_2 <= seed_key[`SECOND_WRD];
+			reg_round_key_words_3 <= seed_key[`THIRD_WRD ];
+			reg_round_key_words_4 <= seed_key[`FOURTH_WRD];
+			key_available 				<= 1'b1;
+		end else begin
+			key_available 				<= 1'b0;
+		end
+	end
+-----
+to
+-----
+
+	always @(posedge clk) begin
+		if (key_in_vld) begin
+			reg_seed_key_1        <= key_in[`FIRST_WRD ];
+			reg_seed_key_2        <= key_in[`SECOND_WRD];
+			reg_seed_key_3        <= key_in[`THIRD_WRD ];
+			reg_seed_key_4        <= key_in[`FOURTH_WRD];
+			reg_round_key_words_1 <= key_in[`FIRST_WRD ];
+			reg_round_key_words_2 <= key_in[`SECOND_WRD];
+			reg_round_key_words_3 <= key_in[`THIRD_WRD ];
+			reg_round_key_words_4 <= key_in[`FOURTH_WRD];
+			key_available 				<= 1'b1;
+		end else begin
+			key_available 				<= 1'b0;
+		end
+	end

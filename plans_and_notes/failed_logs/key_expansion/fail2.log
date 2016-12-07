@@ -1,0 +1,102 @@
+# 10.2c
+
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes key_expansion_test_top 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: key_expansion_tb.sv(74): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.key_expansion_test_top(fast)
+# Loading work.key_expansion_test(fast)
+# Loading work.subbytes_test(fast)
+# ** Warning: (vsim-PLI-3691) key_expansion_test_top.sv(60): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /key_expansion_test_top
+# Loading ./aes.so
+# Sv_Seed = 4197982987
+# run -all 
+#                    0[ns]: key_expansion reset - 0x1
+#                    0[ns]: Sbox reset - 0x1
+#                   30[ns]: key_expansion reset - 0x0, should have reset triggered
+#                   30[ns]: Sbox reset - 0x0, should have reset triggered
+#                   50[ns]: sbox_data = 0x16bb54b00f2d99416842e6bf0d89a18cdf2855cee9871e9b948ed9691198f8e19e1dc186b95735610ef6034866b53e708a8bbd4b1f74dde8c6b4a61c2e2578ba08ae7a65eaf4566ca94ed58d6d37c8e779e4959162acd3c25c2406490a3a32e0db0b5ede14b8ee4688902a22dc4f816073195d643d7ea7c41744975fec130ccdd2f3ff1021dab6bcf5389d928f40a351a89f3c507f02f94585334d43fbaaefd0cf584c4a39becb6a5bb1fc20ed00d153842fe329b3d63b52a05a6e1b1a2c830975b227ebe28012079a059618c323c7041531d871f1e5a534ccf73f362693fdb7c072a49cafa2d4adf04759fa7dc982ca76abd7fe2b670130c56f6bf27b777c63, writing to the sbox lut tables
+#                   50[ns]:reg_seed_key_1 is 0x00000000
+#                   50[ns]:reg_seed_key_2 is 0x00000000
+#                   50[ns]:reg_seed_key_3 is 0x00000000
+#                   50[ns]:reg_seed_key_4 is 0x00000000
+#                   50[ns]:reg_round_key_words_1 is 0x00000000
+#                   50[ns]:reg_round_key_words_2 is 0x00000000
+#                   50[ns]:reg_round_key_words_3 is 0x00000000
+#                   50[ns]:reg_round_key_words_4 is 0x00000000
+#                   50[ns]:reg_key_expn is 0x00000000
+#                  150[ns]: generated_seed_key = 0x891fc293534e9a1f18749a14b74f3f8a
+#                  150[ns]: C model key_schedule[000] = 0x8a3f4fb7
+#                  150[ns]: C model key_schedule[001] = 0x149a7418
+#                  150[ns]: C model key_schedule[002] = 0x1f9a4e53
+#                  150[ns]: C model key_schedule[003] = 0x93c21f89
+#                  150[ns]: C model key_schedule[004] = 0x9d29596b
+#                  150[ns]: C model key_schedule[005] = 0x89b32d73
+#                  150[ns]: C model key_schedule[006] = 0x96296320
+#                  150[ns]: C model key_schedule[007] = 0x05eb7ca9
+#                  150[ns]: C model key_schedule[008] = 0x76398a00
+#                  150[ns]: C model key_schedule[009] = 0xff8aa773
+#                  150[ns]: C model key_schedule[010] = 0x69a3c453
+#                  150[ns]: C model key_schedule[011] = 0x6c48b8fa
+#                  150[ns]: C model key_schedule[012] = 0x642f9c50
+#                  150[ns]: C model key_schedule[013] = 0x9ba53b23
+#                  150[ns]: C model key_schedule[014] = 0xf206ff70
+#                  150[ns]: C model key_schedule[015] = 0x9e4e478a
+#                  150[ns]: C model key_schedule[016] = 0x7a398a5b
+#                  150[ns]: C model key_schedule[017] = 0xe19cb178
+#                  150[ns]: C model key_schedule[018] = 0x139a4e08
+#                  150[ns]: C model key_schedule[019] = 0x8dd40982
+#                  150[ns]: C model key_schedule[020] = 0x7c2f9c06
+#                  150[ns]: C model key_schedule[021] = 0x9db32d7e
+#                  150[ns]: C model key_schedule[022] = 0x8e296376
+#                  150[ns]: C model key_schedule[023] = 0x03fd6af4
+#                  150[ns]: C model key_schedule[024] = 0x082d237d
+#                  150[ns]: C model key_schedule[025] = 0x959e0e03
+#                  150[ns]: C model key_schedule[026] = 0x1bb76d75
+#                  150[ns]: C model key_schedule[027] = 0x184a0781
+#                  150[ns]: C model key_schedule[028] = 0x5e3b35d0
+#                  150[ns]: C model key_schedule[029] = 0xcba53bd3
+#                  150[ns]: C model key_schedule[030] = 0xd01256a6
+#                  150[ns]: C model key_schedule[031] = 0xc8585127
+#                  150[ns]: C model key_schedule[032] = 0xc82d2338
+#                  150[ns]: C model key_schedule[033] = 0x038818eb
+#                  150[ns]: C model key_schedule[034] = 0xd39a4e4d
+#                  150[ns]: C model key_schedule[035] = 0x1bc21f6a
+#                  150[ns]: C model key_schedule[036] = 0xc53b3597
+#                  150[ns]: C model key_schedule[037] = 0xc6b32d7c
+#                  150[ns]: C model key_schedule[038] = 0x15296331
+#                  150[ns]: C model key_schedule[039] = 0x0eeb7c5b
+#                  150[ns]: C model key_schedule[040] = 0x1a2b0c3c
+#                  150[ns]: C model key_schedule[041] = 0xdc982140
+#                  150[ns]: C model key_schedule[042] = 0xc9b14271
+#                  150[ns]: C model key_schedule[043] = 0xc75a3e2a
+#                  350[ns]: [ERROR] the key_expansion seed key output 0xb74f3f8a18749a14534e9a1f891fc293 and input seed key 0x891fc293534e9a1f18749a14b74f3f8a do not match
+#                  350[ns]: seed_key_vld is 1'b1, as it should be
+# ** Note: $finish    : key_expansion_tb.sv(168)
+#    Time: 350 ns  Iteration: 1  Instance: /key_expansion_test_top/key_expansion_test
+
+---------------------------
+changed 
+
+`define FIRST_WRD       31:0
+`define SECOND_WRD      63:32
+`define THIRD_WRD       95:64
+`define FOURTH_WRD      127:96
+
+to 
+
+`define FOURTH_WRD       31:0
+`define THIRD_WRD        63:32
+`define SECOND_WRD       95:64
+`define FIRST_WRD        127:96

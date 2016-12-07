@@ -1,0 +1,362 @@
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes chip_top_test_top 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: chip_top_tb.sv(144): (vopt-LRM-2897) Using non-standard foreach loop variable list syntax.
+# ** Warning: chip_top_tb.sv(107): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: chip_top_tb.sv(121): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: chip_top_tb.sv(125): (vopt-2240) Treating stand-alone use of function 'aes_complete_encrypt_test' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.chip_top_test_top(fast)
+# Loading work.chip_top_test(fast)
+# Loading work.chip_top(fast)
+# Loading work.flow_cntr(fast)
+# Loading work.add_round_key_block(fast)
+# Loading work.sbox_lut(fast)
+# Loading work.mix_columns(fast)
+# Loading work.add_round_key_word(fast)
+# ** Warning: (vsim-PLI-3691) chip_top_tb.sv(38): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /chip_top_test_top/chip_top_test/input_data::new
+# ** Warning: (vsim-PLI-3691) chip_top_tb.sv(39): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /chip_top_test_top/chip_top_test/input_data::new
+# ** Warning: (vsim-PLI-3691) chip_top_tb.sv(40): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /chip_top_test_top/chip_top_test/input_data::new
+# ** Warning: (vsim-PLI-3691) chip_top_tb.sv(41): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /chip_top_test_top/chip_top_test/input_data::new
+# ** Warning: (vsim-PLI-3691) chip_top_test_top.sv(58): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /chip_top_test_top
+# Loading ./aes.so
+# Sv_Seed = 1985939356
+# run -all 
+# ** Error: (vsim-PLI-3107) chip_top_test_top.sv(50): $dumpports : File "test.vcd" is already in use.
+#         Region: /chip_top_test_top
+# ** Error: (vsim-PLI-3107) chip_top_test_top.sv(51): $dumpports : File "test.vcd" is already in use.
+#         Region: /chip_top_test_top
+# ** Error: (vsim-PLI-3107) chip_top_test_top.sv(52): $dumpports : File "test.vcd" is already in use.
+#         Region: /chip_top_test_top
+# ** Error: (vsim-PLI-3107) chip_top_test_top.sv(53): $dumpports : File "test.vcd" is already in use.
+#         Region: /chip_top_test_top
+# ** Error: (vsim-PLI-3107) chip_top_test_top.sv(54): $dumpports : File "test.vcd" is already in use.
+#         Region: /chip_top_test_top
+# ** Error: (vsim-PLI-3107) chip_top_test_top.sv(55): $dumpports : File "test.vcd" is already in use.
+#         Region: /chip_top_test_top
+#                    0[ns]: key_expansion reset - 0x1
+#                   30[ns]: key_expansion reset - 0x0, should have reset triggered
+#                   50[ns]: The sbox values are:
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+# 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+#                   50[ns]:key_expansion.reg_seed_key_1 is 0x00000000
+#                   50[ns]:key_expansion.reg_seed_key_2 is 0x00000000
+#                   50[ns]: key_expansion.reg_seed_key_3 is 0x00000000
+#                   50[ns]:key_expansion.reg_seed_key_4 is 0x00000000
+#                   50[ns]:key_expansion.reg_round_key_words_1 is 0x00000000
+#                   50[ns]:key_expansion.reg_round_key_words_2 is 0x00000000
+#                   50[ns]: key_expansion.reg_round_key_words_3 is 0x00000000
+#                   50[ns]: key_expansion.reg_round_key_words_4 is 0x00000000
+#                   50[ns]: key_expansion.reg_key_expn is 0x00000000
+#                   50[ns]:flow_cntr.reg_x_word_store_1 is 0x00000000
+#                   50[ns]: flow_cntr.reg_x_word_store_2 is 0x00000000
+#                   50[ns]: flow_cntr.reg_x_word_store_3 is 0x00000000
+#                   50[ns]: flow_cntr.reg_x_word_store_4 is 0x00000000
+#                   50[ns]: flow_cntr.reg_y_word_store_1 is 0x00000000
+#                   50[ns]: flow_cntr.reg_y_word_store_2 is 0x00000000
+#                   50[ns]: flow_cntr.reg_y_word_store_3 is 0x00000000
+#                   50[ns]: flow_cntr.reg_y_word_store_4 is 0x00000000
+#                   50[ns]: flow_cntr.reg_flow_cntr is 0x00000000
+#                   50[ns]: flow_cntr.data_accept is 0x0
+#                  150[ns]: sbox_data = 0x16bb54b00f2d99416842e6bf0d89a18cdf2855cee9871e9b948ed9691198f8e19e1dc186b95735610ef6034866b53e708a8bbd4b1f74dde8c6b4a61c2e2578ba08ae7a65eaf4566ca94ed58d6d37c8e779e4959162acd3c25c2406490a3a32e0db0b5ede14b8ee4688902a22dc4f816073195d643d7ea7c41744975fec130ccdd2f3ff1021dab6bcf5389d928f40a351a89f3c507f02f94585334d43fbaaefd0cf584c4a39becb6a5bb1fc20ed00d153842fe329b3d63b52a05a6e1b1a2c830975b227ebe28012079a059618c323c7041531d871f1e5a534ccf73f362693fdb7c072a49cafa2d4adf04759fa7dc982ca76abd7fe2b670130c56f6bf27b777c63, writing to the sbox lut tables
+#                  150[ns]: generated_seed_key = 0x00000000000000000000000000000052
+#                  250[ns]: The sbox values are:
+# 0x16 0xbb 0x54 0xb0 0x0f 0x2d 0x99 0x41 0x68 0x42 0xe6 0xbf 0x0d 0x89 0xa1 0x8c 
+# 0xdf 0x28 0x55 0xce 0xe9 0x87 0x1e 0x9b 0x94 0x8e 0xd9 0x69 0x11 0x98 0xf8 0xe1 
+# 0x9e 0x1d 0xc1 0x86 0xb9 0x57 0x35 0x61 0x0e 0xf6 0x03 0x48 0x66 0xb5 0x3e 0x70 
+# 0x8a 0x8b 0xbd 0x4b 0x1f 0x74 0xdd 0xe8 0xc6 0xb4 0xa6 0x1c 0x2e 0x25 0x78 0xba 
+# 0x08 0xae 0x7a 0x65 0xea 0xf4 0x56 0x6c 0xa9 0x4e 0xd5 0x8d 0x6d 0x37 0xc8 0xe7 
+# 0x79 0xe4 0x95 0x91 0x62 0xac 0xd3 0xc2 0x5c 0x24 0x06 0x49 0x0a 0x3a 0x32 0xe0 
+# 0xdb 0x0b 0x5e 0xde 0x14 0xb8 0xee 0x46 0x88 0x90 0x2a 0x22 0xdc 0x4f 0x81 0x60 
+# 0x73 0x19 0x5d 0x64 0x3d 0x7e 0xa7 0xc4 0x17 0x44 0x97 0x5f 0xec 0x13 0x0c 0xcd 
+# 0xd2 0xf3 0xff 0x10 0x21 0xda 0xb6 0xbc 0xf5 0x38 0x9d 0x92 0x8f 0x40 0xa3 0x51 
+# 0xa8 0x9f 0x3c 0x50 0x7f 0x02 0xf9 0x45 0x85 0x33 0x4d 0x43 0xfb 0xaa 0xef 0xd0 
+# 0xcf 0x58 0x4c 0x4a 0x39 0xbe 0xcb 0x6a 0x5b 0xb1 0xfc 0x20 0xed 0x00 0xd1 0x53 
+# 0x84 0x2f 0xe3 0x29 0xb3 0xd6 0x3b 0x52 0xa0 0x5a 0x6e 0x1b 0x1a 0x2c 0x83 0x09 
+# 0x75 0xb2 0x27 0xeb 0xe2 0x80 0x12 0x07 0x9a 0x05 0x96 0x18 0xc3 0x23 0xc7 0x04 
+# 0x15 0x31 0xd8 0x71 0xf1 0xe5 0xa5 0x34 0xcc 0xf7 0x3f 0x36 0x26 0x93 0xfd 0xb7 
+# 0xc0 0x72 0xa4 0x9c 0xaf 0xa2 0xd4 0xad 0xf0 0x47 0x59 0xfa 0x7d 0xc9 0x82 0xca 
+# 0x76 0xab 0xd7 0xfe 0x2b 0x67 0x01 0x30 0xc5 0x6f 0x6b 0xf2 0x7b 0x77 0x7c 0x63 
+#                  250[ns]:key_expansion.reg_seed_key_1 is 0x00000000
+#                  250[ns]:key_expansion.reg_seed_key_2 is 0x00000000
+#                  250[ns]: key_expansion.reg_seed_key_3 is 0x00000000
+#                  250[ns]:key_expansion.reg_seed_key_4 is 0x00000052
+#                  250[ns]:key_expansion.reg_round_key_words_1 is 0x00000000
+#                  250[ns]:key_expansion.reg_round_key_words_2 is 0x00000000
+#                  250[ns]: key_expansion.reg_round_key_words_3 is 0x00000000
+#                  250[ns]: key_expansion.reg_round_key_words_4 is 0x00000052
+#                  250[ns]: key_expansion.reg_key_expn is 0x00000000
+#                  250[ns]:flow_cntr.reg_x_word_store_1 is 0x00000000
+#                  250[ns]: flow_cntr.reg_x_word_store_2 is 0x00000000
+#                  250[ns]: flow_cntr.reg_x_word_store_3 is 0x00000000
+#                  250[ns]: flow_cntr.reg_x_word_store_4 is 0x00000000
+#                  250[ns]: flow_cntr.reg_y_word_store_1 is 0x00000000
+#                  250[ns]: flow_cntr.reg_y_word_store_2 is 0x00000000
+#                  250[ns]: flow_cntr.reg_y_word_store_3 is 0x00000000
+#                  250[ns]: flow_cntr.reg_y_word_store_4 is 0x00000000
+#                  250[ns]: flow_cntr.reg_flow_cntr is 0x00000000
+#                  250[ns]: flow_cntr.data_accept is 0x1
+#                  350[ns]: generated_block_data = 0x0000000000000000000000000000003d
+# Printing state just after data copied in 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  3d 
+# ROUND 0 Starting 0 cycle Addroundkey 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  6f 
+# Printing state round key used for AddRounkey 
+# 00000000000000000000000000000052
+# ROUND 1 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  63  63  63  63  63  63  63  63  63  63  63  63  63  63  63  a8 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  63  63  63  a8  63  63  63  63  63  63  63  63  63  63  63  63 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  a8  a8  25  ee  63  63  63  63  63  63  63  63  63  63  63  63 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  ca  cb  25  8d  01  00  63  00  01  00  63  00  01  00  63  52 
+# Printing state round key used for AddRounkey 
+# 62630063626300636263006362630031
+# ROUND 2 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  74  1f  3f  5d  7c  63  fb  63  7c  63  fb  63  7c  63  fb  00 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  74  63  fb  00  7c  63  fb  5d  7c  63  3f  63  7c  1f  fb  63 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  b6  a4  fa  04  fb  f1  15  a6  01  98  c4  1e  41  37  2b  a6 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  2d  a4  3d  cd  02  92  d2  0c  9a  98  03  d7  b8  54  ec  5e 
+# Printing state round key used for AddRounkey 
+# 9b00c7c9f963c7aa9b00c7c9f963c7f8
+# ROUND 3 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  d8  49  27  bd  77  4f  b5  fe  b8  46  7b  0e  6c  20  ce  58 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  d8  4f  7b  58  77  46  ce  bd  b8  20  27  fe  6c  49  b5  0e 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  59  93  89  f7  57  0f  6a  70  d2  6f  cf  33  b8  34  46  54 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  3d  55  0f  a7  ca  aa  2b  8a  d4  ca  49  00  47  f2  07  9f 
+# Printing state round key used for AddRounkey 
+# 64c686509da541fa06a58633ffc641cb
+# ROUND 4 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  27  fc  76  5c  74  ac  f1  7e  48  74  3b  63  a0  89  c5  db 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  27  ac  3b  db  74  74  c5  5c  48  89  76  7e  a0  fc  f1  63 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  41  f2  8b  53  ed  94  75  95  18  a5  af  db  d6  28  00  30 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  99  b7  12  15  a8  74  ad  29  5b  e0  f1  54  6a  ab  1f  74 
+# Printing state round key used for AddRounkey 
+# d845994645e0d8bc43455e8fbc831f44
+# ROUND 5 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  ee  a9  c9  59  c2  92  95  a5  39  e1  a1  20  02  62  c0  92 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  ee  92  a1  92  c2  e1  c0  59  39  62  c9  a5  02  a9  95  20 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  59  bb  88  25  3e  19  53  ce  b8  18  26  b1  51  cf  fa  7a 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  7d  3e  0a  06  5f  7c  09  51  9a  38  22  a1  cf  6c  e1  2e 
+# Printing state round key used for AddRounkey 
+# 2485822361655a9f222004109ea31b54
+# ROUND 6 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  ff  b2  67  6f  cf  10  01  d1  b8  07  93  32  8a  50  f8  31 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  ff  10  93  31  cf  07  f8  6f  b8  50  67  d1  8a  b2  01  32 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  77  40  81  fb  1b  bd  92  6b  2d  60  4e  5d  f1  c4  6c  52 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  79  6a  23  d3  74  f2  6a  dc  60  0f  b2  fa  22  08  8b  a1 
+# Printing state round key used for AddRounkey 
+# 0e2aa2286f4ff8b74d6ffca7d3cce7f3
+# ROUND 7 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  b6  02  26  66  92  89  02  86  d0  76  37  2d  93  30  3d  32 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  b6  89  37  32  92  76  3d  66  d0  30  26  86  93  02  02  2d 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  f2  d4  07  1b  fe  5f  34  2a  4b  5c  3d  6a  14  bc  e2  f4 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  f7  6a  a8  55  94  ae  63  d3  6c  c2  96  34  e0  ee  ae  59 
+# Printing state round key used for AddRounkey 
+# 05beaf4e6af157f9279eab5ef4524cad
+# ROUND 8 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  68  02  c2  fc  22  e4  fb  66  50  25  90  18  e1  28  e4  cb 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  68  e4  90  cb  22  25  e4  fc  50  28  c2  66  e1  02  fb  18 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bc  db  f1  41  33  a3  cb  44  7c  3b  4d  d6  3c  eb  26  f1 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  39  4c  cb  b0  dc  c5  a6  4c  b4  c3  8b  80  00  41  ac  0a 
+# Printing state round key used for AddRounkey 
+# 85973af1ef666d08c8f8c6563caa8afb
+# ROUND 9 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  12  29  1f  e7  86  a6  24  29  8d  2e  3d  cd  63  83  91  67 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  12  a6  3d  67  86  2e  91  e7  8d  83  1f  29  63  29  24  cd 
+# Printing state just after MixColumns 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  8f  65  67  63  13  95  a3  fb  a9  98  4b  42  54  90  4e  29 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bd  8c  52  79  ce  1a  fb  e9  bc  ef  d5  06  7d  4d  5a  96 
+# Printing state round key used for AddRounkey 
+# 32e9351add8f581215779e4429dd14bf
+# ROUND 10 Subbytes, ShiftRows, MixColumns, AddRoundKey 
+# Printing state just after SubBytes 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  7a  64  00  b6  8b  a2  0f  1e  65  df  03  6f  ff  e3  be  90 
+# Printing state just after Shifrows 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  7a  a2  03  90  8b  df  be  b6  65  e3  00  1e  ff  64  0f  6f 
+# Printing state just after AddRounkey 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bf  b1  3e  2f  93  43  db  1b  68  08  fb  f7  db  52  e0  39 
+# Printing state round key used for AddRounkey 
+# c5133dbf189c65ad0debfbe92436ef56
+# Printing state after encprytion done 
+# [00] [10] [20] [30] [01] [11] [21] [31] [02] [12] [22] [32] [03] [13] [23] [33] 
+#  bf  b1  3e  2f  93  43  db  1b  68  08  fb  f7  db  52  e0  39 
+#                  350[ns]: dpi_block_data = 0xbfb13e2f9343db1b6808fbf7db52e039
+#                  350[ns]: The sbox values are:
+# 0x16 0xbb 0x54 0xb0 0x0f 0x2d 0x99 0x41 0x68 0x42 0xe6 0xbf 0x0d 0x89 0xa1 0x8c 
+# 0xdf 0x28 0x55 0xce 0xe9 0x87 0x1e 0x9b 0x94 0x8e 0xd9 0x69 0x11 0x98 0xf8 0xe1 
+# 0x9e 0x1d 0xc1 0x86 0xb9 0x57 0x35 0x61 0x0e 0xf6 0x03 0x48 0x66 0xb5 0x3e 0x70 
+# 0x8a 0x8b 0xbd 0x4b 0x1f 0x74 0xdd 0xe8 0xc6 0xb4 0xa6 0x1c 0x2e 0x25 0x78 0xba 
+# 0x08 0xae 0x7a 0x65 0xea 0xf4 0x56 0x6c 0xa9 0x4e 0xd5 0x8d 0x6d 0x37 0xc8 0xe7 
+# 0x79 0xe4 0x95 0x91 0x62 0xac 0xd3 0xc2 0x5c 0x24 0x06 0x49 0x0a 0x3a 0x32 0xe0 
+# 0xdb 0x0b 0x5e 0xde 0x14 0xb8 0xee 0x46 0x88 0x90 0x2a 0x22 0xdc 0x4f 0x81 0x60 
+# 0x73 0x19 0x5d 0x64 0x3d 0x7e 0xa7 0xc4 0x17 0x44 0x97 0x5f 0xec 0x13 0x0c 0xcd 
+# 0xd2 0xf3 0xff 0x10 0x21 0xda 0xb6 0xbc 0xf5 0x38 0x9d 0x92 0x8f 0x40 0xa3 0x51 
+# 0xa8 0x9f 0x3c 0x50 0x7f 0x02 0xf9 0x45 0x85 0x33 0x4d 0x43 0xfb 0xaa 0xef 0xd0 
+# 0xcf 0x58 0x4c 0x4a 0x39 0xbe 0xcb 0x6a 0x5b 0xb1 0xfc 0x20 0xed 0x00 0xd1 0x53 
+# 0x84 0x2f 0xe3 0x29 0xb3 0xd6 0x3b 0x52 0xa0 0x5a 0x6e 0x1b 0x1a 0x2c 0x83 0x09 
+# 0x75 0xb2 0x27 0xeb 0xe2 0x80 0x12 0x07 0x9a 0x05 0x96 0x18 0xc3 0x23 0xc7 0x04 
+# 0x15 0x31 0xd8 0x71 0xf1 0xe5 0xa5 0x34 0xcc 0xf7 0x3f 0x36 0x26 0x93 0xfd 0xb7 
+# 0xc0 0x72 0xa4 0x9c 0xaf 0xa2 0xd4 0xad 0xf0 0x47 0x59 0xfa 0x7d 0xc9 0x82 0xca 
+# 0x76 0xab 0xd7 0xfe 0x2b 0x67 0x01 0x30 0xc5 0x6f 0x6b 0xf2 0x7b 0x77 0x7c 0x63 
+#                  350[ns]:key_expansion.reg_seed_key_1 is 0x00000000
+#                  350[ns]:key_expansion.reg_seed_key_2 is 0x00000000
+#                  350[ns]: key_expansion.reg_seed_key_3 is 0x00000000
+#                  350[ns]:key_expansion.reg_seed_key_4 is 0x00000052
+#                  350[ns]:key_expansion.reg_round_key_words_1 is 0x00000000
+#                  350[ns]:key_expansion.reg_round_key_words_2 is 0x00000000
+#                  350[ns]: key_expansion.reg_round_key_words_3 is 0x00000000
+#                  350[ns]: key_expansion.reg_round_key_words_4 is 0x00000052
+#                  350[ns]: key_expansion.reg_key_expn is 0x00000000
+#                  350[ns]:flow_cntr.reg_x_word_store_1 is 0x00000000
+#                  350[ns]: flow_cntr.reg_x_word_store_2 is 0x00000000
+#                  350[ns]: flow_cntr.reg_x_word_store_3 is 0x00000000
+#                  350[ns]: flow_cntr.reg_x_word_store_4 is 0x00000000
+#                  350[ns]: flow_cntr.reg_y_word_store_1 is 0x00000000
+#                  350[ns]: flow_cntr.reg_y_word_store_2 is 0x00000000
+#                  350[ns]: flow_cntr.reg_y_word_store_3 is 0x00000000
+#                  350[ns]: flow_cntr.reg_y_word_store_4 is 0x00000000
+#                  350[ns]: flow_cntr.reg_flow_cntr is 0x00000000
+#                  350[ns]: flow_cntr.data_accept is 0x0
+#                  450[ns]: The sbox values are:
+# 0x16 0xbb 0x54 0xb0 0x0f 0x2d 0x99 0x41 0x68 0x42 0xe6 0xbf 0x0d 0x89 0xa1 0x8c 
+# 0xdf 0x28 0x55 0xce 0xe9 0x87 0x1e 0x9b 0x94 0x8e 0xd9 0x69 0x11 0x98 0xf8 0xe1 
+# 0x9e 0x1d 0xc1 0x86 0xb9 0x57 0x35 0x61 0x0e 0xf6 0x03 0x48 0x66 0xb5 0x3e 0x70 
+# 0x8a 0x8b 0xbd 0x4b 0x1f 0x74 0xdd 0xe8 0xc6 0xb4 0xa6 0x1c 0x2e 0x25 0x78 0xba 
+# 0x08 0xae 0x7a 0x65 0xea 0xf4 0x56 0x6c 0xa9 0x4e 0xd5 0x8d 0x6d 0x37 0xc8 0xe7 
+# 0x79 0xe4 0x95 0x91 0x62 0xac 0xd3 0xc2 0x5c 0x24 0x06 0x49 0x0a 0x3a 0x32 0xe0 
+# 0xdb 0x0b 0x5e 0xde 0x14 0xb8 0xee 0x46 0x88 0x90 0x2a 0x22 0xdc 0x4f 0x81 0x60 
+# 0x73 0x19 0x5d 0x64 0x3d 0x7e 0xa7 0xc4 0x17 0x44 0x97 0x5f 0xec 0x13 0x0c 0xcd 
+# 0xd2 0xf3 0xff 0x10 0x21 0xda 0xb6 0xbc 0xf5 0x38 0x9d 0x92 0x8f 0x40 0xa3 0x51 
+# 0xa8 0x9f 0x3c 0x50 0x7f 0x02 0xf9 0x45 0x85 0x33 0x4d 0x43 0xfb 0xaa 0xef 0xd0 
+# 0xcf 0x58 0x4c 0x4a 0x39 0xbe 0xcb 0x6a 0x5b 0xb1 0xfc 0x20 0xed 0x00 0xd1 0x53 
+# 0x84 0x2f 0xe3 0x29 0xb3 0xd6 0x3b 0x52 0xa0 0x5a 0x6e 0x1b 0x1a 0x2c 0x83 0x09 
+# 0x75 0xb2 0x27 0xeb 0xe2 0x80 0x12 0x07 0x9a 0x05 0x96 0x18 0xc3 0x23 0xc7 0x04 
+# 0x15 0x31 0xd8 0x71 0xf1 0xe5 0xa5 0x34 0xcc 0xf7 0x3f 0x36 0x26 0x93 0xfd 0xb7 
+# 0xc0 0x72 0xa4 0x9c 0xaf 0xa2 0xd4 0xad 0xf0 0x47 0x59 0xfa 0x7d 0xc9 0x82 0xca 
+# 0x76 0xab 0xd7 0xfe 0x2b 0x67 0x01 0x30 0xc5 0x6f 0x6b 0xf2 0x7b 0x77 0x7c 0x63 
+#                  450[ns]:key_expansion.reg_seed_key_1 is 0x00000000
+#                  450[ns]:key_expansion.reg_seed_key_2 is 0x00000000
+#                  450[ns]: key_expansion.reg_seed_key_3 is 0x00000000
+#                  450[ns]:key_expansion.reg_seed_key_4 is 0x00000052
+#                  450[ns]:key_expansion.reg_round_key_words_1 is 0x00000000
+#                  450[ns]:key_expansion.reg_round_key_words_2 is 0x00000000
+#                  450[ns]: key_expansion.reg_round_key_words_3 is 0x00000000
+#                  450[ns]: key_expansion.reg_round_key_words_4 is 0x00000052
+#                  450[ns]: key_expansion.reg_key_expn is 0x00000000
+#                  450[ns]:flow_cntr.reg_x_word_store_1 is 0x00000000
+#                  450[ns]: flow_cntr.reg_x_word_store_2 is 0x00000000
+#                  450[ns]: flow_cntr.reg_x_word_store_3 is 0x00000000
+#                  450[ns]: flow_cntr.reg_x_word_store_4 is 0x0000006f
+#                  450[ns]: flow_cntr.reg_y_word_store_1 is 0x00000000
+#                  450[ns]: flow_cntr.reg_y_word_store_2 is 0x00000000
+#                  450[ns]: flow_cntr.reg_y_word_store_3 is 0x00000000
+#                  450[ns]: flow_cntr.reg_y_word_store_4 is 0x00000000
+#                  450[ns]: flow_cntr.reg_flow_cntr is 0x00000001
+#                  450[ns]: flow_cntr.data_accept is 0x0
+#                 4550[ns]: data_out = 0xbfb13e2f9343db1b6808fbf7db52e039, data_out_vld = 0x1
+# ** Note: $finish    : chip_top_tb.sv(234)
+#    Time: 4550 ns  Iteration: 2  Instance: /chip_top_test_top/chip_top_test

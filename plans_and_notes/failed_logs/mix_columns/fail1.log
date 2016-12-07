@@ -1,0 +1,29 @@
+# vsim -do {run -all} -c -sv_seed random -sv_lib aes mix_columns_test_top 
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.mix_columns_test_top(fast)
+# Loading work.mix_columns_test(fast)
+# ** Warning: (vsim-PLI-3691) mix_columns_test_top.sv(21): Expected a system task, not a system function '$value$plusargs'.
+#         Region: /mix_columns_test_top
+# Loading ./aes.so
+# Sv_Seed = 2104639016
+# run -all 
+#                   50[ns]: generated_data = 0xbc789b5f, mix_column_off = 0x0
+#                   50[ns]: C model output = 0x61eb46cc
+#                  150[ns]: [ERROR] The C model output value 0x61eb46cc and output DUT value do not match 0x4cc66be1, data_out_vld = 1b'1
+# ** Note: $finish    : mix_columns_tb.sv(92)
+#    Time: 150 ns  Iteration: 1  Instance: /mix_columns_test_top/mix_columns_test
+
+################
+fix
+change 			xtime = (word_byte_data ^ 8'h1b) << 1;
+tp 			xtime = (word_byte_data << 1) ^ 8'h1b;

@@ -1,0 +1,41 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/user/final_year_project/asic_project/messin/clock_gen
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1436364636
+V]2RT6nUa=TYJom[`8WNa_2
+04 9 4 work clock_gen fast 0
+=1-24b6fdfd2b29-559d2f5c-1d0bf-38e5
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.2c;57
+vclock_gen
+DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+IfPf_;0M45I8]k7Wf_YmBL2
+V`JN@9S9cnhjKRR_L]QIcM3
+S1
+Z1 d/home/user/final_year_project/asic_project/messin/clock_gen
+w1436364628
+8test_top_clk.sv
+Ftest_top_clk.sv
+L0 1
+OL;L;10.2c;57
+r1
+31
+o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s105 test_top_clk_sv_unit
+!s90 test_top_clk.sv|
+!s110 1436364631
+!i10b 1
+!s100 0l68z[B[mW[7cf6D^H`:33
+!s85 0
+!s108 1436364631.157715
+!s107 test_top_clk.sv|
+!i111 0

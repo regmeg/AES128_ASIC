@@ -1,0 +1,15 @@
+g000002.htm = work.chip_top_test_top
+z000002.htm = work.chip_top_test_top
+g000012.htm = /chip_top_test_top
+z000012.htm = /chip_top_test_top
+r000001.htm = tmp_chip_top_test_top_2614546245
+testlist.html = NON_SCOPE
+globattrlist.html = NON_SCOPE
+__HDL_srcfile_1.htm = NON_SCOPE
+__head.htm = NON_SCOPE
+__frametop.htm = NON_SCOPE
+__menu.htm = NON_SCOPE
+legacy.html = NON_SCOPE
+index.html = NON_SCOPE
+covsummary.html = NON_SCOPE
+blank.htm = NON_SCOPE

@@ -1,9 +1,10 @@
 `include "chip_defines.v"
 
+// Chip top is the top module, which speaks with the "outer world". It instantiates and interconnects all the submodules in the chip.
 module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, sbox_in_vld, data_accept, data_out, data_out_vld);
 
 	//#############################
-	// I/O
+	// I/O signals
 	//#############################
 
 	input 												clk;
@@ -23,11 +24,11 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	// Wires for connecting modules
 	//#############################
 	
-	//Wires for add_round_key_block and flow_cntrl
+	//Wires for add_round_key_block and flow_cntr
 	wire [`BLOCK_DATA_WIDTH-1:0] block_data_out;
 	wire												 block_data_out_vld;
 	
-	//Wires for sbox_lut and flow_cntrl
+	//Wires for sbox_lut and flow_cntr
 	wire [`WORD_DATA_WIDTH-1:0] word_out_comb;
 	wire											  word_out_comb_vld;
 	
@@ -35,14 +36,14 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	wire  [`WORD_DATA_WIDTH-1:0] sub_bytes_sbox_data;
 	wire 												 sub_bytes_sbox_data_vld;
 	
-	//Wires for mix_columns and flow_cntrl
+	//Wires for mix_columns and flow_cntr
 	wire mix_column_off;
 
 	//Wires for add_round_key_word and mix_columns
 	wire [`WORD_DATA_WIDTH-1:0] word_out_comb_mix_column;
 	wire												word_out_comb_mix_column_vld;
 	
-	//Wires for add_round_key_word and flow_cntrl
+	//Wires for add_round_key_word and flow_cntr
 	wire [`WORD_DATA_WIDTH-1:0] word_in_comb;
 	wire 												word_in_comb_vld;
 	
@@ -54,10 +55,10 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	wire [`SEED_KEY_WIDTH-1:0] seed_key;
 	wire											 seed_key_vld;
 	
-	//Wires for key_expansion and flow_cntrl
+	//Wires for key_expansion and flow_cntr
 	wire key_available,rnd_key_gen;
 	
-	//Wires for sbox and flow_cntrl
+	//Wires for sbox and flow_cntr
 	wire sbox_available;
 	
 	//Wires for sbox and key_expansion
@@ -69,8 +70,8 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 
 
 
-
-	flow_cntrl flow_cntrl(
+// instantiate flow_cntr module
+	flow_cntr flow_cntr(
 	.clk(clk),
 	.reset(reset),
 	.block_data_in(block_data_out),
@@ -89,6 +90,7 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	
 	);
 
+// instantiate key_expansion module
 	key_expansion key_expansion(
 	.clk(clk),
 	.reset(reset),
@@ -107,6 +109,7 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	.key_exp_val(key_exp_val)
 	);
 	
+// instantiate add_round_key_block module
 	add_round_key_block add_round_key_block(
 	.data_in(data_in),
 	.data_in_vld(data_in_vld),
@@ -116,6 +119,7 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	.block_data_out_vld(block_data_out_vld)
 	);
 	
+// instantiate  sbox_lut module
 	sbox_lut sbox_lut(
 	.clk(clk),
 	.reset(reset),
@@ -131,7 +135,8 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	.sub_bytes_sbox_data(sub_bytes_sbox_data),
 	.sub_bytes_sbox_data_vld(sub_bytes_sbox_data_vld)
 	);
-	
+
+// instantiate mix_columns module
 	mix_columns mix_columns(
 	.word_in_comb_sub_bytes(sub_bytes_sbox_data),
 	.word_in_comb_sub_bytes_vld(sub_bytes_sbox_data_vld),
@@ -140,6 +145,7 @@ module chip_top (clk, reset, key_in, key_in_vld, data_in, data_in_vld, sbox_in, 
 	.word_out_comb_mix_column_vld(word_out_comb_mix_column_vld)
 	);
 	
+// instantiate add_round_key_word module
 	add_round_key_word add_round_key_word(
 	.word_in_comb_mix_column(word_out_comb_mix_column),
 	.word_in_comb_mix_column_vld(word_out_comb_mix_column_vld),

@@ -1,0 +1,27 @@
+---
+abstract: 'Verilog language utilities and parsing'
+author:
+  - 'Wilson Snyder <wsnyder@wsnyder.org>'
+build_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 0
+generated_by: 'hand, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Verilog-Perl
+requires:
+  Data::Dumper: 1
+  Digest::SHA: 0
+  Pod::Usage: 1.34
+  Test: 1
+  Test::More: 0
+  Time::HiRes: 1
+  warnings: 1
+resources:
+  bugtracker: http://www.veripool.org/verilog-perl-bugs
+  homepage: http://www.veripool.org/verilog-perl
+version: 3.410
+x_installdirs: site
+x_version_from: Language.pm

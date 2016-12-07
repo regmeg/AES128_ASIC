@@ -1,0 +1,57 @@
+# vsim -do {run 500ns} -c clock_gen 
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.clock_gen(fast)
+# run 500ns 
+#                    0[ns]: clock tick x00
+#                    5[ns]: clock tick x01
+#                   10[ns]: clock tick x00
+#                   15[ns]: clock tick x01
+#                   20[ns]: clock tick x00
+#                   25[ns]: clock tick x01
+#                   30[ns]: clock tick x00
+#                   35[ns]: clock tick x01
+#                   40[ns]: clock tick x00
+#                   45[ns]: clock tick x01
+#                   50[ns]: clock tick x00
+#                   55[ns]: clock tick x01
+#                   60[ns]: clock tick x00
+#                   65[ns]: clock tick x01
+#                   70[ns]: clock tick x00
+#                   75[ns]: clock tick x01
+#                   80[ns]: clock tick x00
+#                   85[ns]: clock tick x01
+#                   90[ns]: clock tick x00
+#                   95[ns]: clock tick x01
+#                  100[ns]: clock tick x00
+#                  105[ns]: clock tick x01
+#                  110[ns]: clock tick x00
+#                  115[ns]: clock tick x01
+#                  120[ns]: clock tick x00
+#                  125[ns]: clock tick x01
+#                  130[ns]: clock tick x00
+#                  135[ns]: clock tick x01
+#                  140[ns]: clock tick x00
+#                  145[ns]: clock tick x01
+#                  150[ns]: clock tick x00
+#                  155[ns]: clock tick x01
+#                  160[ns]: clock tick x00
+#                  165[ns]: clock tick x01
+#                  170[ns]: clock tick x00
+#                  175[ns]: clock tick x01
+#                  180[ns]: clock tick x00
+#                  185[ns]: clock tick x01
+#                  190[ns]: clock tick x00
+#                  195[ns]: clock tick x01
+#                  200[ns]: clock tick x00
+# ** Note: $finish    : test_top_clk.sv(8)
+#    Time: 201 ns  Iteration: 0  Instance: /clock_gen

@@ -1,0 +1,8 @@
+`line 1 "verilog/v_sv_pgm.v" 0
+// DESCRIPTION: Verilog-Perl: Example Verilog for testing package
+// This file ONLY is placed into the Public Domain, for any use,
+// without warranty, 2009-2012 by Wilson Snyder.
+
+program v_sv_pgm;
+   int in_pgm;
+endprogram
