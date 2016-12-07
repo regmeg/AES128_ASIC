@@ -1,8 +1,0 @@
-module test ()
-
-
-		`for (`i = 0; `i < 16; `i = `i +1)
-			sbox[`i]
-		`endfor
-		
-endmodule
