@@ -30,9 +30,9 @@ Flow CNTRL
 ** How testing works -
 	No need to check for all values of DATA in or key values - it is irrelevant. - Just couple of tests with random values.	
 
-#######
+##############
 Key exapnsion
-########
+##############
 **What checker should check:
 	-After KEY_IN_VLD, two coppies of the key from KEY_IN are stored in REG_SEED_KEY_{1,2,3,4} and REG_ROUND_KEY_WORDS_{1,2,3,4} - the same cycle issue KEY_AVAILABLE signal.
 	- Once data_in_valid goes high seed key is going to be issued into block_wide_add_rnd_key.
