@@ -1,4 +1,4 @@
-+simulation_cycle= //symulation clock period in ns
-+ntb_random_seed= //random seed
++simulation_cycle=  //symulation clock period in ns
++ntb_random_seed=  //random seed
 //Mix columns test
-+mix_column_off=// turn off mix_column
++mix_column_off= //turn off mix_column
