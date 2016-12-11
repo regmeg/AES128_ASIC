@@ -2,3 +2,5 @@
 +ntb_random_seed=  //random seed
 //Mix columns test
 +mix_column_off= //turn off mix_column
++block_data_low_val= //define randonmly generated block lock data input range low
++block_data_high_val= //define randonmly generated block lock data input range max
